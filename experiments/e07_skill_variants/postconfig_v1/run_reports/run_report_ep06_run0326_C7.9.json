@@ -1,0 +1,106 @@
+{
+  "task_id": "C7.9",
+  "status": "completed",
+  "runtime_seconds": 30.224125041626394,
+  "total_tokens": 10752,
+  "n_calls": 7,
+  "skip_count": 9,
+  "agents": [
+    {
+      "agent": "planner",
+      "n_invocations": 1,
+      "n_successes": 1,
+      "n_failures": 0,
+      "total_tokens": 427,
+      "mean_latency_seconds": 3.137751459144056,
+      "error_reasons": {},
+      "models": [
+        "openai/gpt-5.4-nano-20260317"
+      ]
+    },
+    {
+      "agent": "solver_evidence_haiku",
+      "n_invocations": 1,
+      "n_successes": 1,
+      "n_failures": 0,
+      "total_tokens": 1387,
+      "mean_latency_seconds": 1.254729582928121,
+      "error_reasons": {},
+      "models": [
+        "anthropic/claude-4.5-haiku-20251001"
+      ]
+    },
+    {
+      "agent": "solver_cot_mini",
+      "n_invocations": 1,
+      "n_successes": 1,
+      "n_failures": 0,
+      "total_tokens": 1205,
+      "mean_latency_seconds": 6.012791250366718,
+      "error_reasons": {},
+      "models": [
+        "openai/gpt-5.4-mini-20260317"
+      ]
+    },
+    {
+      "agent": "solver_concise_haiku",
+      "n_invocations": 1,
+      "n_successes": 1,
+      "n_failures": 0,
+      "total_tokens": 1432,
+      "mean_latency_seconds": 3.6918639577925205,
+      "error_reasons": {},
+      "models": [
+        "anthropic/claude-4.5-haiku-20251001"
+      ]
+    },
+    {
+      "agent": "solver_cot_fast",
+      "n_invocations": 1,
+      "n_successes": 1,
+      "n_failures": 0,
+      "total_tokens": 1978,
+      "mean_latency_seconds": 8.939668083097786,
+      "error_reasons": {},
+      "models": [
+        "openai/gpt-5.4-nano-20260317"
+      ]
+    },
+    {
+      "agent": "web_search_exa",
+      "n_invocations": 1,
+      "n_successes": 1,
+      "n_failures": 0,
+      "total_tokens": 1500,
+      "mean_latency_seconds": 1.169244083110243,
+      "error_reasons": {},
+      "models": [
+        "exa"
+      ]
+    },
+    {
+      "agent": "verifier_fast",
+      "n_invocations": 1,
+      "n_successes": 1,
+      "n_failures": 0,
+      "total_tokens": 2823,
+      "mean_latency_seconds": 6.01807662518695,
+      "error_reasons": {},
+      "models": [
+        "openai/gpt-5.4-nano-20260317"
+      ]
+    }
+  ],
+  "governance_violations": [],
+  "policy_graph_backed_up": true,
+  "ruler_score": 0.92,
+  "hybrid_reward": 0.6200000000000001,
+  "halt_reason": null,
+  "suggested_fix": null,
+  "metadata": {
+    "scenario_class": "C7",
+    "epoch": 6,
+    "run_index": 326,
+    "expected_optimal_variant": "solver_haiku"
+  }
+}

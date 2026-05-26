@@ -1,0 +1,214 @@
+{
+  "task_id": "C4.7",
+  "status": "completed",
+  "runtime_seconds": 79.57764482870698,
+  "total_tokens": 26656,
+  "n_calls": 16,
+  "skip_count": 0,
+  "agents": [
+    {
+      "agent": "planner",
+      "n_invocations": 1,
+      "n_successes": 1,
+      "n_failures": 0,
+      "total_tokens": 487,
+      "mean_latency_seconds": 1.9109970419667661,
+      "error_reasons": {},
+      "models": [
+        "openai/gpt-5.4-nano-20260317"
+      ]
+    },
+    {
+      "agent": "web_search_tavily",
+      "n_invocations": 1,
+      "n_successes": 1,
+      "n_failures": 0,
+      "total_tokens": 500,
+      "mean_latency_seconds": 4.856611290946603,
+      "error_reasons": {},
+      "models": [
+        "tavily"
+      ]
+    },
+    {
+      "agent": "solver_concise_fast",
+      "n_invocations": 1,
+      "n_successes": 1,
+      "n_failures": 0,
+      "total_tokens": 1630,
+      "mean_latency_seconds": 2.61513204080984,
+      "error_reasons": {},
+      "models": [
+        "openai/gpt-5.4-nano-20260317"
+      ]
+    },
+    {
+      "agent": "memory",
+      "n_invocations": 1,
+      "n_successes": 1,
+      "n_failures": 0,
+      "total_tokens": 957,
+      "mean_latency_seconds": 2.325346250087023,
+      "error_reasons": {},
+      "models": [
+        "openai/gpt-5.4-nano-20260317"
+      ]
+    },
+    {
+      "agent": "solver_concise_mini",
+      "n_invocations": 1,
+      "n_successes": 1,
+      "n_failures": 0,
+      "total_tokens": 936,
+      "mean_latency_seconds": 1.7587383748032153,
+      "error_reasons": {},
+      "models": [
+        "openai/gpt-5.4-mini-20260317"
+      ]
+    },
+    {
+      "agent": "solver_evidence_fast",
+      "n_invocations": 1,
+      "n_successes": 1,
+      "n_failures": 0,
+      "total_tokens": 1797,
+      "mean_latency_seconds": 6.664682165719569,
+      "error_reasons": {},
+      "models": [
+        "openai/gpt-5.4-nano-20260317"
+      ]
+    },
+    {
+      "agent": "solver_cot_haiku",
+      "n_invocations": 1,
+      "n_successes": 1,
+      "n_failures": 0,
+      "total_tokens": 2750,
+      "mean_latency_seconds": 13.350776457693428,
+      "error_reasons": {},
+      "models": [
+        "anthropic/claude-4.5-haiku-20251001"
+      ]
+    },
+    {
+      "agent": "solver_cot_mini",
+      "n_invocations": 1,
+      "n_successes": 1,
+      "n_failures": 0,
+      "total_tokens": 1751,
+      "mean_latency_seconds": 7.33919299999252,
+      "error_reasons": {},
+      "models": [
+        "openai/gpt-5.4-mini-20260317"
+      ]
+    },
+    {
+      "agent": "evaluator",
+      "n_invocations": 1,
+      "n_successes": 1,
+      "n_failures": 0,
+      "total_tokens": 1694,
+      "mean_latency_seconds": 3.5615949579514563,
+      "error_reasons": {},
+      "models": [
+        "openai/gpt-5.4-nano-20260317"
+      ]
+    },
+    {
+      "agent": "solver_concise_haiku",
+      "n_invocations": 1,
+      "n_successes": 1,
+      "n_failures": 0,
+      "total_tokens": 1679,
+      "mean_latency_seconds": 3.017441041767597,
+      "error_reasons": {},
+      "models": [
+        "anthropic/claude-4.5-haiku-20251001"
+      ]
+    },
+    {
+      "agent": "solver_evidence_haiku",
+      "n_invocations": 1,
+      "n_successes": 1,
+      "n_failures": 0,
+      "total_tokens": 2581,
+      "mean_latency_seconds": 8.670157416723669,
+      "error_reasons": {},
+      "models": [
+        "anthropic/claude-4.5-haiku-20251001"
+      ]
+    },
+    {
+      "agent": "solver_cot_fast",
+      "n_invocations": 1,
+      "n_successes": 1,
+      "n_failures": 0,
+      "total_tokens": 2545,
+      "mean_latency_seconds": 10.945491832681,
+      "error_reasons": {},
+      "models": [
+        "openai/gpt-5.4-nano-20260317"
+      ]
+    },
+    {
+      "agent": "solver_evidence_mini",
+      "n_invocations": 1,
+      "n_successes": 1,
+      "n_failures": 0,
+      "total_tokens": 1659,
+      "mean_latency_seconds": 5.27741966675967,
+      "error_reasons": {},
+      "models": [
+        "openai/gpt-5.4-mini-20260317"
+      ]
+    },
+    {
+      "agent": "verifier_haiku",
+      "n_invocations": 1,
+      "n_successes": 1,
+      "n_failures": 0,
+      "total_tokens": 2572,
+      "mean_latency_seconds": 3.9460110408253968,
+      "error_reasons": {},
+      "models": [
+        "anthropic/claude-4.5-haiku-20251001"
+      ]
+    },
+    {
+      "agent": "verifier_fast",
+      "n_invocations": 1,
+      "n_successes": 1,
+      "n_failures": 0,
+      "total_tokens": 1618,
+      "mean_latency_seconds": 1.768281000200659,
+      "error_reasons": {},
+      "models": [
+        "openai/gpt-5.4-nano-20260317"
+      ]
+    },
+    {
+      "agent": "web_search_exa",
+      "n_invocations": 1,
+      "n_successes": 1,
+      "n_failures": 0,
+      "total_tokens": 1500,
+      "mean_latency_seconds": 1.5697712497785687,
+      "error_reasons": {},
+      "models": [
+        "exa"
+      ]
+    }
+  ],
+  "governance_violations": [],
+  "policy_graph_backed_up": true,
+  "ruler_score": 0.8250000000000001,
+  "hybrid_reward": 0.5250000000000001,
+  "halt_reason": null,
+  "suggested_fix": null,
+  "metadata": {
+    "scenario_class": "C4",
+    "epoch": 6,
+    "run_index": 349,
+    "expected_optimal_variant": "solver_haiku"
+  }
+}

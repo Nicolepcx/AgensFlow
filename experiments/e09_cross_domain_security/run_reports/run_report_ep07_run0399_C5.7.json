@@ -1,0 +1,166 @@
+{
+  "task_id": "C5.7",
+  "status": "completed",
+  "runtime_seconds": 56.36897504143417,
+  "total_tokens": 20918,
+  "n_calls": 12,
+  "skip_count": 4,
+  "agents": [
+    {
+      "agent": "planner",
+      "n_invocations": 1,
+      "n_successes": 1,
+      "n_failures": 0,
+      "total_tokens": 435,
+      "mean_latency_seconds": 2.403241458814591,
+      "error_reasons": {},
+      "models": [
+        "openai/gpt-5.4-nano-20260317"
+      ]
+    },
+    {
+      "agent": "web_search_tavily",
+      "n_invocations": 1,
+      "n_successes": 1,
+      "n_failures": 0,
+      "total_tokens": 500,
+      "mean_latency_seconds": 2.1400745417922735,
+      "error_reasons": {},
+      "models": [
+        "tavily"
+      ]
+    },
+    {
+      "agent": "solver_cot_fast",
+      "n_invocations": 1,
+      "n_successes": 1,
+      "n_failures": 0,
+      "total_tokens": 3228,
+      "mean_latency_seconds": 12.863839333876967,
+      "error_reasons": {},
+      "models": [
+        "openai/gpt-5.4-nano-20260317"
+      ]
+    },
+    {
+      "agent": "solver_evidence_fast",
+      "n_invocations": 1,
+      "n_successes": 1,
+      "n_failures": 0,
+      "total_tokens": 2432,
+      "mean_latency_seconds": 8.175037167035043,
+      "error_reasons": {},
+      "models": [
+        "openai/gpt-5.4-nano-20260317"
+      ]
+    },
+    {
+      "agent": "solver_cot_mini",
+      "n_invocations": 1,
+      "n_successes": 1,
+      "n_failures": 0,
+      "total_tokens": 1768,
+      "mean_latency_seconds": 4.831445500254631,
+      "error_reasons": {},
+      "models": [
+        "openai/gpt-5.4-mini-20260317"
+      ]
+    },
+    {
+      "agent": "solver_cot_haiku",
+      "n_invocations": 1,
+      "n_successes": 1,
+      "n_failures": 0,
+      "total_tokens": 3114,
+      "mean_latency_seconds": 11.506996375042945,
+      "error_reasons": {},
+      "models": [
+        "anthropic/claude-4.5-haiku-20251001"
+      ]
+    },
+    {
+      "agent": "solver_concise_haiku",
+      "n_invocations": 1,
+      "n_successes": 1,
+      "n_failures": 0,
+      "total_tokens": 2243,
+      "mean_latency_seconds": 4.3007536246441305,
+      "error_reasons": {},
+      "models": [
+        "anthropic/claude-4.5-haiku-20251001"
+      ]
+    },
+    {
+      "agent": "memory",
+      "n_invocations": 1,
+      "n_successes": 1,
+      "n_failures": 0,
+      "total_tokens": 875,
+      "mean_latency_seconds": 2.19354833336547,
+      "error_reasons": {},
+      "models": [
+        "openai/gpt-5.4-nano-20260317"
+      ]
+    },
+    {
+      "agent": "web_search_exa",
+      "n_invocations": 1,
+      "n_successes": 1,
+      "n_failures": 0,
+      "total_tokens": 1500,
+      "mean_latency_seconds": 1.098466457799077,
+      "error_reasons": {},
+      "models": [
+        "exa"
+      ]
+    },
+    {
+      "agent": "verifier_haiku",
+      "n_invocations": 1,
+      "n_successes": 1,
+      "n_failures": 0,
+      "total_tokens": 2377,
+      "mean_latency_seconds": 3.0603288747370243,
+      "error_reasons": {},
+      "models": [
+        "anthropic/claude-4.5-haiku-20251001"
+      ]
+    },
+    {
+      "agent": "evaluator",
+      "n_invocations": 1,
+      "n_successes": 1,
+      "n_failures": 0,
+      "total_tokens": 910,
+      "mean_latency_seconds": 1.7521624159999192,
+      "error_reasons": {},
+      "models": [
+        "openai/gpt-5.4-nano-20260317"
+      ]
+    },
+    {
+      "agent": "verifier_fast",
+      "n_invocations": 1,
+      "n_successes": 1,
+      "n_failures": 0,
+      "total_tokens": 1536,
+      "mean_latency_seconds": 2.043080958072096,
+      "error_reasons": {},
+      "models": [
+        "openai/gpt-5.4-nano-20260317"
+      ]
+    }
+  ],
+  "governance_violations": [],
+  "policy_graph_backed_up": true,
+  "ruler_score": 0.5249999999999999,
+  "hybrid_reward": 0.22499999999999992,
+  "halt_reason": null,
+  "suggested_fix": null,
+  "metadata": {
+    "scenario_class": "C5",
+    "epoch": 7,
+    "run_index": 399,
+    "expected_optimal_variant": "solver_haiku"
+  }
+}

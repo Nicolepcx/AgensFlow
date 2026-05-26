@@ -1,0 +1,106 @@
+{
+  "task_id": "C3.6",
+  "status": "completed",
+  "runtime_seconds": 15.36720533343032,
+  "total_tokens": 7225,
+  "n_calls": 7,
+  "skip_count": 7,
+  "agents": [
+    {
+      "agent": "planner",
+      "n_invocations": 1,
+      "n_successes": 1,
+      "n_failures": 0,
+      "total_tokens": 487,
+      "mean_latency_seconds": 2.235591708216816,
+      "error_reasons": {},
+      "models": [
+        "openai/gpt-5.4-nano-20260317"
+      ]
+    },
+    {
+      "agent": "solver_evidence_fast",
+      "n_invocations": 1,
+      "n_successes": 1,
+      "n_failures": 0,
+      "total_tokens": 763,
+      "mean_latency_seconds": 1.0905298329889774,
+      "error_reasons": {},
+      "models": [
+        "openai/gpt-5.4-nano-20260317"
+      ]
+    },
+    {
+      "agent": "solver_concise_fast",
+      "n_invocations": 1,
+      "n_successes": 1,
+      "n_failures": 0,
+      "total_tokens": 600,
+      "mean_latency_seconds": 1.100329666864127,
+      "error_reasons": {},
+      "models": [
+        "openai/gpt-5.4-nano-20260317"
+      ]
+    },
+    {
+      "agent": "solver_concise_haiku",
+      "n_invocations": 1,
+      "n_successes": 1,
+      "n_failures": 0,
+      "total_tokens": 1288,
+      "mean_latency_seconds": 1.9275734582915902,
+      "error_reasons": {},
+      "models": [
+        "anthropic/claude-4.5-haiku-20251001"
+      ]
+    },
+    {
+      "agent": "solver_evidence_mini",
+      "n_invocations": 1,
+      "n_successes": 1,
+      "n_failures": 0,
+      "total_tokens": 792,
+      "mean_latency_seconds": 1.437956958077848,
+      "error_reasons": {},
+      "models": [
+        "openai/gpt-5.4-mini-20260317"
+      ]
+    },
+    {
+      "agent": "solver_evidence_haiku",
+      "n_invocations": 1,
+      "n_successes": 1,
+      "n_failures": 0,
+      "total_tokens": 1413,
+      "mean_latency_seconds": 0.9552934588864446,
+      "error_reasons": {},
+      "models": [
+        "anthropic/claude-4.5-haiku-20251001"
+      ]
+    },
+    {
+      "agent": "solver_cot_haiku",
+      "n_invocations": 1,
+      "n_successes": 1,
+      "n_failures": 0,
+      "total_tokens": 1882,
+      "mean_latency_seconds": 6.619930250104517,
+      "error_reasons": {},
+      "models": [
+        "anthropic/claude-4.5-haiku-20251001"
+      ]
+    }
+  ],
+  "governance_violations": [],
+  "policy_graph_backed_up": true,
+  "ruler_score": 0.64,
+  "hybrid_reward": 0.3690625,
+  "halt_reason": null,
+  "suggested_fix": null,
+  "metadata": {
+    "scenario_class": "C3",
+    "epoch": 8,
+    "run_index": 470,
+    "expected_optimal_variant": "solver_haiku"
+  }
+}

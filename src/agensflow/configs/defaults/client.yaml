@@ -1,0 +1,30 @@
+# Default OpenRouter client configuration. Transport, attribution
+# headers, and per-call defaults that complete_typed uses when the
+# caller doesn't override.
+#
+# See `agensflow/runtime/client/README.md` for per-knob guidance.
+
+# ----- transport ----- #
+base_url: "https://openrouter.ai/api/v1"
+timeout_seconds: 60.0
+
+# Keep low (≤2) — stacks above Instructor's validation retries.
+max_transport_retries: 2
+
+# ----- attribution headers ----- #
+app_name: "AgensFlow"
+site_url: "https://agensflow.ai"
+
+# ----- Instructor mode ----- #
+# "tools" (most portable + strongest schema enforcement) or "json".
+instructor_mode: "tools"
+
+# ----- per-call defaults ----- #
+# 2 = first attempt + at most one corrective retry (bounded recovery).
+default_max_retries: 2
+
+# Near-deterministic for schema compliance.
+default_temperature: 0.2
+
+# Generous default for short structured outputs.
+default_max_tokens: 4096

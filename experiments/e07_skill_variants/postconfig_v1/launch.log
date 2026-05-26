@@ -1,0 +1,1535 @@
+Loaded config from experiments/e07_skill_variants/example_config.yaml
+Loaded 4 SKILL.md cards from /Users/Nicole/Documents/01_research/02_Agents/policy_framework/agensflow/skills
+  solver_chain_of_thought         role=solver  (1989 chars)
+  solver_concise                  role=solver  (1311 chars)
+  solver_default                  role=solver  (868 chars)
+  solver_evidence_first           role=solver  (2072 chars)
+
+Warm-started from chunk-8 graph at /Users/Nicole/Documents/01_research/02_Agents/policy_framework/agensflow/experiments/e05_topology_skip/policy_graph.pkl (238 nodes)
+
+Running chunk-9 skill-variants experiment.
+  tasks per epoch:       59
+  epochs (this session): 1 .. 8
+  total runs estimated:  472
+  judge model:           anthropic/claude-haiku-4.5
+  max_steps:             18
+  confidence_threshold:  5
+  reliability_weight:    0.5
+  enable_skip:           True
+  enable_router_logging: False
+  frozen replay:         False
+  output dir:            /Users/Nicole/Documents/01_research/02_Agents/policy_framework/agensflow/experiments/e07_skill_variants/postconfig_v1
+
+Running pre-flight checks...
+═══ Pre-flight check report ═══
+  ✓ ok      openrouter     (0.2s)  auth ok (367 models available)
+  ✓ ok      exa            (0.7s)  search ok (1 results)
+  ✓ ok      tavily         (0.4s)  search ok (1 results)
+Total elapsed: 1.2s
+
+Governance: max_consecutive_failures=5, max_calls_per_agent=12, halt_on_terminal_errors=True
+Per-task reports: /Users/Nicole/Documents/01_research/02_Agents/policy_framework/agensflow/experiments/e07_skill_variants/postconfig_v1/run_reports/
+
+
+========== EPOCH 1/8 ==========
+=== run 1 (epoch 1, 1/59) ===
+  [C4.4] C4 ... ruler=0.50 reward=+0.20  tok=31131  retries=0  path: planner → solver_concise_haiku → solver_concise_fast → solver_concise_  (100.6s)
+
+=== run 2 (epoch 1, 2/59) ===
+  [C3.5] C3 ... ruler=0.50 reward=+0.20  tok=21985  retries=0  path: planner → solver_concise_fast → solver_concise_haiku → solver_cot_haik  (46.8s)
+
+=== run 3 (epoch 1, 3/59) ===
+  [C1.1] C1 ... ruler=0.50 reward=+0.20  tok=20489  retries=0  path: planner → solver_concise_haiku → solver_concise_fast → solver_concise_  (25.7s)
+
+=== run 4 (epoch 1, 4/59) ===
+  [C5.1] C5 ... ruler=0.50 reward=+0.20  tok=34074  retries=0  path: planner → solver_concise_haiku → solver_concise_fast → solver_concise_  (90.7s)
+
+=== run 5 (epoch 1, 5/59) ===
+  [C2.4] C2 ... ruler=0.50 reward=+0.20  tok=33366  retries=0  path: planner → solver_concise_mini → solver_cot_haiku → solver_concise_haik  (106.5s)
+
+=== run 6 (epoch 1, 6/59) ===
+  [C8.5] C8 ... ruler=0.50 reward=+0.20  tok=25842  retries=0  path: planner → solver_concise_fast → solver_concise_haiku → solver_cot_haik  (55.0s)
+
+=== run 7 (epoch 1, 7/59) ===
+  [C8.4] C8 ... ruler=0.92 reward=+0.62  tok=23523  retries=0  path: planner → solver_concise_mini → solver_cot_haiku → solver_concise_haik  (46.8s)
+
+=== run 8 (epoch 1, 8/59) ===
+  [C4.5] C4 ... ruler=0.82 reward=+0.52  tok=18652  retries=0  path: planner → solver_cot_haiku → solver_concise_mini → solver_concise_fast  (73.8s)
+
+=== run 9 (epoch 1, 9/59) ===
+  [C3.3] C3 ... ruler=0.72 reward=+0.42  tok=18075  retries=0  path: planner → solver_cot_fast → solver_cot_mini → solver_evidence_haiku →   (54.7s)
+
+=== run 10 (epoch 1, 10/59) ===
+  [C3.4] C3 ... ruler=0.30 reward=+0.00  tok=15846  retries=0  path: planner → solver_cot_mini → solver_cot_fast → solver_evidence_fast → s  (38.0s)
+
+=== run 11 (epoch 1, 11/59) ===
+  [C2.7] C2 ... ruler=0.92 reward=+0.62  tok=16211  retries=0  path: planner → solver_evidence_haiku → solver_evidence_fast → solver_cot_fa  (42.5s)
+
+=== run 12 (epoch 1, 12/59) ===
+  [C2.1] C2 ... ruler=0.68 reward=+0.38  tok=20700  retries=0  path: planner → solver_evidence_fast → solver_evidence_haiku → solver_cot_mi  (63.6s)
+
+=== run 13 (epoch 1, 13/59) ===
+  [C6.6] C6 ... ruler=0.50 reward=+0.20  tok=20908  retries=0  path: planner → solver_cot_haiku → solver_concise_mini → solver_concise_fast  (35.3s)
+
+=== run 14 (epoch 1, 14/59) ===
+  [C7.4] C7 ... ruler=0.50 reward=+0.29  tok=5694  retries=0  path: planner → solver_evidence_mini → skip:solver_concise_haiku → skip:solv  (10.3s)
+
+=== run 15 (epoch 1, 15/59) ===
+  [C6.7] C6 ... ruler=0.92 reward=+0.62  tok=24150  retries=0  path: planner → solver_cot_fast → solver_cot_mini → solver_evidence_haiku →   (46.4s)
+
+=== run 16 (epoch 1, 16/59) ===
+  [C7.3] C7 ... ruler=0.05 reward=+0.01  tok=1009  retries=0  path: planner → skip:solver_concise_haiku → skip:solver_concise_fast → skip:  (9.8s)
+
+=== run 17 (epoch 1, 17/59) ===
+  [C7.8] C7 ... ruler=0.65 reward=+0.38  tok=7092  retries=0  path: planner → solver_evidence_haiku → solver_evidence_mini → skip:solver_c  (19.1s)
+
+=== run 18 (epoch 1, 18/59) ===
+  [C5.3] C5 ... ruler=0.78 reward=+0.48  tok=30053  retries=0  path: planner → solver_concise_fast → solver_concise_haiku → solver_cot_haik  (107.0s)
+
+=== run 19 (epoch 1, 19/59) ===
+  [C1.3] C1 ... ruler=0.92 reward=+0.62  tok=10147  retries=0  path: planner → solver_cot_mini → solver_cot_fast → solver_evidence_fast → s  (29.3s)
+
+=== run 20 (epoch 1, 20/59) ===
+  [C3.6] C3 ... ruler=0.78 reward=+0.48  tok=10253  retries=0  path: planner → solver_cot_haiku → skip:solver_evidence_mini → solver_eviden  (48.0s)
+
+=== run 21 (epoch 1, 21/59) ===
+  [C6.2] C6 ... ruler=0.85 reward=+0.55  tok=11382  retries=0  path: planner → solver_evidence_haiku → solver_evidence_fast → solver_cot_fa  (30.4s)
+
+=== run 22 (epoch 1, 22/59) ===
+  [C7.6] C7 ... ruler=0.92 reward=+0.62  tok=22373  retries=0  path: planner → solver_cot_fast → solver_concise_mini → solver_evidence_mini  (86.8s)
+
+=== run 23 (epoch 1, 23/59) ===
+  [C3.2] C3 ... ruler=0.85 reward=+0.55  tok=12026  retries=0  path: planner → solver_evidence_fast → skip:solver_evidence_mini → solver_co  (31.3s)
+
+=== run 24 (epoch 1, 24/59) ===
+  [C1.8] C1 ... ruler=0.92 reward=+0.62  tok=21989  retries=0  path: planner → solver_evidence_fast → solver_evidence_haiku → solver_cot_mi  (44.3s)
+
+=== run 25 (epoch 1, 25/59) ===
+  [C5.4] C5 ... ruler=0.82 reward=+0.52  tok=35586  retries=0  path: planner → solver_concise_mini → solver_cot_haiku → solver_concise_haik  (95.5s)
+
+=== run 26 (epoch 1, 26/59) ===
+  [C8.8] C8 ... ruler=0.85 reward=+0.55  tok=8627  retries=0  path: planner → solver_evidence_mini → skip:solver_concise_haiku → skip:solv  (19.6s)
+
+=== run 27 (epoch 1, 27/59) ===
+  [C2.5] C2 ... ruler=0.08 reward=-0.05  tok=3347  retries=0  path: planner → solver_evidence_mini → solver_evidence_haiku → skip:solver_c  (14.0s)
+
+=== run 28 (epoch 1, 28/59) ===
+  [C5.5] C5 ... ruler=0.92 reward=+0.62  tok=23154  retries=0  path: planner → solver_cot_haiku → solver_concise_mini → solver_concise_fast  (65.2s)
+
+=== run 29 (epoch 1, 29/59) ===
+  [C4.2] C4 ... ruler=0.92 reward=+0.62  tok=15766  retries=0  path: planner → solver_concise_haiku → solver_evidence_mini → skip:solver_ev  (55.2s)
+
+=== run 30 (epoch 1, 30/59) ===
+  [C1.6] C1 ... ruler=0.02 reward=-0.01  tok=911  retries=0  path: planner → skip:solver_concise_haiku → skip:solver_concise_fast → skip:  (9.7s)
+
+=== run 31 (epoch 1, 31/59) ===
+  [C1.5] C1 ... ruler=0.05 reward=-0.11  tok=4365  retries=0  path: planner → solver_concise_mini → solver_evidence_mini → skip:solver_con  (18.5s)
+
+=== run 32 (epoch 1, 32/59) ===
+  [C8.6] C8 ... ruler=0.95 reward=+0.78  tok=4456  retries=0  path: planner → solver_cot_fast → skip:solver_evidence_mini → solver_cot_hai  (17.7s)
+
+=== run 33 (epoch 1, 33/59) ===
+  [C6.8] C6 ... ruler=0.85 reward=+0.71  tok=3795  retries=0  path: planner → solver_cot_mini → skip:solver_evidence_mini → solver_cot_fas  (14.4s)
+
+=== run 34 (epoch 1, 34/59) ===
+  [C7.2] C7 ... ruler=0.92 reward=+0.73  tok=5190  retries=0  path: planner → solver_concise_fast → skip:solver_concise_haiku → skip:solve  (20.3s)
+
+=== run 35 (epoch 1, 35/59) ===
+  [C7.9] C7 ... ruler=0.92 reward=+0.62  tok=17543  retries=0  path: planner → solver_concise_mini → skip:solver_concise_fast → solver_conc  (61.0s)
+
+=== run 36 (epoch 1, 36/59) ===
+  [C4.1] C4 ... ruler=0.92 reward=+0.62  tok=22103  retries=0  path: planner → solver_cot_fast → solver_concise_fast → solver_evidence_mini  (82.0s)
+
+=== run 37 (epoch 1, 37/59) ===
+  [C2.6] C2 ... ruler=0.95 reward=+0.65  tok=15207  retries=0  path: planner → solver_evidence_haiku → solver_cot_haiku → skip:solver_evide  (48.8s)
+
+=== run 38 (epoch 1, 38/59) ===
+  [C7.5] C7 ... ruler=0.92 reward=+0.72  tok=5430  retries=0  path: planner → solver_cot_haiku → solver_concise_mini → skip:solver_evidenc  (30.7s)
+
+=== run 39 (epoch 1, 39/59) ===
+  [C7.7] C7 ... ruler=0.92 reward=+0.68  tok=6435  retries=0  path: planner → solver_evidence_fast → skip:solver_concise_haiku → skip:solv  (28.0s)
+
+=== run 40 (epoch 1, 40/59) ===
+  [C7.10] C7 ... ruler=0.92 reward=+0.65  tok=7324  retries=0  path: planner → solver_concise_fast → solver_evidence_fast → solver_evidence  (30.0s)
+
+=== run 41 (epoch 1, 41/59) ===
+  [C4.3] C4 ... ruler=0.58 reward=+0.28  tok=28340  retries=0  path: planner → solver_cot_haiku → skip:solver_evidence_fast → solver_cot_mi  (110.3s)
+
+=== run 42 (epoch 1, 42/59) ===
+  [C4.6] C4 ... ruler=0.65 reward=+0.35  tok=21938  retries=0  path: planner → solver_concise_haiku → skip:solver_concise_fast → solver_con  (74.5s)
+
+=== run 43 (epoch 1, 43/59) ===
+  [C6.3] C6 ... ruler=0.95 reward=+0.65  tok=8695  retries=0  path: planner → solver_evidence_fast → solver_cot_mini → solver_evidence_min  (23.7s)
+
+=== run 44 (epoch 1, 44/59) ===
+  [C8.7] C8 ... ruler=0.95 reward=+0.65  tok=14875  retries=0  path: planner → solver_evidence_haiku → solver_evidence_fast → skip:solver_e  (35.5s)
+
+=== run 45 (epoch 1, 45/59) ===
+  [C6.5] C6 ... ruler=0.95 reward=+0.65  tok=12460  retries=0  path: planner → solver_evidence_mini → solver_evidence_haiku → solver_eviden  (27.8s)
+
+=== run 46 (epoch 1, 46/59) ===
+  [C6.1] C6 ... ruler=0.85 reward=+0.75  tok=2681  retries=0  path: planner → solver_cot_fast → skip:solver_concise_haiku → skip:solver_co  (15.0s)
+
+=== run 47 (epoch 1, 47/59) ===
+  [C8.2] C8 ... ruler=0.95 reward=+0.65  tok=16293  retries=0  path: planner → solver_cot_mini → skip:solver_cot_fast → solver_cot_haiku →   (33.9s)
+
+=== run 48 (epoch 1, 48/59) ===
+  [C5.2] C5 ... ruler=0.92 reward=+0.62  tok=26226  retries=0  path: planner → solver_cot_fast → solver_cot_mini → solver_evidence_haiku →   (84.8s)
+
+=== run 49 (epoch 1, 49/59) ===
+  [C5.6] C5 ... ruler=0.72 reward=+0.42  tok=23491  retries=0  path: planner → solver_cot_mini → solver_cot_fast → solver_evidence_fast → s  (51.6s)
+
+=== run 50 (epoch 1, 50/59) ===
+  [C2.8] C2 ... ruler=0.92 reward=+0.65  tok=7169  retries=0  path: planner → solver_concise_mini → solver_cot_haiku → solver_concise_haik  (33.5s)
+
+=== run 51 (epoch 1, 51/59) ===
+  [C1.7] C1 ... ruler=0.95 reward=+0.65  tok=13890  retries=0  path: planner → solver_evidence_fast → solver_cot_fast → skip:solver_evidenc  (50.7s)
+
+=== run 52 (epoch 1, 52/59) ===
+  [C6.4] C6 ... ruler=0.02 reward=-0.17  tok=5055  retries=0  path: planner → solver_evidence_haiku → skip:solver_concise_haiku → skip:sol  (15.9s)
+
+=== run 53 (epoch 1, 53/59) ===
+  [C8.3] C8 ... ruler=0.95 reward=+0.80  tok=4010  retries=0  path: planner → solver_evidence_mini → skip:solver_evidence_haiku → solver_c  (19.4s)
+
+=== run 54 (epoch 1, 54/59) ===
+  [C8.1] C8 ... ruler=0.92 reward=+0.62  tok=24444  retries=0  path: planner → solver_concise_haiku → solver_evidence_haiku → solver_cot_fa  (55.6s)
+
+=== run 55 (epoch 1, 55/59) ===
+  [C3.1] C3 ... ruler=0.40 reward=+0.22  tok=4678  retries=0  path: planner → solver_cot_fast → skip:solver_evidence_mini → solver_evidenc  (21.7s)
+
+=== run 56 (epoch 1, 56/59) ===
+  [C2.3] C2 ... ruler=0.92 reward=+0.67  tok=6594  retries=0  path: planner → solver_evidence_haiku → solver_concise_haiku → solver_cot_mi  (30.5s)
+
+=== run 57 (epoch 1, 57/59) ===
+  [C1.2] C1 ... ruler=0.85 reward=+0.64  tok=5652  retries=0  path: planner → solver_concise_fast → solver_evidence_fast → solver_evidence  (24.1s)
+
+=== run 58 (epoch 1, 58/59) ===
+  [C2.2] C2 ... ruler=0.85 reward=+0.55  tok=11324  retries=0  path: planner → solver_evidence_fast → solver_concise_fast → solver_evidence  (32.9s)
+
+=== run 59 (epoch 1, 59/59) ===
+  [C1.4] C1 ... ruler=0.95 reward=+0.65  tok=12178  retries=0  path: planner → solver_cot_haiku → solver_concise_haiku → solver_evidence_mi  (38.3s)
+
+
+Epoch 1 complete. Graph: 313 nodes.
+
+========== EPOCH 2/8 ==========
+=== run 60 (epoch 2, 1/59) ===
+  [C6.2] C6 ... ruler=0.95 reward=+0.65  tok=11866  retries=0  path: planner → solver_cot_fast → solver_concise_fast → skip:solver_evidence  (28.7s)
+
+=== run 61 (epoch 2, 2/59) ===
+  [C2.3] C2 ... ruler=0.00 reward=-0.04  tok=965  retries=0  path: planner → skip:solver_concise_haiku → skip:solver_concise_fast → skip:  (13.0s)
+
+=== run 62 (epoch 2, 3/59) ===
+  [C2.7] C2 ... ruler=0.05 reward=-0.18  tok=6012  retries=0  path: planner → solver_concise_fast → skip:solver_concise_haiku → skip:solve  (22.4s)
+
+=== run 63 (epoch 2, 4/59) ===
+  [C3.4] C3 ... ruler=0.35 reward=+0.05  tok=13674  retries=0  path: planner → solver_cot_mini → solver_cot_fast → skip:solver_evidence_hai  (37.0s)
+
+=== run 64 (epoch 2, 5/59) ===
+  [C1.7] C1 ... ruler=0.95 reward=+0.65  tok=13497  retries=0  path: planner → solver_evidence_mini → solver_concise_mini → solver_evidence  (40.5s)
+
+=== run 65 (epoch 2, 6/59) ===
+  [C1.5] C1 ... ruler=0.88 reward=+0.58  tok=12424  retries=0  path: planner → solver_cot_mini → skip:solver_evidence_haiku → solver_cot_ha  (36.3s)
+
+=== run 66 (epoch 2, 7/59) ===
+  [C7.8] C7 ... ruler=0.92 reward=+0.62  tok=12460  retries=0  path: planner → solver_concise_mini → solver_cot_haiku → solver_cot_fast → s  (43.4s)
+
+=== run 67 (epoch 2, 8/59) ===
+  [C3.3] C3 ... ruler=0.88 reward=+0.58  tok=19775  retries=0  path: planner → solver_evidence_haiku → solver_concise_haiku → solver_cot_mi  (66.1s)
+
+=== run 68 (epoch 2, 9/59) ===
+  [C5.3] C5 ... ruler=0.72 reward=+0.42  tok=30946  retries=0  path: planner → solver_evidence_haiku → solver_evidence_fast → solver_cot_fa  (84.9s)
+
+=== run 69 (epoch 2, 10/59) ===
+  [C2.2] C2 ... ruler=0.95 reward=+0.65  tok=20049  retries=0  path: planner → solver_evidence_fast → solver_concise_fast → solver_evidence  (52.4s)
+
+=== run 70 (epoch 2, 11/59) ===
+  [C3.1] C3 ... ruler=0.65 reward=+0.35  tok=18552  retries=0  path: planner → solver_concise_mini → skip:solver_evidence_fast → solver_cot  (49.5s)
+
+=== run 71 (epoch 2, 12/59) ===
+  [C5.4] C5 ... ruler=0.82 reward=+0.52  tok=38058  retries=0  path: planner → solver_evidence_fast → solver_evidence_haiku → solver_cot_mi  (113.8s)
+
+=== run 72 (epoch 2, 13/59) ===
+  [C3.5] C3 ... ruler=0.95 reward=+0.65  tok=20362  retries=0  path: planner → solver_evidence_haiku → solver_concise_mini → solver_cot_fas  (37.6s)
+
+=== run 73 (epoch 2, 14/59) ===
+  [C7.4] C7 ... ruler=0.92 reward=+0.62  tok=9970  retries=0  path: planner → solver_cot_haiku → skip:solver_concise_fast → solver_concise  (40.5s)
+
+=== run 74 (epoch 2, 15/59) ===
+  [C7.5] C7 ... ruler=0.85 reward=+0.55  tok=22118  retries=0  path: planner → solver_evidence_fast → solver_cot_mini → solver_evidence_min  (69.4s)
+
+=== run 75 (epoch 2, 16/59) ===
+  [C7.9] C7 ... ruler=0.92 reward=+0.62  tok=12715  retries=0  path: planner → solver_concise_haiku → solver_concise_fast → solver_cot_fast  (46.7s)
+
+=== run 76 (epoch 2, 17/59) ===
+  [C6.8] C6 ... ruler=0.92 reward=+0.62  tok=15438  retries=0  path: planner → solver_evidence_fast → solver_cot_mini → solver_concise_fast  (42.5s)
+
+=== run 77 (epoch 2, 18/59) ===
+  [C1.6] C1 ... ruler=0.85 reward=+0.55  tok=14284  retries=0  path: planner → solver_cot_fast → solver_evidence_haiku → solver_concise_min  (55.8s)
+
+=== run 78 (epoch 2, 19/59) ===
+  [C4.3] C4 ... ruler=0.92 reward=+0.62  tok=11035  retries=0  path: planner → solver_evidence_haiku → solver_concise_mini → skip:solver_ev  (56.7s)
+
+=== run 79 (epoch 2, 20/59) ===
+  [C7.2] C7 ... ruler=0.92 reward=+0.62  tok=9751  retries=0  path: planner → solver_cot_fast → skip:solver_evidence_mini → solver_evidenc  (43.9s)
+
+=== run 80 (epoch 2, 21/59) ===
+  [C4.6] C4 ... ruler=0.92 reward=+0.62  tok=14543  retries=0  path: planner → solver_cot_haiku → solver_concise_haiku → solver_cot_fast →   (59.4s)
+
+=== run 81 (epoch 2, 22/59) ===
+  [C2.8] C2 ... ruler=0.35 reward=+0.05  tok=16990  retries=0  path: planner → solver_concise_haiku → skip:solver_concise_fast → solver_con  (65.3s)
+
+=== run 82 (epoch 2, 23/59) ===
+  [C6.1] C6 ... ruler=0.78 reward=+0.51  tok=7160  retries=0  path: planner → solver_cot_haiku → solver_cot_fast → solver_evidence_haiku →  (25.1s)
+
+=== run 83 (epoch 2, 24/59) ===
+  [C8.6] C8 ... ruler=0.95 reward=+0.65  tok=18759  retries=0  path: planner → solver_concise_fast → solver_evidence_fast → solver_cot_haik  (38.3s)
+
+=== run 84 (epoch 2, 25/59) ===
+  [C8.3] C8 ... ruler=0.95 reward=+0.65  tok=12692  retries=0  path: planner → solver_concise_haiku → solver_concise_fast → solver_cot_fast  (28.9s)
+
+=== run 85 (epoch 2, 26/59) ===
+  [C4.1] C4 ... agent_event agent=verifier_haiku status=error:schema
+ruler=0.85 reward=+0.40  tok=27734  retries=1  path: planner → solver_evidence_fast → solver_concise_fast → solver_cot_haik  (79.9s)
+
+=== run 86 (epoch 2, 27/59) ===
+  [C7.10] C7 ... ruler=0.95 reward=+0.75  tok=5396  retries=0  path: planner → solver_evidence_haiku → skip:solver_evidence_mini → solver_c  (24.7s)
+
+=== run 87 (epoch 2, 28/59) ===
+  [C8.2] C8 ... ruler=0.95 reward=+0.65  tok=17804  retries=0  path: planner → solver_evidence_mini → solver_concise_haiku → solver_cot_min  (43.0s)
+
+=== run 88 (epoch 2, 29/59) ===
+  [C2.4] C2 ... ruler=0.92 reward=+0.62  tok=13377  retries=0  path: planner → solver_cot_fast → solver_evidence_fast → solver_concise_fast  (56.2s)
+
+=== run 89 (epoch 2, 30/59) ===
+  [C4.5] C4 ... ruler=0.92 reward=+0.62  tok=23496  retries=0  path: planner → solver_evidence_haiku → solver_cot_mini → skip:solver_eviden  (82.7s)
+
+=== run 90 (epoch 2, 31/59) ===
+  [C1.3] C1 ... agent_event agent=verifier_haiku status=error:schema
+ruler=0.95 reward=+0.50  tok=16944  retries=1  path: planner → solver_cot_mini → solver_concise_mini → solver_evidence_mini  (33.1s)
+
+=== run 91 (epoch 2, 32/59) ===
+  [C7.6] C7 ... ruler=0.92 reward=+0.62  tok=11346  retries=0  path: planner → solver_cot_haiku → skip:solver_evidence_mini → solver_eviden  (52.0s)
+
+=== run 92 (epoch 2, 33/59) ===
+  [C4.2] C4 ... ruler=0.95 reward=+0.65  tok=10571  retries=0  path: planner → solver_concise_mini → solver_concise_haiku → solver_evidence  (48.0s)
+
+=== run 93 (epoch 2, 34/59) ===
+  [C6.6] C6 ... ruler=0.95 reward=+0.81  tok=3746  retries=0  path: planner → solver_evidence_fast → solver_cot_mini → skip:solver_evidenc  (17.4s)
+
+=== run 94 (epoch 2, 35/59) ===
+  [C3.2] C3 ... ruler=0.05 reward=-0.18  tok=6035  retries=0  path: planner → solver_evidence_haiku → solver_cot_haiku → solver_cot_fast →  (22.0s)
+
+=== run 95 (epoch 2, 36/59) ===
+  [C2.1] C2 ... ruler=0.92 reward=+0.62  tok=19195  retries=0  path: planner → solver_cot_fast → solver_evidence_haiku → solver_concise_fas  (63.9s)
+
+=== run 96 (epoch 2, 37/59) ===
+  [C6.4] C6 ... ruler=0.02 reward=-0.05  tok=1880  retries=0  path: planner → skip:solver_concise_haiku → skip:solver_concise_fast → skip:  (9.8s)
+
+=== run 97 (epoch 2, 38/59) ===
+  [C6.5] C6 ... ruler=0.95 reward=+0.65  tok=12981  retries=0  path: planner → solver_cot_fast → skip:solver_evidence_haiku → solver_cot_ha  (41.5s)
+
+=== run 98 (epoch 2, 39/59) ===
+  [C1.1] C1 ... ruler=0.95 reward=+0.72  tok=6032  retries=0  path: planner → solver_evidence_fast → solver_cot_mini → skip:solver_evidenc  (20.2s)
+
+=== run 99 (epoch 2, 40/59) ===
+  [C6.3] C6 ... ruler=0.95 reward=+0.65  tok=13936  retries=0  path: planner → solver_concise_fast → solver_cot_fast → solver_cot_haiku → w  (40.1s)
+
+=== run 100 (epoch 2, 41/59) ===
+  [C3.6] C3 ... ruler=0.92 reward=+0.74  tok=4795  retries=0  path: planner → solver_concise_mini → solver_evidence_fast → skip:solver_evi  (23.1s)
+
+=== run 101 (epoch 2, 42/59) ===
+  [C2.6] C2 ... ruler=0.88 reward=+0.58  tok=13943  retries=0  path: planner → solver_cot_haiku → skip:solver_evidence_fast → solver_cot_mi  (45.9s)
+
+=== run 102 (epoch 2, 43/59) ===
+  [C5.6] C5 ... ruler=0.68 reward=+0.39  tok=7632  retries=0  path: planner → solver_evidence_mini → skip:solver_concise_haiku → skip:solv  (21.2s)
+
+=== run 103 (epoch 2, 44/59) ===
+  [C6.7] C6 ... ruler=0.95 reward=+0.65  tok=11115  retries=0  path: planner → solver_evidence_mini → solver_evidence_fast → skip:solver_co  (30.4s)
+
+=== run 104 (epoch 2, 45/59) ===
+  [C8.7] C8 ... ruler=0.95 reward=+0.65  tok=13987  retries=0  path: planner → solver_concise_haiku → solver_evidence_haiku → solver_eviden  (37.1s)
+
+=== run 105 (epoch 2, 46/59) ===
+  [C1.8] C1 ... ruler=0.95 reward=+0.66  tok=7737  retries=0  path: planner → solver_evidence_fast → skip:solver_evidence_haiku → solver_c  (27.1s)
+
+=== run 106 (epoch 2, 47/59) ===
+  [C8.1] C8 ... ruler=0.95 reward=+0.69  tok=6840  retries=0  path: planner → solver_cot_haiku → solver_concise_fast → skip:solver_evidenc  (30.0s)
+
+=== run 107 (epoch 2, 48/59) ===
+  [C8.4] C8 ... ruler=0.92 reward=+0.62  tok=11380  retries=0  path: planner → solver_cot_fast → solver_cot_haiku → skip:web_search_exa → s  (38.5s)
+
+=== run 108 (epoch 2, 49/59) ===
+  [C8.8] C8 ... ruler=0.95 reward=+0.74  tok=5588  retries=0  path: planner → solver_cot_mini → solver_cot_fast → skip:memory → skip:web_s  (24.5s)
+
+=== run 109 (epoch 2, 50/59) ===
+  [C1.2] C1 ... ruler=0.85 reward=+0.55  tok=8716  retries=0  path: planner → solver_evidence_mini → solver_cot_mini → solver_cot_fast → s  (28.9s)
+
+=== run 110 (epoch 2, 51/59) ===
+  [C5.1] C5 ... ruler=0.05 reward=-0.06  tok=3006  retries=0  path: planner → skip:solver_concise_haiku → skip:solver_concise_fast → skip:  (13.3s)
+
+=== run 111 (epoch 2, 52/59) ===
+  [C7.3] C7 ... ruler=0.92 reward=+0.62  tok=11952  retries=0  path: planner → solver_concise_mini → skip:solver_evidence_mini → solver_con  (61.1s)
+
+=== run 112 (epoch 2, 53/59) ===
+  [C4.4] C4 ... agent_event agent=solver_cot_fast status=error:schema
+ruler=0.82 reward=+0.37  tok=31613  retries=1  path: planner → solver_evidence_fast → solver_evidence_haiku → skip:evaluato  (79.1s)
+
+=== run 113 (epoch 2, 54/59) ===
+  [C2.5] C2 ... ruler=0.92 reward=+0.62  tok=8704  retries=0  path: planner → solver_cot_fast → solver_evidence_fast → solver_cot_mini → s  (46.5s)
+
+=== run 114 (epoch 2, 55/59) ===
+  [C5.2] C5 ... ruler=0.85 reward=+0.60  tok=6682  retries=0  path: planner → solver_cot_haiku → solver_evidence_mini → skip:solver_concis  (32.2s)
+
+=== run 115 (epoch 2, 56/59) ===
+  [C5.5] C5 ... ruler=0.85 reward=+0.55  tok=18220  retries=0  path: planner → solver_cot_fast → skip:solver_evidence_mini → solver_concise  (61.5s)
+
+=== run 116 (epoch 2, 57/59) ===
+  [C8.5] C8 ... ruler=0.92 reward=+0.62  tok=18117  retries=0  path: planner → solver_concise_fast → solver_evidence_fast → solver_concise_  (61.9s)
+
+=== run 117 (epoch 2, 58/59) ===
+  [C1.4] C1 ... ruler=0.95 reward=+0.67  tok=7562  retries=0  path: planner → solver_concise_haiku → solver_evidence_haiku → skip:solver_c  (31.5s)
+
+=== run 118 (epoch 2, 59/59) ===
+  [C7.7] C7 ... ruler=0.92 reward=+0.62  tok=9829  retries=0  path: planner → solver_evidence_mini → solver_concise_fast → solver_evidence  (45.6s)
+
+
+Epoch 2 complete. Graph: 351 nodes.
+
+========== EPOCH 3/8 ==========
+=== run 119 (epoch 3, 1/59) ===
+  [C2.6] C2 ... ruler=0.50 reward=+0.20  tok=13031  retries=0  path: planner → solver_evidence_mini → solver_concise_haiku → solver_concise  (37.7s)
+
+=== run 120 (epoch 3, 2/59) ===
+  [C7.2] C7 ... ruler=0.92 reward=+0.67  tok=6572  retries=0  path: planner → solver_concise_mini → skip:solver_evidence_mini → solver_evi  (31.1s)
+
+=== run 121 (epoch 3, 3/59) ===
+  [C1.3] C1 ... ruler=0.95 reward=+0.82  tok=3498  retries=0  path: planner → solver_concise_mini → skip:solver_evidence_haiku → solver_co  (15.8s)
+
+=== run 122 (epoch 3, 4/59) ===
+  [C8.6] C8 ... ruler=0.95 reward=+0.65  tok=11346  retries=0  path: planner → solver_concise_mini → solver_concise_haiku → solver_cot_mini  (34.5s)
+
+=== run 123 (epoch 3, 5/59) ===
+  [C6.7] C6 ... ruler=0.95 reward=+0.66  tok=7804  retries=0  path: planner → solver_evidence_fast → solver_concise_mini → skip:web_search  (24.9s)
+
+=== run 124 (epoch 3, 6/59) ===
+  [C1.8] C1 ... ruler=0.88 reward=+0.58  tok=12653  retries=0  path: planner → solver_cot_mini → solver_concise_fast → solver_evidence_fast  (31.8s)
+
+=== run 125 (epoch 3, 7/59) ===
+  [C1.6] C1 ... ruler=0.95 reward=+0.65  tok=11782  retries=0  path: planner → solver_cot_haiku → skip:solver_evidence_haiku → solver_cot_f  (56.5s)
+
+=== run 126 (epoch 3, 8/59) ===
+  [C3.5] C3 ... ruler=0.25 reward=-0.05  tok=9845  retries=0  path: planner → solver_cot_haiku → skip:solver_concise_haiku → skip:solver_c  (27.4s)
+
+=== run 127 (epoch 3, 9/59) ===
+  [C2.4] C2 ... ruler=0.92 reward=+0.65  tok=7116  retries=0  path: planner → solver_cot_fast → skip:solver_cot_haiku → solver_cot_mini →   (36.6s)
+
+=== run 128 (epoch 3, 10/59) ===
+  [C5.2] C5 ... ruler=0.72 reward=+0.42  tok=15097  retries=0  path: planner → solver_concise_mini → solver_cot_mini → solver_evidence_mini  (60.1s)
+
+=== run 129 (epoch 3, 11/59) ===
+  [C7.3] C7 ... ruler=0.92 reward=+0.62  tok=8054  retries=0  path: planner → solver_concise_mini → skip:solver_evidence_fast → skip:solve  (49.2s)
+
+=== run 130 (epoch 3, 12/59) ===
+  [C5.5] C5 ... ruler=0.30 reward=+0.00  tok=25761  retries=0  path: planner → solver_evidence_fast → solver_evidence_mini → solver_evidenc  (61.5s)
+
+=== run 131 (epoch 3, 13/59) ===
+  [C7.6] C7 ... ruler=0.92 reward=+0.62  tok=9219  retries=0  path: planner → solver_cot_fast → solver_evidence_fast → skip:solver_concise  (35.0s)
+
+=== run 132 (epoch 3, 14/59) ===
+  [C3.2] C3 ... agent_event agent=verifier_haiku status=error:schema
+ruler=0.28 reward=-0.17  tok=14270  retries=1  path: planner → solver_concise_fast → solver_cot_mini → skip:solver_evidence  (30.1s)
+
+=== run 133 (epoch 3, 15/59) ===
+  [C8.7] C8 ... ruler=0.95 reward=+0.65  tok=14675  retries=0  path: planner → solver_cot_fast → solver_cot_haiku → memory → web_search_exa  (33.6s)
+
+=== run 134 (epoch 3, 16/59) ===
+  [C8.8] C8 ... ruler=0.35 reward=+0.05  tok=13852  retries=0  path: planner → solver_concise_mini → solver_cot_mini → solver_concise_haiku  (36.3s)
+
+=== run 135 (epoch 3, 17/59) ===
+  [C6.3] C6 ... ruler=0.93 reward=+0.63  tok=12965  retries=0  path: planner → solver_concise_haiku → skip:solver_evidence_mini → solver_ev  (35.5s)
+
+=== run 136 (epoch 3, 18/59) ===
+  [C8.5] C8 ... ruler=0.70 reward=+0.42  tok=7419  retries=0  path: planner → solver_evidence_mini → solver_evidence_haiku → skip:memory →  (27.6s)
+
+=== run 137 (epoch 3, 19/59) ===
+  [C8.3] C8 ... ruler=0.20 reward=-0.06  tok=6831  retries=0  path: planner → solver_evidence_fast → solver_evidence_mini → solver_concise  (30.3s)
+
+=== run 138 (epoch 3, 20/59) ===
+  [C4.5] C4 ... agent_event agent=verifier_haiku status=error:schema
+ruler=0.85 reward=+0.40  tok=13632  retries=1  path: planner → solver_concise_mini → skip:solver_evidence_fast → skip:solve  (32.6s)
+
+=== run 139 (epoch 3, 21/59) ===
+  [C7.8] C7 ... ruler=0.85 reward=+0.55  tok=8738  retries=0  path: planner → solver_cot_fast → solver_evidence_fast → skip:solver_cot_hai  (32.5s)
+
+=== run 140 (epoch 3, 22/59) ===
+  [C6.2] C6 ... ruler=0.95 reward=+0.65  tok=16361  retries=0  path: planner → solver_concise_fast → solver_concise_mini → skip:solver_evid  (42.8s)
+
+=== run 141 (epoch 3, 23/59) ===
+  [C5.6] C5 ... ruler=0.92 reward=+0.62  tok=8123  retries=0  path: planner → solver_concise_fast → skip:solver_evidence_mini → solver_cot  (36.0s)
+
+=== run 142 (epoch 3, 24/59) ===
+  [C6.1] C6 ... ruler=0.95 reward=+0.70  tok=6559  retries=0  path: planner → solver_cot_haiku → skip:solver_evidence_haiku → solver_conci  (26.7s)
+
+=== run 143 (epoch 3, 25/59) ===
+  [C2.3] C2 ... ruler=0.92 reward=+0.62  tok=10228  retries=0  path: planner → solver_evidence_fast → solver_concise_mini → solver_concise_  (47.6s)
+
+=== run 144 (epoch 3, 26/59) ===
+  [C7.10] C7 ... ruler=0.65 reward=+0.35  tok=23755  retries=0  path: planner → solver_evidence_fast → solver_concise_mini → solver_cot_mini  (71.0s)
+
+=== run 145 (epoch 3, 27/59) ===
+  [C7.9] C7 ... ruler=0.05 reward=-0.25  tok=12313  retries=0  path: planner → solver_cot_fast → solver_evidence_fast → solver_evidence_min  (44.4s)
+
+=== run 146 (epoch 3, 28/59) ===
+  [C1.2] C1 ... ruler=0.92 reward=+0.62  tok=8871  retries=0  path: planner → solver_cot_fast → solver_cot_haiku → solver_evidence_mini →   (30.1s)
+
+=== run 147 (epoch 3, 29/59) ===
+  [C4.4] C4 ... ruler=0.42 reward=+0.16  tok=7000  retries=0  path: planner → solver_concise_mini → solver_evidence_haiku → skip:solver_co  (35.8s)
+
+=== run 148 (epoch 3, 30/59) ===
+  [C4.6] C4 ... ruler=0.92 reward=+0.62  tok=8929  retries=0  path: planner → solver_evidence_haiku → skip:solver_concise_fast → solver_co  (45.5s)
+
+=== run 149 (epoch 3, 31/59) ===
+  [C5.4] C5 ... ruler=0.68 reward=+0.38  tok=21003  retries=0  path: planner → solver_cot_mini → solver_evidence_haiku → skip:solver_eviden  (61.0s)
+
+=== run 150 (epoch 3, 32/59) ===
+  [C6.8] C6 ... ruler=0.92 reward=+0.70  tok=5911  retries=0  path: planner → solver_cot_mini → solver_cot_fast → memory → solver_concise_  (23.4s)
+
+=== run 151 (epoch 3, 33/59) ===
+  [C7.7] C7 ... ruler=0.92 reward=+0.66  tok=6999  retries=0  path: planner → solver_concise_haiku → skip:solver_evidence_mini → skip:solv  (33.0s)
+
+=== run 152 (epoch 3, 34/59) ===
+  [C3.3] C3 ... ruler=0.22 reward=-0.01  tok=6091  retries=0  path: planner → solver_concise_haiku → solver_cot_fast → skip:solver_concise  (23.0s)
+
+=== run 153 (epoch 3, 35/59) ===
+  [C2.8] C2 ... ruler=0.92 reward=+0.62  tok=12261  retries=0  path: planner → solver_evidence_haiku → solver_concise_fast → solver_concise  (33.6s)
+
+=== run 154 (epoch 3, 36/59) ===
+  [C4.2] C4 ... ruler=0.95 reward=+0.65  tok=11277  retries=0  path: planner → solver_evidence_haiku → skip:solver_evidence_mini → solver_c  (50.7s)
+
+=== run 155 (epoch 3, 37/59) ===
+  [C3.6] C3 ... ruler=0.88 reward=+0.62  tok=6945  retries=0  path: planner → solver_cot_mini → skip:solver_concise_fast → skip:solver_evi  (25.5s)
+
+=== run 156 (epoch 3, 38/59) ===
+  [C2.5] C2 ... ruler=0.30 reward=+0.00  tok=24675  retries=0  path: planner → solver_cot_mini → solver_concise_fast → solver_concise_mini   (65.5s)
+
+=== run 157 (epoch 3, 39/59) ===
+  [C7.4] C7 ... ruler=0.92 reward=+0.63  tok=7863  retries=0  path: planner → solver_evidence_fast → skip:solver_cot_haiku → skip:solver_c  (34.3s)
+
+=== run 158 (epoch 3, 40/59) ===
+  [C5.1] C5 ... agent_event agent=verifier_haiku status=error:schema
+ruler=0.72 reward=+0.27  tok=40398  retries=1  path: planner → solver_evidence_haiku → solver_concise_haiku → solver_cot_mi  (82.2s)
+
+=== run 159 (epoch 3, 41/59) ===
+  [C5.3] C5 ... ruler=0.85 reward=+0.55  tok=30645  retries=0  path: planner → solver_evidence_mini → solver_cot_fast → solver_cot_haiku →   (98.4s)
+
+=== run 160 (epoch 3, 42/59) ===
+  [C3.4] C3 ... ruler=0.30 reward=+0.00  tok=9072  retries=0  path: planner → solver_evidence_haiku → skip:solver_evidence_fast → solver_c  (27.2s)
+
+=== run 161 (epoch 3, 43/59) ===
+  [C8.4] C8 ... ruler=0.72 reward=+0.51  tok=5511  retries=0  path: planner → solver_concise_haiku → solver_concise_fast → solver_evidence  (24.5s)
+
+=== run 162 (epoch 3, 44/59) ===
+  [C6.5] C6 ... ruler=0.95 reward=+0.76  tok=4962  retries=0  path: planner → solver_cot_haiku → skip:solver_evidence_haiku → solver_evide  (24.6s)
+
+=== run 163 (epoch 3, 45/59) ===
+  [C1.5] C1 ... ruler=0.98 reward=+0.87  tok=2830  retries=0  path: planner → solver_concise_fast → skip:solver_evidence_mini → skip:solve  (14.4s)
+
+=== run 164 (epoch 3, 46/59) ===
+  [C2.1] C2 ... ruler=0.92 reward=+0.63  tok=7620  retries=0  path: planner → solver_cot_haiku → skip:solver_concise_fast → skip:solver_ev  (40.7s)
+
+=== run 165 (epoch 3, 47/59) ===
+  [C7.5] C7 ... ruler=0.30 reward=+0.13  tok=4436  retries=0  path: planner → solver_cot_haiku → skip:solver_concise_fast → skip:solver_ev  (29.7s)
+
+=== run 166 (epoch 3, 48/59) ===
+  [C1.7] C1 ... ruler=0.92 reward=+0.74  tok=4848  retries=0  path: planner → solver_concise_fast → skip:solver_concise_haiku → skip:solve  (20.1s)
+
+=== run 167 (epoch 3, 49/59) ===
+  [C1.1] C1 ... ruler=1.00 reward=+0.91  tok=2425  retries=0  path: planner → solver_cot_mini → skip:solver_concise_haiku → skip:solver_co  (12.0s)
+
+=== run 168 (epoch 3, 50/59) ===
+  [C8.1] C8 ... ruler=0.72 reward=+0.42  tok=10684  retries=0  path: planner → solver_cot_mini → skip:solver_concise_fast → skip:solver_con  (31.5s)
+
+=== run 169 (epoch 3, 51/59) ===
+  [C2.2] C2 ... ruler=0.92 reward=+0.62  tok=16894  retries=0  path: planner → solver_evidence_fast → skip:solver_cot_haiku → solver_cot_mi  (43.1s)
+
+=== run 170 (epoch 3, 52/59) ===
+  [C1.4] C1 ... ruler=0.95 reward=+0.65  tok=9390  retries=0  path: planner → solver_evidence_haiku → skip:solver_cot_mini → solver_concis  (35.1s)
+
+=== run 171 (epoch 3, 53/59) ===
+  [C4.1] C4 ... ruler=0.92 reward=+0.62  tok=12557  retries=0  path: planner → solver_evidence_mini → skip:solver_cot_haiku → solver_cot_mi  (51.8s)
+
+=== run 172 (epoch 3, 54/59) ===
+  [C2.7] C2 ... ruler=0.92 reward=+0.62  tok=10136  retries=0  path: planner → solver_evidence_mini → solver_cot_haiku → solver_cot_mini →   (49.8s)
+
+=== run 173 (epoch 3, 55/59) ===
+  [C8.2] C8 ... ruler=0.92 reward=+0.71  tok=5561  retries=0  path: planner → solver_cot_fast → solver_concise_mini → solver_cot_mini → sk  (20.6s)
+
+=== run 174 (epoch 3, 56/59) ===
+  [C6.6] C6 ... ruler=0.95 reward=+0.65  tok=12262  retries=0  path: planner → solver_cot_haiku → solver_evidence_fast → skip:memory → skip  (34.4s)
+
+=== run 175 (epoch 3, 57/59) ===
+  [C4.3] C4 ... ruler=0.92 reward=+0.71  tok=5587  retries=0  path: planner → solver_evidence_mini → skip:solver_cot_haiku → solver_cot_mi  (31.0s)
+
+=== run 176 (epoch 3, 58/59) ===
+  [C6.4] C6 ... ruler=0.95 reward=+0.65  tok=8602  retries=0  path: planner → solver_concise_fast → solver_cot_haiku → solver_evidence_min  (33.1s)
+
+=== run 177 (epoch 3, 59/59) ===
+  [C3.1] C3 ... ruler=0.68 reward=+0.38  tok=17441  retries=0  path: planner → solver_evidence_mini → skip:solver_cot_haiku → solver_cot_mi  (54.7s)
+
+
+Epoch 3 complete. Graph: 383 nodes.
+
+========== EPOCH 4/8 ==========
+=== run 178 (epoch 4, 1/59) ===
+  [C5.5] C5 ... ruler=0.85 reward=+0.57  tok=7343  retries=0  path: planner → solver_cot_haiku → solver_evidence_fast → solver_cot_fast →   (34.3s)
+
+=== run 179 (epoch 4, 2/59) ===
+  [C2.4] C2 ... ruler=0.68 reward=+0.38  tok=13378  retries=0  path: planner → solver_evidence_fast → solver_cot_haiku → web_search_exa → s  (58.5s)
+
+=== run 180 (epoch 4, 3/59) ===
+  [C6.6] C6 ... ruler=0.95 reward=+0.65  tok=11165  retries=0  path: planner → solver_evidence_mini → skip:solver_cot_mini → solver_concise  (36.5s)
+
+=== run 181 (epoch 4, 4/59) ===
+  [C1.2] C1 ... ruler=0.95 reward=+0.70  tok=6748  retries=0  path: planner → solver_cot_fast → solver_evidence_haiku → skip:evaluator → s  (19.6s)
+
+=== run 182 (epoch 4, 5/59) ===
+  [C4.3] C4 ... ruler=0.89 reward=+0.59  tok=11912  retries=0  path: planner → solver_concise_mini → solver_evidence_fast → solver_cot_fast  (54.2s)
+
+=== run 183 (epoch 4, 6/59) ===
+  [C8.4] C8 ... ruler=0.92 reward=+0.62  tok=8177  retries=0  path: planner → solver_evidence_haiku → solver_concise_haiku → skip:solver_e  (29.5s)
+
+=== run 184 (epoch 4, 7/59) ===
+  [C4.6] C4 ... ruler=0.95 reward=+0.65  tok=12719  retries=0  path: planner → solver_concise_mini → skip:solver_cot_haiku → solver_evidenc  (38.4s)
+
+=== run 185 (epoch 4, 8/59) ===
+  [C3.5] C3 ... ruler=0.85 reward=+0.55  tok=10251  retries=0  path: planner → solver_concise_mini → solver_evidence_haiku → solver_cot_min  (29.4s)
+
+=== run 186 (epoch 4, 9/59) ===
+  [C7.8] C7 ... ruler=0.02 reward=-0.09  tok=3039  retries=0  path: planner → skip:solver_concise_haiku → skip:solver_concise_fast → skip:  (14.9s)
+
+=== run 187 (epoch 4, 10/59) ===
+  [C7.9] C7 ... ruler=0.92 reward=+0.63  tok=7712  retries=0  path: planner → solver_evidence_mini → solver_evidence_fast → solver_cot_fas  (35.9s)
+
+=== run 188 (epoch 4, 11/59) ===
+  [C8.2] C8 ... ruler=0.45 reward=+0.15  tok=18946  retries=0  path: planner → solver_concise_fast → skip:solver_cot_fast → solver_cot_haik  (43.1s)
+
+=== run 189 (epoch 4, 12/59) ===
+  [C8.6] C8 ... ruler=0.95 reward=+0.65  tok=10866  retries=0  path: planner → solver_cot_haiku → solver_evidence_fast → skip:web_search_ex  (27.5s)
+
+=== run 190 (epoch 4, 13/59) ===
+  [C1.1] C1 ... ruler=0.93 reward=+0.63  tok=8217  retries=0  path: planner → solver_cot_fast → solver_concise_fast → solver_evidence_fast  (25.1s)
+
+=== run 191 (epoch 4, 14/59) ===
+  [C1.6] C1 ... ruler=0.95 reward=+0.65  tok=8618  retries=0  path: planner → solver_concise_haiku → skip:solver_concise_mini → skip:solve  (32.7s)
+
+=== run 192 (epoch 4, 15/59) ===
+  [C3.1] C3 ... ruler=0.68 reward=+0.45  tok=6242  retries=0  path: planner → solver_evidence_fast → skip:solver_evidence_mini → skip:solv  (19.4s)
+
+=== run 193 (epoch 4, 16/59) ===
+  [C6.5] C6 ... ruler=0.92 reward=+0.62  tok=14133  retries=0  path: planner → solver_evidence_mini → skip:solver_concise_haiku → skip:solv  (35.2s)
+
+=== run 194 (epoch 4, 17/59) ===
+  [C1.4] C1 ... ruler=0.02 reward=-0.28  tok=10971  retries=0  path: planner → solver_cot_mini → solver_concise_mini → solver_cot_haiku → s  (35.9s)
+
+=== run 195 (epoch 4, 18/59) ===
+  [C6.7] C6 ... ruler=0.85 reward=+0.55  tok=17733  retries=0  path: planner → solver_cot_haiku → solver_cot_mini → solver_evidence_haiku →  (48.3s)
+
+=== run 196 (epoch 4, 19/59) ===
+  [C6.3] C6 ... ruler=0.05 reward=-0.21  tok=6989  retries=0  path: planner → solver_evidence_haiku → skip:solver_evidence_mini → solver_c  (25.5s)
+
+=== run 197 (epoch 4, 20/59) ===
+  [C4.1] C4 ... ruler=0.78 reward=+0.48  tok=12467  retries=0  path: planner → solver_evidence_mini → solver_evidence_fast → solver_cot_fas  (53.0s)
+
+=== run 198 (epoch 4, 21/59) ===
+  [C6.8] C6 ... ruler=0.92 reward=+0.62  tok=12720  retries=0  path: planner → solver_cot_fast → solver_evidence_fast → solver_evidence_min  (36.7s)
+
+=== run 199 (epoch 4, 22/59) ===
+  [C7.4] C7 ... ruler=0.88 reward=+0.72  tok=4358  retries=0  path: planner → solver_concise_mini → solver_evidence_mini → solver_cot_mini  (23.1s)
+
+=== run 200 (epoch 4, 23/59) ===
+  [C2.8] C2 ... ruler=0.85 reward=+0.55  tok=16148  retries=0  path: planner → solver_concise_mini → solver_evidence_mini → solver_cot_mini  (53.2s)
+
+=== run 201 (epoch 4, 24/59) ===
+  [C7.2] C7 ... ruler=0.92 reward=+0.62  tok=8306  retries=0  path: planner → solver_cot_fast → solver_evidence_mini → solver_cot_mini → s  (36.3s)
+
+=== run 202 (epoch 4, 25/59) ===
+  [C3.4] C3 ... ruler=0.82 reward=+0.52  tok=10070  retries=0  path: planner → solver_concise_mini → solver_evidence_mini → memory → solver  (39.2s)
+
+=== run 203 (epoch 4, 26/59) ===
+  [C5.3] C5 ... ruler=0.92 reward=+0.67  tok=6558  retries=0  path: planner → solver_cot_fast → skip:solver_concise_haiku → skip:solver_co  (39.7s)
+
+=== run 204 (epoch 4, 27/59) ===
+  [C5.1] C5 ... ruler=0.72 reward=+0.42  tok=13944  retries=0  path: planner → solver_concise_fast → skip:solver_cot_fast → solver_concise_  (42.8s)
+
+=== run 205 (epoch 4, 28/59) ===
+  [C7.7] C7 ... ruler=0.92 reward=+0.62  tok=11055  retries=0  path: planner → solver_evidence_haiku → solver_concise_haiku → skip:solver_e  (48.0s)
+
+=== run 206 (epoch 4, 29/59) ===
+  [C5.2] C5 ... ruler=0.85 reward=+0.55  tok=21855  retries=0  path: planner → solver_concise_haiku → solver_cot_haiku → solver_evidence_mi  (82.7s)
+
+=== run 207 (epoch 4, 30/59) ===
+  [C2.6] C2 ... ruler=0.92 reward=+0.62  tok=8650  retries=0  path: planner → solver_cot_fast → solver_evidence_haiku → skip:solver_eviden  (32.7s)
+
+=== run 208 (epoch 4, 31/59) ===
+  [C1.3] C1 ... ruler=0.95 reward=+0.82  tok=3580  retries=0  path: planner → solver_concise_haiku → solver_concise_fast → skip:solver_evi  (19.4s)
+
+=== run 209 (epoch 4, 32/59) ===
+  [C4.4] C4 ... ruler=0.05 reward=-0.25  tok=14458  retries=0  path: planner → solver_evidence_haiku → solver_cot_haiku → skip:solver_evide  (72.4s)
+
+=== run 210 (epoch 4, 33/59) ===
+  [C3.6] C3 ... ruler=0.65 reward=+0.35  tok=11390  retries=0  path: planner → solver_cot_fast → solver_evidence_haiku → skip:evaluator → s  (43.0s)
+
+=== run 211 (epoch 4, 34/59) ===
+  [C8.1] C8 ... ruler=0.95 reward=+0.81  tok=3819  retries=0  path: planner → solver_concise_haiku → solver_concise_fast → skip:solver_cot  (17.3s)
+
+=== run 212 (epoch 4, 35/59) ===
+  [C3.2] C3 ... ruler=0.92 reward=+0.73  tok=5091  retries=0  path: planner → solver_evidence_fast → solver_concise_haiku → solver_evidenc  (23.5s)
+
+=== run 213 (epoch 4, 36/59) ===
+  [C7.5] C7 ... ruler=0.92 reward=+0.73  tok=5056  retries=0  path: planner → solver_evidence_fast → solver_concise_haiku → solver_evidenc  (22.2s)
+
+=== run 214 (epoch 4, 37/59) ===
+  [C6.2] C6 ... ruler=0.92 reward=+0.62  tok=11912  retries=0  path: planner → solver_concise_haiku → skip:solver_concise_mini → skip:solve  (30.9s)
+
+=== run 215 (epoch 4, 38/59) ===
+  [C1.8] C1 ... ruler=0.95 reward=+0.65  tok=9421  retries=0  path: planner → solver_evidence_mini → solver_concise_haiku → skip:solver_co  (28.5s)
+
+=== run 216 (epoch 4, 39/59) ===
+  [C8.5] C8 ... ruler=0.92 reward=+0.73  tok=5186  retries=0  path: planner → solver_evidence_fast → solver_concise_fast → skip:solver_cot  (19.5s)
+
+=== run 217 (epoch 4, 40/59) ===
+  [C2.3] C2 ... ruler=0.92 reward=+0.69  tok=6063  retries=0  path: planner → solver_evidence_fast → solver_concise_haiku → solver_evidenc  (34.9s)
+
+=== run 218 (epoch 4, 41/59) ===
+  [C2.5] C2 ... ruler=0.92 reward=+0.70  tok=5975  retries=0  path: planner → solver_evidence_fast → solver_concise_haiku → solver_evidenc  (30.7s)
+
+=== run 219 (epoch 4, 42/59) ===
+  [C5.6] C5 ... ruler=0.68 reward=+0.54  tok=3617  retries=0  path: planner → solver_cot_fast → skip:solver_concise_haiku → skip:solver_co  (18.8s)
+
+=== run 220 (epoch 4, 43/59) ===
+  [C7.3] C7 ... ruler=0.92 reward=+0.62  tok=16919  retries=0  path: planner → solver_evidence_fast → solver_concise_haiku → solver_evidenc  (81.0s)
+
+=== run 221 (epoch 4, 44/59) ===
+  [C8.3] C8 ... ruler=0.85 reward=+0.55  tok=10285  retries=0  path: planner → solver_cot_fast → solver_evidence_haiku → skip:solver_concis  (29.1s)
+
+=== run 222 (epoch 4, 45/59) ===
+  [C8.7] C8 ... ruler=0.98 reward=+0.68  tok=14782  retries=0  path: planner → solver_evidence_fast → skip:solver_evidence_haiku → skip:sol  (32.5s)
+
+=== run 223 (epoch 4, 46/59) ===
+  [C1.5] C1 ... ruler=0.95 reward=+0.85  tok=2761  retries=0  path: planner → solver_evidence_mini → skip:solver_cot_mini → skip:solver_co  (14.0s)
+
+=== run 224 (epoch 4, 47/59) ===
+  [C1.7] C1 ... ruler=0.98 reward=+0.78  tok=5428  retries=0  path: planner → solver_evidence_mini → skip:solver_concise_fast → skip:solve  (20.5s)
+
+=== run 225 (epoch 4, 48/59) ===
+  [C2.7] C2 ... ruler=0.92 reward=+0.75  tok=4596  retries=0  path: planner → solver_evidence_fast → skip:solver_concise_fast → solver_con  (21.8s)
+
+=== run 226 (epoch 4, 49/59) ===
+  [C7.10] C7 ... ruler=0.92 reward=+0.62  tok=11462  retries=0  path: planner → solver_evidence_fast → skip:solver_concise_fast → solver_con  (37.9s)
+
+=== run 227 (epoch 4, 50/59) ===
+  [C6.4] C6 ... ruler=0.05 reward=-0.22  tok=7304  retries=0  path: planner → solver_cot_haiku → skip:solver_concise_fast → skip:solver_co  (26.7s)
+
+=== run 228 (epoch 4, 51/59) ===
+  [C4.2] C4 ... ruler=0.92 reward=+0.72  tok=5260  retries=0  path: planner → solver_evidence_mini → skip:solver_concise_fast → solver_con  (31.5s)
+
+=== run 229 (epoch 4, 52/59) ===
+  [C4.5] C4 ... ruler=0.95 reward=+0.65  tok=15802  retries=0  path: planner → solver_evidence_mini → skip:solver_concise_fast → solver_con  (72.9s)
+
+=== run 230 (epoch 4, 53/59) ===
+  [C2.1] C2 ... ruler=0.92 reward=+0.62  tok=8462  retries=0  path: planner → solver_evidence_mini → skip:solver_concise_fast → solver_cot  (32.4s)
+
+=== run 231 (epoch 4, 54/59) ===
+  [C7.6] C7 ... ruler=0.92 reward=+0.62  tok=9471  retries=0  path: planner → solver_evidence_mini → solver_concise_mini → solver_concise_  (54.8s)
+
+=== run 232 (epoch 4, 55/59) ===
+  [C8.8] C8 ... agent_event agent=verifier_haiku status=error:schema
+ruler=0.92 reward=+0.47  tok=12323  retries=1  path: planner → solver_concise_haiku → solver_concise_fast → skip:solver_evi  (23.4s)
+
+=== run 233 (epoch 4, 56/59) ===
+  [C5.4] C5 ... agent_event agent=web_search_tavily status=error:unknown
+ruler=0.68 reward=+0.26  tok=7122  retries=1  path: planner → solver_evidence_mini → solver_concise_fast → skip:solver_con  (37.5s)
+
+=== run 234 (epoch 4, 57/59) ===
+  [C2.2] C2 ... ruler=0.92 reward=+0.62  tok=12045  retries=0  path: planner → solver_cot_haiku → skip:solver_evidence_mini → solver_concis  (45.7s)
+
+=== run 235 (epoch 4, 58/59) ===
+  [C3.3] C3 ... ruler=0.85 reward=+0.55  tok=10742  retries=0  path: planner → solver_evidence_fast → solver_evidence_mini → solver_concise  (40.4s)
+
+=== run 236 (epoch 4, 59/59) ===
+  [C6.1] C6 ... ruler=0.92 reward=+0.62  tok=13231  retries=0  path: planner → solver_evidence_mini → solver_concise_haiku → skip:solver_co  (33.0s)
+
+
+Epoch 4 complete. Graph: 399 nodes.
+
+========== EPOCH 5/8 ==========
+=== run 237 (epoch 5, 1/59) ===
+  [C5.1] C5 ... agent_event agent=verifier_haiku status=error:schema
+ruler=0.72 reward=+0.27  tok=21096  retries=1  path: planner → solver_concise_mini → solver_cot_mini → skip:solver_evidence  (47.0s)
+
+=== run 238 (epoch 5, 2/59) ===
+  [C1.7] C1 ... ruler=0.92 reward=+0.70  tok=5985  retries=0  path: planner → solver_evidence_fast → skip:solver_evidence_haiku → solver_c  (24.5s)
+
+=== run 239 (epoch 5, 3/59) ===
+  [C2.6] C2 ... ruler=0.95 reward=+0.65  tok=8318  retries=0  path: planner → solver_concise_mini → skip:solver_evidence_fast → skip:solve  (29.6s)
+
+=== run 240 (epoch 5, 4/59) ===
+  [C5.5] C5 ... ruler=0.85 reward=+0.55  tok=14542  retries=0  path: planner → solver_cot_haiku → solver_evidence_fast → solver_concise_min  (37.4s)
+
+=== run 241 (epoch 5, 5/59) ===
+  [C8.7] C8 ... ruler=0.98 reward=+0.68  tok=18199  retries=0  path: planner → solver_cot_fast → skip:solver_concise_haiku → memory → web_s  (35.5s)
+
+=== run 242 (epoch 5, 6/59) ===
+  [C5.4] C5 ... ruler=0.72 reward=+0.42  tok=21470  retries=0  path: planner → solver_cot_mini → solver_cot_fast → skip:solver_concise_fast  (97.1s)
+
+=== run 243 (epoch 5, 7/59) ===
+  [C3.3] C3 ... ruler=0.72 reward=+0.42  tok=9060  retries=0  path: planner → solver_evidence_mini → skip:solver_evidence_fast → solver_co  (33.6s)
+
+=== run 244 (epoch 5, 8/59) ===
+  [C3.6] C3 ... ruler=0.88 reward=+0.61  tok=7237  retries=0  path: planner → solver_cot_haiku → solver_evidence_fast → solver_evidence_ha  (39.0s)
+
+=== run 245 (epoch 5, 9/59) ===
+  [C8.1] C8 ... ruler=0.85 reward=+0.55  tok=21219  retries=0  path: planner → solver_evidence_mini → web_search_exa → solver_concise_haiku  (71.2s)
+
+=== run 246 (epoch 5, 10/59) ===
+  [C2.5] C2 ... ruler=0.92 reward=+0.62  tok=9754  retries=0  path: planner → solver_concise_mini → skip:solver_evidence_mini → skip:solve  (38.5s)
+
+=== run 247 (epoch 5, 11/59) ===
+  [C6.5] C6 ... ruler=0.95 reward=+0.73  tok=5898  retries=0  path: planner → solver_evidence_fast → skip:solver_concise_mini → skip:solve  (17.1s)
+
+=== run 248 (epoch 5, 12/59) ===
+  [C1.5] C1 ... ruler=0.92 reward=+0.77  tok=4070  retries=0  path: planner → solver_concise_fast → skip:solver_evidence_fast → solver_evi  (12.9s)
+
+=== run 249 (epoch 5, 13/59) ===
+  [C3.2] C3 ... ruler=0.68 reward=+0.38  tok=18944  retries=0  path: planner → solver_cot_haiku → solver_concise_mini → skip:web_search_exa  (55.4s)
+
+=== run 250 (epoch 5, 14/59) ===
+  [C8.2] C8 ... ruler=0.80 reward=+0.64  tok=4204  retries=0  path: planner → solver_concise_fast → skip:solver_evidence_fast → skip:solve  (18.7s)
+
+=== run 251 (epoch 5, 15/59) ===
+  [C8.4] C8 ... ruler=0.95 reward=+0.70  tok=6763  retries=0  path: planner → solver_evidence_fast → memory → solver_cot_haiku → solver_ev  (27.5s)
+
+=== run 252 (epoch 5, 16/59) ===
+  [C4.6] C4 ... ruler=0.65 reward=+0.35  tok=17955  retries=0  path: planner → solver_evidence_fast → solver_concise_fast → solver_evidence  (64.6s)
+
+=== run 253 (epoch 5, 17/59) ===
+  [C2.2] C2 ... ruler=0.93 reward=+0.63  tok=12200  retries=0  path: planner → solver_concise_mini → skip:solver_evidence_mini → solver_evi  (58.1s)
+
+=== run 254 (epoch 5, 18/59) ===
+  [C4.2] C4 ... ruler=0.15 reward=-0.03  tok=4754  retries=0  path: planner → solver_concise_mini → skip:solver_cot_haiku → solver_evidenc  (23.7s)
+
+=== run 255 (epoch 5, 19/59) ===
+  [C1.3] C1 ... ruler=0.95 reward=+0.70  tok=6756  retries=0  path: planner → solver_cot_fast → solver_concise_haiku → solver_concise_fast  (25.7s)
+
+=== run 256 (epoch 5, 20/59) ===
+  [C1.4] C1 ... ruler=0.05 reward=-0.18  tok=6175  retries=0  path: planner → solver_concise_mini → skip:solver_evidence_haiku → skip:web_  (17.5s)
+
+=== run 257 (epoch 5, 21/59) ===
+  [C6.7] C6 ... ruler=0.92 reward=+0.62  tok=12992  retries=0  path: planner → solver_concise_haiku → solver_cot_haiku → solver_evidence_ha  (41.4s)
+
+=== run 258 (epoch 5, 22/59) ===
+  [C7.5] C7 ... ruler=0.95 reward=+0.65  tok=13656  retries=0  path: planner → solver_concise_haiku → skip:solver_concise_fast → solver_cot  (39.6s)
+
+=== run 259 (epoch 5, 23/59) ===
+  [C4.5] C4 ... ruler=0.18 reward=-0.12  tok=7978  retries=0  path: planner → solver_concise_haiku → skip:solver_concise_mini → skip:solve  (32.4s)
+
+=== run 260 (epoch 5, 24/59) ===
+  [C8.8] C8 ... ruler=0.92 reward=+0.73  tok=5008  retries=0  path: planner → solver_evidence_fast → skip:memory → skip:web_search_exa → s  (20.6s)
+
+=== run 261 (epoch 5, 25/59) ===
+  [C6.1] C6 ... ruler=0.85 reward=+0.55  tok=16626  retries=0  path: planner → solver_cot_fast → memory → web_search_exa → web_search_tavil  (36.6s)
+
+=== run 262 (epoch 5, 26/59) ===
+  [C7.9] C7 ... ruler=0.92 reward=+0.73  tok=5156  retries=0  path: planner → solver_evidence_mini → skip:solver_concise_haiku → solver_co  (33.8s)
+
+=== run 263 (epoch 5, 27/59) ===
+  [C4.4] C4 ... ruler=0.88 reward=+0.58  tok=10616  retries=0  path: planner → solver_evidence_mini → skip:solver_concise_haiku → solver_co  (53.1s)
+
+=== run 264 (epoch 5, 28/59) ===
+  [C3.4] C3 ... ruler=0.85 reward=+0.60  tok=6597  retries=0  path: planner → solver_cot_fast → skip:solver_concise_haiku → skip:solver_ev  (29.8s)
+
+=== run 265 (epoch 5, 29/59) ===
+  [C5.3] C5 ... ruler=0.35 reward=+0.05  tok=24425  retries=0  path: planner → solver_concise_haiku → solver_evidence_haiku → solver_cot_fa  (85.9s)
+
+=== run 266 (epoch 5, 30/59) ===
+  [C1.2] C1 ... ruler=0.95 reward=+0.65  tok=16265  retries=0  path: planner → solver_evidence_mini → skip:solver_evidence_fast → solver_co  (44.9s)
+
+=== run 267 (epoch 5, 31/59) ===
+  [C7.10] C7 ... ruler=0.92 reward=+0.71  tok=5517  retries=0  path: planner → solver_evidence_mini → skip:solver_concise_haiku → skip:solv  (26.9s)
+
+=== run 268 (epoch 5, 32/59) ===
+  [C1.1] C1 ... ruler=0.95 reward=+0.65  tok=8483  retries=0  path: planner → solver_concise_fast → web_search_exa → solver_cot_fast → sol  (22.2s)
+
+=== run 269 (epoch 5, 33/59) ===
+  [C2.3] C2 ... ruler=0.92 reward=+0.67  tok=6655  retries=0  path: planner → solver_evidence_mini → skip:solver_concise_haiku → skip:solv  (30.5s)
+
+=== run 270 (epoch 5, 34/59) ===
+  [C2.8] C2 ... ruler=0.92 reward=+0.70  tok=5935  retries=0  path: planner → solver_evidence_mini → skip:solver_concise_haiku → skip:solv  (29.3s)
+
+=== run 271 (epoch 5, 35/59) ===
+  [C5.2] C5 ... ruler=0.85 reward=+0.55  tok=14651  retries=0  path: planner → solver_cot_fast → solver_cot_haiku → skip:evaluator → skip:m  (75.4s)
+
+=== run 272 (epoch 5, 36/59) ===
+  [C4.1] C4 ... ruler=0.10 reward=-0.17  tok=7285  retries=0  path: planner → solver_evidence_mini → skip:solver_concise_haiku → skip:solv  (30.5s)
+
+=== run 273 (epoch 5, 37/59) ===
+  [C2.1] C2 ... ruler=0.85 reward=+0.55  tok=13945  retries=0  path: planner → solver_evidence_fast → skip:solver_evidence_mini → solver_co  (42.5s)
+
+=== run 274 (epoch 5, 38/59) ===
+  [C8.5] C8 ... ruler=0.85 reward=+0.55  tok=13260  retries=0  path: planner → solver_evidence_fast → skip:solver_concise_mini → skip:solve  (39.3s)
+
+=== run 275 (epoch 5, 39/59) ===
+  [C7.7] C7 ... ruler=0.85 reward=+0.55  tok=21527  retries=0  path: planner → solver_cot_fast → solver_cot_mini → solver_concise_haiku → s  (68.3s)
+
+=== run 276 (epoch 5, 40/59) ===
+  [C7.2] C7 ... ruler=0.02 reward=-0.20  tok=5861  retries=0  path: planner → solver_cot_haiku → solver_evidence_haiku → skip:solver_conci  (32.5s)
+
+=== run 277 (epoch 5, 41/59) ===
+  [C2.7] C2 ... ruler=0.92 reward=+0.62  tok=11975  retries=0  path: planner → solver_evidence_fast → skip:solver_evidence_mini → solver_co  (40.2s)
+
+=== run 278 (epoch 5, 42/59) ===
+  [C6.2] C6 ... ruler=0.85 reward=+0.66  tok=5092  retries=0  path: planner → solver_concise_haiku → solver_concise_fast → skip:solver_evi  (20.9s)
+
+=== run 279 (epoch 5, 43/59) ===
+  [C7.3] C7 ... ruler=0.92 reward=+0.62  tok=13374  retries=0  path: planner → solver_cot_fast → skip:solver_evidence_mini → solver_concise  (61.3s)
+
+=== run 280 (epoch 5, 44/59) ===
+  [C6.4] C6 ... ruler=0.92 reward=+0.62  tok=21186  retries=0  path: planner → solver_evidence_mini → solver_concise_haiku → solver_concise  (50.6s)
+
+=== run 281 (epoch 5, 45/59) ===
+  [C7.8] C7 ... ruler=0.72 reward=+0.42  tok=12453  retries=0  path: planner → solver_evidence_fast → solver_cot_mini → solver_concise_haik  (38.6s)
+
+=== run 282 (epoch 5, 46/59) ===
+  [C1.8] C1 ... ruler=0.95 reward=+0.65  tok=12704  retries=0  path: planner → solver_concise_fast → skip:solver_evidence_fast → solver_cot  (36.9s)
+
+=== run 283 (epoch 5, 47/59) ===
+  [C1.6] C1 ... ruler=0.95 reward=+0.65  tok=9277  retries=0  path: planner → solver_cot_fast → web_search_exa → solver_cot_mini → skip:so  (38.2s)
+
+=== run 284 (epoch 5, 48/59) ===
+  [C4.3] C4 ... ruler=0.92 reward=+0.62  tok=17602  retries=0  path: planner → solver_cot_fast → skip:solver_evidence_mini → solver_concise  (97.6s)
+
+=== run 285 (epoch 5, 49/59) ===
+  [C6.3] C6 ... ruler=0.95 reward=+0.69  tok=6854  retries=0  path: planner → solver_concise_haiku → skip:memory → skip:web_search_exa → s  (25.0s)
+
+=== run 286 (epoch 5, 50/59) ===
+  [C7.4] C7 ... ruler=0.02 reward=-0.28  tok=8849  retries=0  path: planner → solver_cot_fast → solver_concise_fast → solver_cot_haiku → s  (39.9s)
+
+=== run 287 (epoch 5, 51/59) ===
+  [C8.3] C8 ... ruler=0.92 reward=+0.62  tok=20550  retries=0  path: planner → solver_evidence_fast → memory → web_search_exa → solver_conc  (39.7s)
+
+=== run 288 (epoch 5, 52/59) ===
+  [C8.6] C8 ... ruler=0.92 reward=+0.69  tok=6048  retries=0  path: planner → solver_evidence_mini → solver_concise_haiku → skip:solver_ev  (20.4s)
+
+=== run 289 (epoch 5, 53/59) ===
+  [C3.1] C3 ... ruler=0.92 reward=+0.63  tok=7735  retries=0  path: planner → solver_concise_fast → solver_cot_fast → skip:evaluator → ski  (25.9s)
+
+=== run 290 (epoch 5, 54/59) ===
+  [C7.6] C7 ... ruler=0.92 reward=+0.62  tok=13319  retries=0  path: planner → solver_concise_fast → solver_cot_fast → memory → skip:solver  (58.4s)
+
+=== run 291 (epoch 5, 55/59) ===
+  [C6.6] C6 ... ruler=0.95 reward=+0.79  tok=4208  retries=0  path: planner → solver_concise_fast → skip:evaluator → skip:memory → skip:we  (15.0s)
+
+=== run 292 (epoch 5, 56/59) ===
+  [C2.4] C2 ... ruler=0.25 reward=-0.05  tok=9959  retries=0  path: planner → solver_concise_fast → solver_cot_fast → solver_evidence_haik  (38.7s)
+
+=== run 293 (epoch 5, 57/59) ===
+  [C3.5] C3 ... agent_event agent=verifier_haiku status=error:schema
+ruler=0.88 reward=+0.43  tok=22564  retries=1  path: planner → solver_evidence_fast → skip:solver_evidence_mini → solver_co  (44.3s)
+
+=== run 294 (epoch 5, 58/59) ===
+  [C5.6] C5 ... ruler=0.85 reward=+0.74  tok=2918  retries=0  path: planner → solver_concise_fast → skip:solver_cot_fast → skip:solver_con  (16.9s)
+
+=== run 295 (epoch 5, 59/59) ===
+  [C6.8] C6 ... ruler=0.92 reward=+0.75  tok=4427  retries=0  path: planner → solver_concise_fast → skip:evaluator → skip:solver_concise_m  (21.4s)
+
+
+Epoch 5 complete. Graph: 420 nodes.
+
+========== EPOCH 6/8 ==========
+=== run 296 (epoch 6, 1/59) ===
+  [C6.6] C6 ... ruler=0.02 reward=-0.28  tok=15734  retries=0  path: planner → solver_cot_fast → web_search_exa → solver_evidence_haiku → s  (39.5s)
+
+=== run 297 (epoch 6, 2/59) ===
+  [C3.3] C3 ... ruler=0.85 reward=+0.55  tok=8227  retries=0  path: planner → solver_concise_mini → skip:memory → skip:evaluator → solver_  (32.5s)
+
+=== run 298 (epoch 6, 3/59) ===
+  [C3.4] C3 ... ruler=0.78 reward=+0.53  tok=6736  retries=0  path: planner → solver_cot_mini → skip:memory → skip:evaluator → skip:web_se  (29.1s)
+
+=== run 299 (epoch 6, 4/59) ===
+  [C6.8] C6 ... agent_event agent=verifier_haiku status=error:schema
+ruler=0.88 reward=+0.43  tok=14641  retries=1  path: planner → solver_concise_fast → skip:evaluator → solver_cot_haiku → so  (33.8s)
+
+=== run 300 (epoch 6, 5/59) ===
+  [C2.1] C2 ... ruler=0.08 reward=-0.14  tok=5830  retries=0  path: planner → solver_cot_mini → skip:evaluator → skip:memory → skip:web_se  (32.9s)
+
+=== run 301 (epoch 6, 6/59) ===
+  [C5.5] C5 ... ruler=0.85 reward=+0.55  tok=9194  retries=0  path: planner → solver_cot_haiku → skip:solver_concise_fast → solver_concise  (32.0s)
+
+=== run 302 (epoch 6, 7/59) ===
+  [C8.4] C8 ... ruler=0.92 reward=+0.62  tok=9560  retries=0  path: planner → solver_concise_haiku → skip:solver_concise_mini → skip:solve  (33.0s)
+
+=== run 303 (epoch 6, 8/59) ===
+  [C4.1] C4 ... ruler=0.88 reward=+0.58  tok=19507  retries=0  path: planner → solver_concise_mini → web_search_tavily → solver_concise_hai  (72.7s)
+
+=== run 304 (epoch 6, 9/59) ===
+  [C1.6] C1 ... ruler=0.02 reward=-0.27  tok=7843  retries=0  path: planner → solver_evidence_mini → solver_concise_haiku → skip:solver_co  (26.5s)
+
+=== run 305 (epoch 6, 10/59) ===
+  [C7.8] C7 ... ruler=0.92 reward=+0.62  tok=10005  retries=0  path: planner → solver_evidence_fast → solver_cot_mini → skip:evaluator → me  (34.1s)
+
+=== run 306 (epoch 6, 11/59) ===
+  [C7.7] C7 ... ruler=0.92 reward=+0.62  tok=9210  retries=0  path: planner → solver_concise_mini → web_search_exa → solver_concise_fast →  (40.7s)
+
+=== run 307 (epoch 6, 12/59) ===
+  [C6.3] C6 ... ruler=0.95 reward=+0.65  tok=10288  retries=0  path: planner → solver_cot_mini → skip:solver_concise_haiku → memory → solve  (34.1s)
+
+=== run 308 (epoch 6, 13/59) ===
+  [C1.3] C1 ... ruler=0.95 reward=+0.65  tok=11104  retries=0  path: planner → solver_evidence_fast → solver_concise_fast → memory → solver  (32.0s)
+
+=== run 309 (epoch 6, 14/59) ===
+  [C7.3] C7 ... ruler=0.92 reward=+0.62  tok=22252  retries=0  path: planner → solver_evidence_fast → solver_cot_mini → skip:evaluator → me  (68.7s)
+
+=== run 310 (epoch 6, 15/59) ===
+  [C5.1] C5 ... ruler=0.72 reward=+0.42  tok=14157  retries=0  path: planner → solver_evidence_haiku → solver_concise_haiku → skip:solver_c  (45.9s)
+
+=== run 311 (epoch 6, 16/59) ===
+  [C6.1] C6 ... ruler=0.92 reward=+0.62  tok=10276  retries=0  path: planner → solver_concise_haiku → solver_cot_fast → skip:web_search_tav  (43.5s)
+
+=== run 312 (epoch 6, 17/59) ===
+  [C5.3] C5 ... ruler=0.95 reward=+0.65  tok=10460  retries=0  path: planner → solver_concise_fast → skip:solver_cot_fast → solver_evidence  (44.2s)
+
+=== run 313 (epoch 6, 18/59) ===
+  [C8.5] C8 ... ruler=0.92 reward=+0.62  tok=10217  retries=0  path: planner → solver_evidence_fast → skip:evaluator → web_search_tavily →   (29.3s)
+
+=== run 314 (epoch 6, 19/59) ===
+  [C1.1] C1 ... ruler=0.95 reward=+0.88  tok=1828  retries=0  path: planner → solver_cot_mini → skip:memory → skip:web_search_exa → evalua  (14.1s)
+
+=== run 315 (epoch 6, 20/59) ===
+  [C5.4] C5 ... ruler=0.92 reward=+0.62  tok=9794  retries=0  path: planner → solver_cot_fast → skip:solver_concise_haiku → skip:solver_co  (45.9s)
+
+=== run 316 (epoch 6, 21/59) ===
+  [C4.2] C4 ... ruler=0.05 reward=-0.04  tok=2299  retries=0  path: planner → solver_concise_mini → evaluator  (20.3s)
+
+=== run 317 (epoch 6, 22/59) ===
+  [C1.8] C1 ... ruler=0.95 reward=+0.86  tok=2474  retries=0  path: planner → solver_cot_mini → skip:memory → skip:web_search_exa → evalua  (15.2s)
+
+=== run 318 (epoch 6, 23/59) ===
+  [C8.1] C8 ... ruler=0.95 reward=+0.71  tok=6391  retries=0  path: planner → solver_cot_mini → skip:memory → skip:web_search_exa → skip:s  (29.4s)
+
+=== run 319 (epoch 6, 24/59) ===
+  [C2.8] C2 ... ruler=0.92 reward=+0.62  tok=25724  retries=0  path: planner → solver_evidence_haiku → web_search_tavily → solver_concise_m  (93.4s)
+
+=== run 320 (epoch 6, 25/59) ===
+  [C2.6] C2 ... ruler=0.95 reward=+0.65  tok=17884  retries=0  path: planner → solver_evidence_fast → web_search_exa → solver_cot_haiku → s  (75.8s)
+
+=== run 321 (epoch 6, 26/59) ===
+  [C6.2] C6 ... ruler=0.05 reward=-0.13  tok=4826  retries=0  path: planner → solver_cot_mini → skip:memory → skip:web_search_exa → skip:e  (17.6s)
+
+=== run 322 (epoch 6, 27/59) ===
+  [C4.5] C4 ... ruler=0.88 reward=+0.58  tok=19948  retries=0  path: planner → solver_evidence_haiku → skip:evaluator → web_search_exa → so  (79.1s)
+
+=== run 323 (epoch 6, 28/59) ===
+  [C8.8] C8 ... ruler=0.92 reward=+0.62  tok=24615  retries=0  path: planner → solver_concise_fast → memory → web_search_exa → web_search_t  (57.3s)
+
+=== run 324 (epoch 6, 29/59) ===
+  [C7.4] C7 ... ruler=0.92 reward=+0.62  tok=17919  retries=0  path: planner → solver_evidence_fast → solver_cot_mini → skip:evaluator → me  (57.2s)
+
+=== run 325 (epoch 6, 30/59) ===
+  [C3.1] C3 ... agent_event agent=verifier_haiku status=error:schema
+ruler=0.58 reward=+0.13  tok=13802  retries=1  path: planner → solver_evidence_fast → web_search_tavily → solver_cot_mini →  (37.5s)
+
+=== run 326 (epoch 6, 31/59) ===
+  [C7.9] C7 ... ruler=0.92 reward=+0.62  tok=10752  retries=0  path: planner → solver_evidence_haiku → skip:evaluator → skip:memory → skip:  (38.4s)
+
+=== run 327 (epoch 6, 32/59) ===
+  [C6.4] C6 ... ruler=0.95 reward=+0.86  tok=2474  retries=0  path: planner → solver_concise_haiku → evaluator  (15.8s)
+
+=== run 328 (epoch 6, 33/59) ===
+  [C8.7] C8 ... ruler=0.98 reward=+0.89  tok=2307  retries=0  path: planner → solver_concise_haiku → evaluator  (13.8s)
+
+=== run 329 (epoch 6, 34/59) ===
+  [C7.5] C7 ... ruler=0.95 reward=+0.68  tok=7178  retries=0  path: planner → solver_evidence_mini → skip:evaluator → skip:memory → skip:w  (33.2s)
+
+=== run 330 (epoch 6, 35/59) ===
+  [C8.3] C8 ... ruler=0.92 reward=+0.84  tok=2175  retries=0  path: planner → solver_concise_haiku → evaluator  (10.7s)
+
+=== run 331 (epoch 6, 36/59) ===
+  [C6.7] C6 ... ruler=0.95 reward=+0.85  tok=2548  retries=0  path: planner → solver_concise_haiku → evaluator  (15.1s)
+
+=== run 332 (epoch 6, 37/59) ===
+  [C2.4] C2 ... ruler=0.92 reward=+0.62  tok=20769  retries=0  path: planner → solver_evidence_mini → skip:evaluator → skip:memory → skip:w  (75.5s)
+
+=== run 333 (epoch 6, 38/59) ===
+  [C1.7] C1 ... ruler=0.98 reward=+0.88  tok=2707  retries=0  path: planner → solver_concise_haiku → evaluator  (18.2s)
+
+=== run 334 (epoch 6, 39/59) ===
+  [C4.4] C4 ... ruler=0.92 reward=+0.62  tok=10301  retries=0  path: planner → solver_evidence_mini → skip:solver_concise_fast → skip:evalu  (62.7s)
+
+=== run 335 (epoch 6, 40/59) ===
+  [C3.6] C3 ... ruler=0.92 reward=+0.62  tok=14473  retries=0  path: planner → solver_evidence_haiku → web_search_exa → solver_evidence_fas  (45.9s)
+
+=== run 336 (epoch 6, 41/59) ===
+  [C8.2] C8 ... ruler=0.85 reward=+0.55  tok=20208  retries=0  path: planner → solver_concise_haiku → evaluator → solver_cot_fast → memory   (40.0s)
+
+=== run 337 (epoch 6, 42/59) ===
+  [C1.2] C1 ... ruler=0.95 reward=+0.65  tok=10119  retries=0  path: planner → solver_concise_haiku → skip:solver_concise_mini → skip:solve  (23.1s)
+
+=== run 338 (epoch 6, 43/59) ===
+  [C7.6] C7 ... ruler=0.95 reward=+0.65  tok=16543  retries=0  path: planner → solver_evidence_haiku → skip:evaluator → skip:web_search_exa  (61.1s)
+
+=== run 339 (epoch 6, 44/59) ===
+  [C4.3] C4 ... ruler=0.92 reward=+0.62  tok=11254  retries=0  path: planner → solver_evidence_haiku → skip:memory → skip:web_search_tavily  (60.9s)
+
+=== run 340 (epoch 6, 45/59) ===
+  [C2.3] C2 ... ruler=0.92 reward=+0.62  tok=15183  retries=0  path: planner → solver_evidence_mini → web_search_exa → solver_evidence_haik  (64.5s)
+
+=== run 341 (epoch 6, 46/59) ===
+  [C1.5] C1 ... ruler=0.95 reward=+0.85  tok=2758  retries=0  path: planner → solver_concise_haiku → web_search_tavily → skip:solver_conci  (13.1s)
+
+=== run 342 (epoch 6, 47/59) ===
+  [C2.7] C2 ... ruler=0.85 reward=+0.55  tok=11841  retries=0  path: planner → solver_evidence_haiku → skip:memory → skip:web_search_tavily  (41.7s)
+
+=== run 343 (epoch 6, 48/59) ===
+  [C3.5] C3 ... ruler=0.92 reward=+0.62  tok=10870  retries=0  path: planner → solver_evidence_mini → skip:web_search_exa → skip:solver_con  (34.5s)
+
+=== run 344 (epoch 6, 49/59) ===
+  [C4.6] C4 ... ruler=0.92 reward=+0.63  tok=7601  retries=0  path: planner → solver_evidence_mini → skip:solver_concise_haiku → skip:eval  (39.3s)
+
+=== run 345 (epoch 6, 50/59) ===
+  [C7.2] C7 ... ruler=0.92 reward=+0.67  tok=6562  retries=0  path: planner → solver_evidence_mini → skip:solver_concise_haiku → web_searc  (23.6s)
+
+=== run 346 (epoch 6, 51/59) ===
+  [C1.4] C1 ... ruler=0.95 reward=+0.84  tok=2848  retries=0  path: planner → solver_concise_haiku → web_search_tavily → skip:solver_conci  (16.1s)
+
+=== run 347 (epoch 6, 52/59) ===
+  [C2.5] C2 ... agent_event agent=web_search_tavily status=error:unknown
+ruler=0.08 reward=-0.32  tok=6615  retries=1  path: planner → solver_evidence_mini → skip:solver_concise_haiku → web_searc  (19.8s)
+
+=== run 348 (epoch 6, 53/59) ===
+  [C3.2] C3 ... ruler=0.22 reward=-0.06  tok=7445  retries=0  path: planner → solver_evidence_haiku → skip:evaluator → skip:web_search_tav  (29.5s)
+
+=== run 349 (epoch 6, 54/59) ===
+  [C5.6] C5 ... ruler=0.92 reward=+0.62  tok=27923  retries=0  path: planner → solver_concise_fast → solver_cot_haiku → web_search_tavily →  (77.3s)
+
+=== run 350 (epoch 6, 55/59) ===
+  [C6.5] C6 ... ruler=0.95 reward=+0.65  tok=13093  retries=0  path: planner → solver_concise_haiku → web_search_tavily → solver_cot_haiku   (38.2s)
+
+=== run 351 (epoch 6, 56/59) ===
+  [C5.2] C5 ... ruler=0.85 reward=+0.61  tok=6420  retries=0  path: planner → solver_cot_haiku → skip:solver_cot_fast → solver_evidence_fa  (37.0s)
+
+=== run 352 (epoch 6, 57/59) ===
+  [C8.6] C8 ... ruler=0.08 reward=-0.19  tok=7128  retries=0  path: planner → solver_evidence_fast → skip:solver_concise_haiku → evaluator  (23.0s)
+
+=== run 353 (epoch 6, 58/59) ===
+  [C7.10] C7 ... agent_event agent=verifier_haiku status=error:schema
+ruler=0.92 reward=+0.47  tok=27722  retries=1  path: planner → solver_evidence_fast → solver_concise_mini → skip:evaluator   (73.1s)
+
+=== run 354 (epoch 6, 59/59) ===
+  [C2.2] C2 ... ruler=0.92 reward=+0.62  tok=16778  retries=0  path: planner → solver_evidence_fast → solver_cot_mini → web_search_tavily →  (55.2s)
+
+
+Epoch 6 complete. Graph: 426 nodes.
+
+========== EPOCH 7/8 ==========
+=== run 355 (epoch 7, 1/59) ===
+  [C6.1] C6 ... ruler=0.95 reward=+0.65  tok=12013  retries=0  path: planner → solver_concise_haiku → memory → solver_cot_mini → skip:solve  (33.9s)
+
+=== run 356 (epoch 7, 2/59) ===
+  [C7.6] C7 ... agent_event agent=web_search_tavily status=error:unknown
+ruler=0.95 reward=+0.50  tok=30252  retries=1  path: planner → solver_concise_mini → solver_cot_mini → solver_concise_fast   (99.3s)
+
+=== run 357 (epoch 7, 3/59) ===
+  [C1.8] C1 ... ruler=0.95 reward=+0.73  tok=5890  retries=0  path: planner → memory → solver_concise_haiku → solver_evidence_fast → solve  (21.3s)
+
+=== run 358 (epoch 7, 4/59) ===
+  [C5.3] C5 ... ruler=0.15 reward=-0.05  tok=5258  retries=0  path: planner → solver_cot_fast → skip:solver_concise_haiku → skip:solver_co  (29.0s)
+
+=== run 359 (epoch 7, 5/59) ===
+  [C8.7] C8 ... ruler=0.98 reward=+0.68  tok=22790  retries=0  path: planner → memory → web_search_exa → web_search_tavily → solver_concise  (36.3s)
+
+=== run 360 (epoch 7, 6/59) ===
+  [C7.5] C7 ... ruler=0.92 reward=+0.62  tok=8681  retries=0  path: planner → solver_evidence_fast → skip:evaluator → skip:web_search_tavi  (45.4s)
+
+=== run 361 (epoch 7, 7/59) ===
+  [C4.6] C4 ... ruler=0.88 reward=+0.58  tok=12329  retries=0  path: planner → solver_cot_fast → skip:solver_evidence_fast → solver_evidenc  (52.5s)
+
+=== run 362 (epoch 7, 8/59) ===
+  [C2.5] C2 ... agent_event agent=web_search_tavily status=error:unknown
+agent_event agent=verifier_haiku status=error:schema
+ruler=0.92 reward=+0.32  tok=42207  retries=2  path: planner → solver_evidence_fast → skip:evaluator → memory → solver_evid  (92.3s)
+
+=== run 363 (epoch 7, 9/59) ===
+  [C1.7] C1 ... ruler=0.95 reward=+0.65  tok=9971  retries=0  path: planner → memory → solver_concise_fast → skip:solver_concise_haiku → s  (35.4s)
+
+=== run 364 (epoch 7, 10/59) ===
+  [C3.4] C3 ... ruler=0.05 reward=-0.20  tok=6683  retries=0  path: planner → solver_cot_haiku → skip:web_search_tavily → skip:memory → sk  (25.4s)
+
+=== run 365 (epoch 7, 11/59) ===
+  [C1.5] C1 ... ruler=0.92 reward=+0.67  tok=6763  retries=0  path: planner → skip:web_search_exa → skip:web_search_tavily → solver_concis  (20.3s)
+
+=== run 366 (epoch 7, 12/59) ===
+  [C2.1] C2 ... ruler=0.92 reward=+0.62  tok=12511  retries=0  path: planner → solver_cot_fast → solver_concise_mini → memory → skip:solver  (53.0s)
+
+=== run 367 (epoch 7, 13/59) ===
+  [C5.4] C5 ... ruler=0.42 reward=+0.12  tok=24607  retries=0  path: planner → solver_cot_mini → solver_cot_fast → skip:solver_concise_haik  (83.9s)
+
+=== run 368 (epoch 7, 14/59) ===
+  [C2.7] C2 ... ruler=0.92 reward=+0.62  tok=17405  retries=0  path: planner → solver_cot_fast → skip:solver_evidence_fast → skip:evaluator  (76.1s)
+
+=== run 369 (epoch 7, 15/59) ===
+  [C3.1] C3 ... ruler=0.95 reward=+0.65  tok=11554  retries=0  path: planner → solver_cot_fast → skip:solver_evidence_fast → skip:evaluator  (47.5s)
+
+=== run 370 (epoch 7, 16/59) ===
+  [C7.9] C7 ... agent_event agent=verifier_haiku status=error:schema
+ruler=0.92 reward=+0.47  tok=33938  retries=1  path: planner → solver_cot_fast → skip:solver_evidence_fast → solver_concise  (90.6s)
+
+=== run 371 (epoch 7, 17/59) ===
+  [C3.2] C3 ... ruler=0.35 reward=+0.05  tok=15391  retries=0  path: planner → solver_concise_mini → skip:evaluator → solver_cot_mini → web  (61.1s)
+
+=== run 372 (epoch 7, 18/59) ===
+  [C3.6] C3 ... ruler=0.20 reward=-0.04  tok=6489  retries=0  path: planner → solver_concise_haiku → skip:web_search_tavily → skip:memory   (38.3s)
+
+=== run 373 (epoch 7, 19/59) ===
+  [C4.1] C4 ... agent_event agent=verifier_haiku status=error:schema
+ruler=0.92 reward=+0.47  tok=31592  retries=1  path: planner → solver_cot_fast → skip:solver_evidence_fast → solver_concise  (78.7s)
+
+=== run 374 (epoch 7, 20/59) ===
+  [C5.5] C5 ... ruler=0.85 reward=+0.55  tok=12562  retries=0  path: planner → solver_concise_mini → solver_cot_mini → skip:solver_cot_fast  (35.7s)
+
+=== run 375 (epoch 7, 21/59) ===
+  [C7.3] C7 ... ruler=0.92 reward=+0.62  tok=11042  retries=0  path: planner → solver_evidence_fast → web_search_tavily → skip:solver_conci  (53.9s)
+
+=== run 376 (epoch 7, 22/59) ===
+  [C5.2] C5 ... ruler=0.05 reward=-0.04  tok=2480  retries=0  path: planner → skip:solver_concise_haiku → skip:solver_concise_fast → skip:  (14.2s)
+
+=== run 377 (epoch 7, 23/59) ===
+  [C8.8] C8 ... ruler=0.85 reward=+0.55  tok=9975  retries=0  path: planner → skip:web_search_exa → solver_concise_fast → skip:web_search_  (28.8s)
+
+=== run 378 (epoch 7, 24/59) ===
+  [C7.8] C7 ... ruler=0.85 reward=+0.55  tok=14883  retries=0  path: planner → solver_evidence_fast → web_search_tavily → solver_concise_fa  (39.2s)
+
+=== run 379 (epoch 7, 25/59) ===
+  [C1.4] C1 ... ruler=0.92 reward=+0.73  tok=5081  retries=0  path: planner → skip:web_search_tavily → skip:web_search_exa → memory → solv  (18.9s)
+
+=== run 380 (epoch 7, 26/59) ===
+  [C4.2] C4 ... ruler=0.92 reward=+0.62  tok=12880  retries=0  path: planner → solver_evidence_fast → skip:web_search_tavily → skip:evaluat  (64.3s)
+
+=== run 381 (epoch 7, 27/59) ===
+  [C6.6] C6 ... ruler=0.95 reward=+0.65  tok=15440  retries=0  path: planner → skip:web_search_tavily → memory → solver_cot_haiku → solver_  (45.4s)
+
+=== run 382 (epoch 7, 28/59) ===
+  [C1.1] C1 ... ruler=1.00 reward=+0.75  tok=6669  retries=0  path: planner → skip:web_search_exa → skip:web_search_tavily → solver_concis  (20.7s)
+
+=== run 383 (epoch 7, 29/59) ===
+  [C5.6] C5 ... ruler=0.92 reward=+0.62  tok=14673  retries=0  path: planner → solver_evidence_fast → solver_concise_mini → skip:solver_cot  (39.9s)
+
+=== run 384 (epoch 7, 30/59) ===
+  [C2.8] C2 ... ruler=0.92 reward=+0.62  tok=10870  retries=0  path: planner → solver_evidence_haiku → solver_cot_haiku → skip:solver_cot_f  (54.2s)
+
+=== run 385 (epoch 7, 31/59) ===
+  [C4.5] C4 ... ruler=0.92 reward=+0.62  tok=11801  retries=0  path: planner → solver_evidence_haiku → solver_cot_haiku → skip:solver_cot_f  (65.8s)
+
+=== run 386 (epoch 7, 32/59) ===
+  [C1.6] C1 ... ruler=0.95 reward=+0.78  tok=4623  retries=0  path: planner → skip:web_search_exa → skip:web_search_tavily → solver_cot_ha  (27.8s)
+
+=== run 387 (epoch 7, 33/59) ===
+  [C6.4] C6 ... ruler=0.95 reward=+0.74  tok=5582  retries=0  path: planner → solver_cot_haiku → solver_concise_fast → skip:web_search_tav  (29.0s)
+
+=== run 388 (epoch 7, 34/59) ===
+  [C4.3] C4 ... ruler=0.68 reward=+0.38  tok=15454  retries=0  path: planner → solver_concise_fast → solver_cot_haiku → skip:solver_cot_fas  (65.4s)
+
+=== run 389 (epoch 7, 35/59) ===
+  [C8.2] C8 ... ruler=0.95 reward=+0.65  tok=11026  retries=0  path: planner → solver_cot_haiku → skip:evaluator → solver_evidence_fast → s  (31.6s)
+
+=== run 390 (epoch 7, 36/59) ===
+  [C8.4] C8 ... ruler=0.95 reward=+0.79  tok=4164  retries=0  path: planner → skip:web_search_exa → skip:web_search_tavily → skip:memory →  (18.5s)
+
+=== run 391 (epoch 7, 37/59) ===
+  [C7.4] C7 ... ruler=0.92 reward=+0.62  tok=11849  retries=0  path: planner → solver_evidence_fast → skip:web_search_tavily → skip:evaluat  (52.1s)
+
+=== run 392 (epoch 7, 38/59) ===
+  [C1.3] C1 ... ruler=0.95 reward=+0.65  tok=8012  retries=0  path: planner → skip:web_search_exa → skip:web_search_tavily → solver_concis  (28.0s)
+
+=== run 393 (epoch 7, 39/59) ===
+  [C7.7] C7 ... ruler=0.92 reward=+0.62  tok=10839  retries=0  path: planner → solver_evidence_haiku → skip:web_search_tavily → skip:evalua  (53.3s)
+
+=== run 394 (epoch 7, 40/59) ===
+  [C8.6] C8 ... ruler=0.98 reward=+0.87  tok=2898  retries=0  path: planner → skip:memory → skip:web_search_tavily → solver_cot_haiku → ev  (14.0s)
+
+=== run 395 (epoch 7, 41/59) ===
+  [C6.3] C6 ... ruler=0.98 reward=+0.86  tok=3276  retries=0  path: planner → solver_cot_haiku → evaluator  (17.2s)
+
+=== run 396 (epoch 7, 42/59) ===
+  [C8.5] C8 ... agent_event agent=web_search_tavily status=error:unknown
+ruler=0.85 reward=+0.40  tok=14474  retries=1  path: planner → solver_cot_haiku → skip:solver_evidence_haiku → evaluator →   (41.5s)
+
+=== run 397 (epoch 7, 43/59) ===
+  [C7.2] C7 ... ruler=0.92 reward=+0.67  tok=6583  retries=0  path: planner → skip:memory → skip:web_search_exa → solver_evidence_haiku →   (25.2s)
+
+=== run 398 (epoch 7, 44/59) ===
+  [C2.3] C2 ... ruler=0.92 reward=+0.62  tok=8487  retries=0  path: planner → solver_evidence_haiku → skip:web_search_tavily → skip:evalua  (40.2s)
+
+=== run 399 (epoch 7, 45/59) ===
+  [C6.7] C6 ... ruler=0.95 reward=+0.76  tok=5005  retries=0  path: planner → skip:memory → skip:web_search_tavily → skip:web_search_exa →  (23.4s)
+
+=== run 400 (epoch 7, 46/59) ===
+  [C4.4] C4 ... ruler=0.88 reward=+0.58  tok=30328  retries=0  path: planner → solver_evidence_haiku → web_search_tavily → solver_concise_m  (95.1s)
+
+=== run 401 (epoch 7, 47/59) ===
+  [C6.8] C6 ... ruler=0.92 reward=+0.67  tok=6643  retries=0  path: planner → skip:memory → skip:web_search_tavily → skip:web_search_exa →  (25.4s)
+
+=== run 402 (epoch 7, 48/59) ===
+  [C3.5] C3 ... ruler=0.85 reward=+0.66  tok=5093  retries=0  path: planner → skip:memory → skip:web_search_exa → solver_cot_fast → skip:w  (25.6s)
+
+=== run 403 (epoch 7, 49/59) ===
+  [C3.3] C3 ... ruler=0.92 reward=+0.62  tok=13474  retries=0  path: planner → solver_cot_fast → skip:solver_cot_haiku → memory → solver_ev  (54.3s)
+
+=== run 404 (epoch 7, 50/59) ===
+  [C6.2] C6 ... ruler=0.02 reward=-0.09  tok=2969  retries=0  path: planner → skip:memory → skip:web_search_tavily → skip:web_search_exa →  (11.8s)
+
+=== run 405 (epoch 7, 51/59) ===
+  [C6.5] C6 ... ruler=0.92 reward=+0.62  tok=13539  retries=0  path: planner → memory → solver_cot_fast → solver_concise_haiku → solver_cot  (35.4s)
+
+=== run 406 (epoch 7, 52/59) ===
+  [C8.1] C8 ... ruler=0.95 reward=+0.77  tok=4794  retries=0  path: planner → solver_cot_haiku → skip:web_search_tavily → evaluator  (23.6s)
+
+=== run 407 (epoch 7, 53/59) ===
+  [C2.6] C2 ... ruler=0.92 reward=+0.66  tok=6924  retries=0  path: planner → skip:memory → skip:web_search_exa → solver_cot_fast → skip:w  (36.2s)
+
+=== run 408 (epoch 7, 54/59) ===
+  [C8.3] C8 ... ruler=0.95 reward=+0.65  tok=9408  retries=0  path: planner → solver_cot_haiku → skip:web_search_tavily → solver_cot_fast   (35.1s)
+
+=== run 409 (epoch 7, 55/59) ===
+  [C1.2] C1 ... ruler=0.95 reward=+0.65  tok=17020  retries=0  path: planner → solver_concise_fast → solver_evidence_fast → skip:web_search  (41.3s)
+
+=== run 410 (epoch 7, 56/59) ===
+  [C5.1] C5 ... ruler=0.95 reward=+0.65  tok=10209  retries=0  path: planner → solver_evidence_mini → solver_cot_haiku → solver_cot_mini →   (53.5s)
+
+=== run 411 (epoch 7, 57/59) ===
+  [C2.4] C2 ... ruler=0.95 reward=+0.76  tok=5192  retries=0  path: planner → solver_cot_fast → skip:solver_cot_haiku → evaluator  (29.9s)
+
+=== run 412 (epoch 7, 58/59) ===
+  [C7.10] C7 ... ruler=0.35 reward=+0.05  tok=9673  retries=0  path: planner → solver_cot_fast → evaluator → skip:solver_cot_haiku → skip:s  (39.1s)
+
+=== run 413 (epoch 7, 59/59) ===
+  [C2.2] C2 ... ruler=0.95 reward=+0.65  tok=14637  retries=0  path: planner → skip:memory → skip:web_search_exa → solver_evidence_fast → s  (62.4s)
+
+
+Epoch 7 complete. Graph: 441 nodes.
+
+========== EPOCH 8/8 ==========
+=== run 414 (epoch 8, 1/59) ===
+  [C1.5] C1 ... ruler=0.95 reward=+0.83  tok=3264  retries=0  path: planner → skip:web_search_tavily → skip:memory → skip:web_search_exa →  (17.8s)
+
+=== run 415 (epoch 8, 2/59) ===
+  [C2.1] C2 ... ruler=0.92 reward=+0.62  tok=14682  retries=0  path: planner → skip:memory → skip:web_search_exa → solver_evidence_fast → s  (54.6s)
+
+=== run 416 (epoch 8, 3/59) ===
+  [C6.8] C6 ... ruler=0.95 reward=+0.83  tok=3221  retries=0  path: planner → solver_cot_haiku → evaluator  (18.8s)
+
+=== run 417 (epoch 8, 4/59) ===
+  [C2.7] C2 ... agent_event agent=verifier_haiku status=error:schema
+ruler=0.92 reward=+0.47  tok=16331  retries=1  path: planner → skip:memory → skip:web_search_exa → solver_evidence_haiku →   (33.2s)
+
+=== run 418 (epoch 8, 5/59) ===
+  [C8.5] C8 ... ruler=0.68 reward=+0.38  tok=10044  retries=0  path: planner → solver_cot_haiku → evaluator → skip:memory → skip:web_search  (41.3s)
+
+=== run 419 (epoch 8, 6/59) ===
+  [C1.7] C1 ... ruler=0.95 reward=+0.69  tok=7042  retries=0  path: planner → skip:web_search_tavily → skip:memory → skip:web_search_exa →  (29.1s)
+
+=== run 420 (epoch 8, 7/59) ===
+  [C8.3] C8 ... ruler=0.92 reward=+0.77  tok=4129  retries=0  path: planner → memory → solver_cot_mini → skip:solver_concise_fast → skip:s  (20.1s)
+
+=== run 421 (epoch 8, 8/59) ===
+  [C4.5] C4 ... ruler=0.88 reward=+0.58  tok=27047  retries=0  path: planner → solver_evidence_fast → memory → solver_evidence_mini → web_s  (104.5s)
+
+=== run 422 (epoch 8, 9/59) ===
+  [C7.4] C7 ... ruler=0.15 reward=-0.15  tok=21359  retries=0  path: planner → skip:web_search_tavily → solver_evidence_mini → skip:evaluat  (83.9s)
+
+=== run 423 (epoch 8, 10/59) ===
+  [C3.3] C3 ... ruler=0.35 reward=+0.05  tok=13645  retries=0  path: planner → solver_evidence_fast → web_search_exa → skip:solver_concise_  (45.0s)
+
+=== run 424 (epoch 8, 11/59) ===
+  [C3.2] C3 ... ruler=0.22 reward=-0.08  tok=11937  retries=0  path: planner → skip:memory → skip:web_search_exa → solver_evidence_haiku →   (35.5s)
+
+=== run 425 (epoch 8, 12/59) ===
+  [C5.6] C5 ... ruler=0.35 reward=+0.24  tok=2956  retries=0  path: planner → solver_concise_fast → skip:solver_evidence_mini → skip:solve  (18.4s)
+
+=== run 426 (epoch 8, 13/59) ===
+  [C8.8] C8 ... ruler=0.95 reward=+0.65  tok=15211  retries=0  path: planner → memory → web_search_exa → web_search_tavily → solver_concise  (34.7s)
+
+=== run 427 (epoch 8, 14/59) ===
+  [C8.2] C8 ... ruler=0.95 reward=+0.81  tok=3601  retries=0  path: planner → skip:web_search_tavily → skip:memory → skip:web_search_exa →  (18.0s)
+
+=== run 428 (epoch 8, 15/59) ===
+  [C2.3] C2 ... ruler=0.88 reward=+0.58  tok=21014  retries=0  path: planner → web_search_exa → solver_concise_haiku → solver_cot_fast → sk  (78.5s)
+
+=== run 429 (epoch 8, 16/59) ===
+  [C7.3] C7 ... ruler=0.78 reward=+0.48  tok=14863  retries=0  path: planner → web_search_exa → solver_concise_fast → solver_concise_haiku   (50.6s)
+
+=== run 430 (epoch 8, 17/59) ===
+  [C5.2] C5 ... ruler=0.92 reward=+0.62  tok=18868  retries=0  path: planner → solver_cot_haiku → skip:solver_concise_fast → solver_concise  (69.1s)
+
+=== run 431 (epoch 8, 18/59) ===
+  [C6.4] C6 ... ruler=0.92 reward=+0.75  tok=4608  retries=0  path: planner → skip:web_search_tavily → skip:memory → skip:web_search_exa →  (23.3s)
+
+=== run 432 (epoch 8, 19/59) ===
+  [C6.3] C6 ... ruler=0.85 reward=+0.64  tok=5477  retries=0  path: planner → skip:web_search_tavily → skip:memory → skip:web_search_exa →  (27.1s)
+
+=== run 433 (epoch 8, 20/59) ===
+  [C8.1] C8 ... ruler=0.95 reward=+0.81  tok=3761  retries=0  path: planner → skip:web_search_tavily → skip:memory → skip:web_search_exa →  (18.5s)
+
+=== run 434 (epoch 8, 21/59) ===
+  [C1.4] C1 ... ruler=0.95 reward=+0.73  tok=5998  retries=0  path: planner → skip:web_search_tavily → memory → solver_evidence_haiku → sk  (23.5s)
+
+=== run 435 (epoch 8, 22/59) ===
+  [C2.6] C2 ... ruler=0.85 reward=+0.55  tok=15090  retries=0  path: planner → solver_concise_mini → solver_cot_mini → skip:solver_evidence  (47.6s)
+
+=== run 436 (epoch 8, 23/59) ===
+  [C5.1] C5 ... ruler=0.90 reward=+0.60  tok=11590  retries=0  path: planner → solver_evidence_fast → solver_cot_haiku → solver_evidence_mi  (41.8s)
+
+=== run 437 (epoch 8, 24/59) ===
+  [C7.7] C7 ... ruler=0.92 reward=+0.62  tok=13694  retries=0  path: planner → solver_concise_mini → solver_cot_haiku → skip:solver_evidenc  (55.0s)
+
+=== run 438 (epoch 8, 25/59) ===
+  [C7.6] C7 ... ruler=0.92 reward=+0.62  tok=12455  retries=0  path: planner → solver_concise_mini → solver_cot_haiku → skip:solver_evidenc  (61.7s)
+
+=== run 439 (epoch 8, 26/59) ===
+  [C2.2] C2 ... ruler=0.92 reward=+0.62  tok=10713  retries=0  path: planner → solver_concise_mini → solver_cot_haiku → skip:solver_evidenc  (44.6s)
+
+=== run 440 (epoch 8, 27/59) ===
+  [C2.8] C2 ... ruler=0.92 reward=+0.62  tok=7985  retries=0  path: planner → solver_concise_mini → solver_cot_haiku → skip:solver_evidenc  (47.9s)
+
+=== run 441 (epoch 8, 28/59) ===
+  [C3.5] C3 ... ruler=0.80 reward=+0.60  tok=5464  retries=0  path: planner → solver_cot_fast → solver_cot_haiku → skip:solver_evidence_ha  (23.7s)
+
+=== run 442 (epoch 8, 29/59) ===
+  [C4.6] C4 ... ruler=0.30 reward=+0.00  tok=12303  retries=0  path: planner → solver_concise_mini → solver_cot_haiku → skip:solver_cot_fas  (56.6s)
+
+=== run 443 (epoch 8, 30/59) ===
+  [C5.4] C5 ... agent_event agent=web_search_tavily status=error:unknown
+ruler=0.85 reward=+0.40  tok=15277  retries=1  path: planner → solver_evidence_mini → solver_concise_haiku → skip:solver_co  (50.4s)
+
+=== run 444 (epoch 8, 31/59) ===
+  [C7.5] C7 ... ruler=0.92 reward=+0.62  tok=15311  retries=0  path: planner → web_search_exa → solver_concise_mini → solver_concise_fast →  (43.8s)
+
+=== run 445 (epoch 8, 32/59) ===
+  [C1.1] C1 ... ruler=0.95 reward=+0.89  tok=1699  retries=0  path: planner → skip:memory → skip:web_search_tavily → skip:web_search_exa →  (10.2s)
+
+=== run 446 (epoch 8, 33/59) ===
+  [C6.1] C6 ... ruler=0.95 reward=+0.65  tok=17074  retries=0  path: planner → solver_cot_fast → memory → solver_concise_fast → solver_evid  (45.0s)
+
+=== run 447 (epoch 8, 34/59) ===
+  [C1.6] C1 ... ruler=0.92 reward=+0.62  tok=12518  retries=0  path: planner → skip:memory → skip:web_search_tavily → skip:web_search_exa →  (54.0s)
+
+=== run 448 (epoch 8, 35/59) ===
+  [C7.10] C7 ... ruler=0.92 reward=+0.62  tok=13476  retries=0  path: planner → web_search_exa → solver_cot_haiku → solver_concise_mini → sk  (48.8s)
+
+=== run 449 (epoch 8, 36/59) ===
+  [C6.7] C6 ... ruler=0.95 reward=+0.65  tok=23481  retries=0  path: planner → memory → web_search_exa → web_search_tavily → solver_concise  (59.0s)
+
+=== run 450 (epoch 8, 37/59) ===
+  [C6.2] C6 ... ruler=0.90 reward=+0.66  tok=6402  retries=0  path: planner → skip:memory → skip:web_search_tavily → skip:web_search_exa →  (28.2s)
+
+=== run 451 (epoch 8, 38/59) ===
+  [C2.4] C2 ... ruler=0.95 reward=+0.65  tok=9104  retries=0  path: planner → web_search_exa → solver_cot_fast → solver_evidence_fast → sk  (30.9s)
+
+=== run 452 (epoch 8, 39/59) ===
+  [C3.6] C3 ... ruler=0.68 reward=+0.38  tok=19371  retries=0  path: planner → web_search_exa → solver_cot_mini → solver_concise_mini → ski  (71.1s)
+
+=== run 453 (epoch 8, 40/59) ===
+  [C6.5] C6 ... ruler=0.95 reward=+0.89  tok=1531  retries=0  path: planner → skip:memory → skip:web_search_tavily → skip:web_search_exa →  (13.7s)
+
+=== run 454 (epoch 8, 41/59) ===
+  [C6.6] C6 ... ruler=0.95 reward=+0.66  tok=7722  retries=0  path: planner → solver_concise_fast → memory → solver_cot_haiku → skip:solve  (28.3s)
+
+=== run 455 (epoch 8, 42/59) ===
+  [C7.2] C7 ... ruler=0.92 reward=+0.71  tok=5483  retries=0  path: planner → solver_cot_fast → skip:web_search_tavily → skip:memory → ski  (26.8s)
+
+=== run 456 (epoch 8, 43/59) ===
+  [C3.4] C3 ... ruler=0.25 reward=+0.05  tok=5390  retries=0  path: planner → solver_cot_fast → skip:web_search_tavily → skip:memory → sol  (21.2s)
+
+=== run 457 (epoch 8, 44/59) ===
+  [C3.1] C3 ... ruler=0.92 reward=+0.63  tok=7759  retries=0  path: planner → solver_concise_fast → solver_cot_fast → skip:memory → solver  (29.6s)
+
+=== run 458 (epoch 8, 45/59) ===
+  [C1.2] C1 ... ruler=0.85 reward=+0.55  tok=8057  retries=0  path: planner → skip:memory → skip:web_search_tavily → skip:web_search_exa →  (27.4s)
+
+=== run 459 (epoch 8, 46/59) ===
+  [C1.8] C1 ... ruler=0.95 reward=+0.86  tok=2486  retries=0  path: planner → skip:web_search_tavily → skip:memory → skip:web_search_exa →  (15.5s)
+
+=== run 460 (epoch 8, 47/59) ===
+  [C4.3] C4 ... ruler=0.85 reward=+0.55  tok=8402  retries=0  path: planner → solver_concise_fast → solver_cot_fast → skip:memory → solver  (45.7s)
+
+=== run 461 (epoch 8, 48/59) ===
+  [C4.4] C4 ... agent_event agent=solver_concise_fast status=error:schema
+agent_event agent=solver_concise_fast status=error:schema
+  ERROR  57.3s  (InvalidAgentOutputError)
+
+=== run 462 (epoch 8, 49/59) ===
+  [C4.1] C4 ... ruler=0.55 reward=+0.25  tok=18686  retries=0  path: planner → solver_concise_fast → solver_cot_fast → skip:memory → solver  (72.8s)
+
+=== run 463 (epoch 8, 50/59) ===
+  [C1.3] C1 ... ruler=0.95 reward=+0.65  tok=8252  retries=0  path: planner → solver_evidence_mini → solver_concise_fast → web_search_exa   (23.7s)
+
+=== run 464 (epoch 8, 51/59) ===
+  [C8.7] C8 ... ruler=0.95 reward=+0.78  tok=4571  retries=0  path: planner → skip:memory → skip:web_search_tavily → skip:web_search_exa →  (25.0s)
+
+=== run 465 (epoch 8, 52/59) ===
+  [C7.8] C7 ... ruler=0.95 reward=+0.65  tok=12421  retries=0  path: planner → web_search_exa → solver_evidence_haiku → solver_cot_mini → s  (35.1s)
+
+=== run 466 (epoch 8, 53/59) ===
+  [C4.2] C4 ... ruler=0.92 reward=+0.62  tok=12707  retries=0  path: planner → web_search_exa → solver_evidence_fast → solver_evidence_mini  (50.2s)
+
+=== run 467 (epoch 8, 54/59) ===
+  [C8.6] C8 ... ruler=0.95 reward=+0.72  tok=6228  retries=0  path: planner → skip:memory → skip:web_search_tavily → skip:web_search_exa →  (20.0s)
+
+=== run 468 (epoch 8, 55/59) ===
+  [C8.4] C8 ... ruler=0.95 reward=+0.79  tok=4284  retries=0  path: planner → memory → solver_evidence_fast → skip:solver_concise_fast → s  (16.3s)
+
+=== run 469 (epoch 8, 56/59) ===
+  [C7.9] C7 ... ruler=0.85 reward=+0.55  tok=22460  retries=0  path: planner → web_search_exa → solver_evidence_mini → solver_cot_fast → sk  (81.2s)
+
+=== run 470 (epoch 8, 57/59) ===
+  [C5.3] C5 ... ruler=0.92 reward=+0.62  tok=17904  retries=0  path: planner → solver_evidence_haiku → solver_concise_fast → solver_cot_min  (53.6s)
+
+=== run 471 (epoch 8, 58/59) ===
+  [C2.5] C2 ... agent_event agent=web_search_tavily status=error:unknown
+ruler=0.01 reward=-0.27  tok=3387  retries=1  path: planner → web_search_exa → skip:solver_concise_haiku → skip:solver_con  (16.0s)
+
+=== run 472 (epoch 8, 59/59) ===
+  [C5.5] C5 ... ruler=0.92 reward=+0.62  tok=17086  retries=0  path: planner → solver_cot_haiku → solver_cot_mini → web_search_exa → solver  (63.5s)
+
+
+Epoch 8 complete. Graph: 443 nodes.
+
+Results written to /Users/Nicole/Documents/01_research/02_Agents/policy_framework/agensflow/experiments/e07_skill_variants/postconfig_v1/RESULTS.md
+
+═══ AgensFlow session report — chunk-9 sustained traffic + governance ═══
+Runs: 472  (471 ok, 0 halted-by-policy, 1 errored)
+Total tokens: 5,579,275  Runtime: 15223.9s
+
+Per-agent activity (rolled up across runs):
+  planner                            472 calls    208,389 tok  100.0% ok
+  solver_cot_mini                    310 calls    431,195 tok  100.0% ok
+  solver_concise_haiku               285 calls    463,538 tok  100.0% ok
+  solver_cot_fast                    280 calls    584,797 tok  99.6% ok
+      ↳ errors: schema=1
+  solver_concise_fast                262 calls    271,976 tok  99.2% ok
+      ↳ errors: schema=2
+  solver_cot_haiku                   252 calls    676,653 tok  100.0% ok
+  solver_concise_mini                249 calls    216,812 tok  100.0% ok
+  solver_evidence_fast               244 calls    249,664 tok  100.0% ok
+  solver_evidence_haiku              238 calls    437,293 tok  100.0% ok
+  evaluator                          237 calls    289,300 tok  100.0% ok
+  solver_evidence_mini               231 calls    244,288 tok  100.0% ok
+  memory                             230 calls    158,672 tok  100.0% ok
+  web_search_exa                     218 calls    327,000 tok  100.0% ok
+  web_search_tavily                  216 calls    108,000 tok  96.8% ok
+      ↳ errors: unknown=7
+  verifier_fast                      192 calls    341,090 tok  100.0% ok
+  verifier_haiku                     184 calls    570,608 tok  91.8% ok
+      ↳ errors: schema=15
+
+Session report saved to /Users/Nicole/Documents/01_research/02_Agents/policy_framework/agensflow/experiments/e07_skill_variants/postconfig_v1/session_report.json

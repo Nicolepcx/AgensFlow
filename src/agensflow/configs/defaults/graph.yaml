@@ -1,0 +1,14 @@
+# Default LangGraph builder configuration. Graph-builder-specific
+# knobs only — the substrate routing knobs live on RouterConfig and
+# PolicyGraphConfig.
+#
+# See `agensflow/runtime/graph/README.md` for per-knob guidance.
+
+# LangGraph recursion-limit math:
+#   recursion_limit = max(floor, multiplier * max_steps + buffer)
+# Each substrate "step" triggers multiple LangGraph accounting events
+# (router → Command → agent → Instructor internals); the multiplier
+# is the empirical worst-case budget per step.
+recursion_limit_floor: 200
+recursion_limit_per_step_multiplier: 12
+recursion_limit_buffer: 32

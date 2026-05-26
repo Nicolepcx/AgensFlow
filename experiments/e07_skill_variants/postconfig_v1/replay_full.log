@@ -1,0 +1,77 @@
+  [20/472]  judge_calls~60  elapsed=349s  eta=452s
+  [40/472]  judge_calls~120  elapsed=1070s  eta=432s
+  [60/472]  judge_calls~180  elapsed=1914s  eta=412s
+  [80/472]  judge_calls~240  elapsed=2837s  eta=392s
+  [100/472]  judge_calls~300  elapsed=3650s  eta=372s
+  [120/472]  judge_calls~360  elapsed=4447s  eta=352s
+  [140/472]  judge_calls~420  elapsed=5307s  eta=332s
+  [160/472]  judge_calls~480  elapsed=6126s  eta=312s
+  [180/472]  judge_calls~540  elapsed=6920s  eta=292s
+  [200/472]  judge_calls~600  elapsed=7694s  eta=272s
+  [220/472]  judge_calls~660  elapsed=8473s  eta=252s
+  [240/472]  judge_calls~720  elapsed=9298s  eta=232s
+  [260/472]  judge_calls~780  elapsed=10154s  eta=212s
+  [280/472]  judge_calls~840  elapsed=10968s  eta=192s
+  [300/472]  judge_calls~900  elapsed=11786s  eta=172s
+  [320/472]  judge_calls~960  elapsed=12565s  eta=152s
+  [340/472]  judge_calls~1020  elapsed=13352s  eta=132s
+  [360/472]  judge_calls~1080  elapsed=14119s  eta=112s
+  [380/472]  judge_calls~1140  elapsed=14936s  eta=92s
+  [400/472]  judge_calls~1200  elapsed=15685s  eta=72s
+  [420/472]  judge_calls~1260  elapsed=16448s  eta=52s
+  [440/472]  judge_calls~1320  elapsed=17233s  eta=32s
+  [460/472]  judge_calls~1380  elapsed=18083s  eta=12s
+  [472/472]  judge_calls~1416  elapsed=18580s  eta=0s
+Source:  /Users/Nicole/Documents/01_research/02_Agents/policy_framework/agensflow/experiments/e07_skill_variants/postconfig_v1/results_agensflow.jsonl
+Output:  experiments/e07_skill_variants/postconfig_v1/replay_full.jsonl
+Judges:  ['anthropic/claude-haiku-4.5', 'openai/gpt-5.4-mini', 'qwen/qwen3.6-flash']
+Per-judge modes: {'qwen/qwen3.6-flash': 'json'}
+Per-judge extra_body overrides: {'openai/gpt-5.4-mini': {}}
+Default extra_body: {'provider': {'require_parameters': True}}
+Axis weights: {'goal_achievement': 0.3, 'grounding': 0.3, 'coordination': 0.2, 'recovery': 0.2}
+
+Loaded 472 records.
+
+Re-scoring 472 trajectories sequentially...
+Estimated time: ~31-47 min at typical judge latency.
+
+
+Wrote 472 comparison records to experiments/e07_skill_variants/postconfig_v1/replay_full.jsonl
+
+════════════════════════════════════════════════════════════════════════════════
+Chunk-11 reward replay — summary
+════════════════════════════════════════════════════════════════════════════════
+Trajectories re-scored: 471/472 (failed: 1)
+
+Judge axis-compliance (463 multi-trajectory groups):
+    anthropic/claude-haiku-4.5                463/463  (100%) returned axes
+    openai/gpt-5.4-mini                       462/462  (100%) returned axes
+    qwen/qwen3.6-flash                        462/462  (100%) returned axes
+
+Mean Δ (new − original) across all trajectories: +0.007
+
+Per scenario class:
+  C1     n= 64  orig=0.86  new=0.84  Δ=-0.02  axis_σ=0.07  conf=0.76
+  C2     n= 64  orig=0.79  new=0.79  Δ=+0.01  axis_σ=0.10  conf=0.68
+  C3     n= 48  orig=0.63  new=0.72  Δ=+0.09  axis_σ=0.13  conf=0.54
+  C4     n= 47  orig=0.75  new=0.79  Δ=+0.04  axis_σ=0.08  conf=0.73
+  C5     n= 48  orig=0.73  new=0.72  Δ=-0.01  axis_σ=0.12  conf=0.53
+  C6     n= 64  orig=0.82  new=0.82  Δ=-0.00  axis_σ=0.08  conf=0.73
+  C7     n= 72  orig=0.81  new=0.81  Δ=-0.00  axis_σ=0.09  conf=0.70
+  C8     n= 64  orig=0.87  new=0.85  Δ=-0.01  axis_σ=0.08  conf=0.72
+
+Per epoch (Δ = new − original mean RULER):
+  epoch 1  n= 59  orig=0.73  new=0.72  Δ=-0.01  conf=0.66
+  epoch 2  n= 59  orig=0.81  new=0.79  Δ=-0.02  conf=0.67
+  epoch 3  n= 59  orig=0.77  new=0.79  Δ=+0.03  conf=0.65
+  epoch 4  n= 59  orig=0.81  new=0.80  Δ=-0.01  conf=0.66
+  epoch 5  n= 59  orig=0.78  new=0.81  Δ=+0.03  conf=0.68
+  epoch 6  n= 59  orig=0.80  new=0.83  Δ=+0.03  conf=0.73
+  epoch 7  n= 59  orig=0.82  new=0.83  Δ=+0.01  conf=0.70
+  epoch 8  n= 58  orig=0.82  new=0.82  Δ=+0.00  conf=0.70
+
+Headline: chunk-9 quality-improvement claim under upgraded reward
+  Original (single-judge haiku): epoch1=0.73 → epoch8=0.82  (Δ +0.09)
+  New (cross-judge + per-axis):  epoch1=0.72 → epoch8=0.82  (Δ +0.10)
+
+  Verdict: SURVIVES — quality-improvement claim holds under bias mitigation.

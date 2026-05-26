@@ -1,0 +1,58 @@
+{
+  "task_id": "C2.7",
+  "status": "completed",
+  "runtime_seconds": 7.077947625890374,
+  "total_tokens": 2005,
+  "n_calls": 3,
+  "skip_count": 11,
+  "agents": [
+    {
+      "agent": "planner",
+      "n_invocations": 1,
+      "n_successes": 1,
+      "n_failures": 0,
+      "total_tokens": 531,
+      "mean_latency_seconds": 3.944428874645382,
+      "error_reasons": {},
+      "models": [
+        "openai/gpt-5.4-nano-20260317"
+      ]
+    },
+    {
+      "agent": "solver_evidence_mini",
+      "n_invocations": 1,
+      "n_successes": 1,
+      "n_failures": 0,
+      "total_tokens": 788,
+      "mean_latency_seconds": 1.2992693344131112,
+      "error_reasons": {},
+      "models": [
+        "openai/gpt-5.4-mini-20260317"
+      ]
+    },
+    {
+      "agent": "evaluator",
+      "n_invocations": 1,
+      "n_successes": 1,
+      "n_failures": 0,
+      "total_tokens": 686,
+      "mean_latency_seconds": 1.8342494168318808,
+      "error_reasons": {},
+      "models": [
+        "openai/gpt-5.4-nano-20260317"
+      ]
+    }
+  ],
+  "governance_violations": [],
+  "policy_graph_backed_up": true,
+  "ruler_score": 0.55,
+  "hybrid_reward": 0.4748125000000001,
+  "halt_reason": null,
+  "suggested_fix": null,
+  "metadata": {
+    "scenario_class": "C2",
+    "epoch": 5,
+    "run_index": 270,
+    "expected_optimal_variant": "solver_haiku"
+  }
+}

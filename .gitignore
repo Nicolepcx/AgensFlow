@@ -1,0 +1,68 @@
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+wheels/
+*.egg-info/
+.installed.cfg
+*.egg
+
+# Virtual environments
+.venv/
+venv/
+env/
+ENV/
+# Local convention: a venv created via `python3 -m venv agensflow` lives at
+# the repo root and shares its name with the project. Ignore it explicitly.
+/agensflow/
+!/src/agensflow/
+
+# Testing
+.pytest_cache/
+.coverage
+.coverage.*
+htmlcov/
+.tox/
+.mypy_cache/
+.ruff_cache/
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+.DS_Store
+
+# Environment
+.env
+.env.*
+!.env.example
+
+# Documentation builds
+docs/_build/
+site/
+
+# Trace artifacts (generated at runtime)
+traces/
+*.trace.jsonl
+
+# Retired upstream benchmark clone (chunk-12). Kept in commit 4fb956e
+# history for reference; not part of active development.
+/deepplanning_benchmark/
+
+# Internal planning notes — not for public consumption. Roadmaps,
+# labor estimates, chunk-internal references, in-flight open questions.
+/docs/internal/

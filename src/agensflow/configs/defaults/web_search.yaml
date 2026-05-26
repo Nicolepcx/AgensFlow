@@ -1,0 +1,33 @@
+# Default configuration for the web_search module.
+#
+# Override any subset of these in your own YAML; pass it via
+# `load_config("your.yaml")` or your experiment runner's --config flag.
+# Unspecified keys fall through to these defaults.
+#
+# Full documentation of every knob: src/agensflow/runtime/web_search/README.md
+
+# Exa retry + backoff
+exa_max_retries: 4              # attempts before giving up on rate-limit
+exa_backoff_base_s: 1.0         # initial sleep between retries (seconds)
+exa_backoff_cap_s: 30.0         # hard cap on per-retry sleep
+
+# Exa argument clamping (prevents expensive calls during exploration)
+exa_max_results: 3              # cap on numResults sent to Exa
+exa_context_max_chars: 6000     # cap on contextMaxCharacters sent to Exa
+
+# Exa cost accounting (synthetic token-equivalent for the hybrid reward)
+exa_synthetic_token_cost: 1500  # ~$0.005/call equivalent
+
+# Tavily retry + backoff
+tavily_max_retries: 4
+tavily_backoff_base_s: 1.0
+tavily_backoff_cap_s: 30.0
+
+# Tavily argument clamping
+tavily_max_results: 5
+
+# Tavily cost accounting
+tavily_synthetic_token_cost: 500  # ~$0.001-0.002/call equivalent
+
+# HTTP transport
+http_timeout_s: 20.0            # per-request timeout (both providers)

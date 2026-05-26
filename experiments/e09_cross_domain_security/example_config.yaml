@@ -1,0 +1,34 @@
+# e09 cross-domain security validation config.
+# Mirrors e07's example_config.yaml (chunk-9 settings) verbatim — the
+# cross-domain claim is about transfer of the SAME mechanism, so the
+# config knobs are inherited unchanged. Only the corpus + task pool
+# differ between e07 and e09.
+
+router:
+  max_steps: 18                # chunk-9 variant pool needs headroom
+  enable_skip: true            # main run: let policy learn coordination *choice*
+  enable_router_logging: false # flip on only for debugging recursion bugs
+
+policy_graph:
+  confidence_threshold: 5
+  reliability_weight: 0.5
+
+relative_judge:
+  judge_model: "anthropic/claude-haiku-4.5"
+  # rubric: ""   # empty → use built-in DEFAULT_RUBRIC
+
+reward:
+  ruler_weight: 1.0
+  cost_weight: 0.3
+  retry_weight: 0.15
+
+governance:
+  max_consecutive_failures_per_agent: 5
+  max_calls_per_agent: 12
+  halt_on_terminal_errors: true
+
+preflight:
+  default_checks:
+    - openrouter
+    - exa
+    - tavily

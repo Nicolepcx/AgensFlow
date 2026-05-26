@@ -1,0 +1,60 @@
+{
+  "n_runs": 60,
+  "n_ok": 60,
+  "n_errors": 0,
+  "tokens_mean": 12960,
+  "ruler_mean": 0.6223166666666666,
+  "reward_mean": 0.29863354166666667,
+  "retries_mean": 0.16666666666666666,
+  "pipeline": [
+    "planner",
+    "memory",
+    "web_search_exa",
+    "web_search_tavily",
+    "solver_cot_haiku",
+    "verifier_haiku",
+    "evaluator"
+  ],
+  "per_class": {
+    "C1": {
+      "n": 8,
+      "tokens_mean": 11599,
+      "ruler_mean": 0.6088749999999999
+    },
+    "C2": {
+      "n": 8,
+      "tokens_mean": 14517,
+      "ruler_mean": 0.670625
+    },
+    "C3": {
+      "n": 7,
+      "tokens_mean": 13989,
+      "ruler_mean": 0.48414285714285715
+    },
+    "C4": {
+      "n": 8,
+      "tokens_mean": 15493,
+      "ruler_mean": 0.71775
+    },
+    "C5": {
+      "n": 7,
+      "tokens_mean": 13636,
+      "ruler_mean": 0.6405714285714286
+    },
+    "C6": {
+      "n": 7,
+      "tokens_mean": 11820,
+      "ruler_mean": 0.639
+    },
+    "C7": {
+      "n": 7,
+      "tokens_mean": 12958,
+      "ruler_mean": 0.6064285714285714
+    },
+    "C8": {
+      "n": 8,
+      "tokens_mean": 9742,
+      "ruler_mean": 0.5962500000000001
+    }
+  }
+}

@@ -1,0 +1,39 @@
+# Default policy-graph hyperparameters. These knobs ARE the learning
+# policy — tuning them is how you adapt AgensFlow's substrate to your
+# workload's signal-to-noise ratio.
+#
+# See `agensflow/learning/policy_graph/README.md` for the per-knob
+# tuning guide and the rationale behind the defaults.
+
+# ----- UCB exploration ----- #
+# Initial exploration constant (`c` in UCB1's `mean + c·√(ln(N)/n)`).
+# Higher → more exploration. 1.4 is canonical.
+ucb_c: 1.4
+
+# Lower bound on annealed exploration. Prevents pure-exploit collapse.
+ucb_c_floor: 0.5
+
+# Visits at which annealed `c` decays to half its initial value.
+# Larger → slower decay → more sustained exploration.
+ucb_anneal_half_life: 50
+
+# ----- Confidence ----- #
+# Minimum visits to a signature before the graph overrides the rule-
+# based prior. Raised from 3 in chunk-5 — 3 was too eager.
+confidence_threshold: 5
+
+# ----- Reliability ----- #
+# Weight on failure-rate term in UCB. 0.5 → a 50%-failing action gets
+# a -0.25 penalty (meaningful but not dominant).
+reliability_weight: 0.5
+
+# ----- Backup discount (chunk 11.C1) ----- #
+# Discount factor applied per-edge during backup: each edge's reward
+# is `reward * gamma^(distance_from_terminal)`. Last edge → full
+# reward; first edge → `reward * gamma^(path_len-1)`.
+#
+# 1.0 (default) = undiscounted; preserves chunk-2..10 semantics.
+# 0.9-0.95 = mild trajectory-credit weighting (recommended for long
+# paths where earlier decisions are noise relative to later ones).
+# <0.8 = aggressively myopic; usually overkill.
+gamma: 1.0

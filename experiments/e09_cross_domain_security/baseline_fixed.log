@@ -1,0 +1,230 @@
+Loaded config from experiments/e09_cross_domain_security/example_config.yaml
+Loaded 4 SKILL.md cards from /Users/Nicole/Documents/01_research/02_Agents/policy_framework/agensflow/skills
+
+Running fixed-full-pipeline baseline.
+  tasks:                 60
+  pipeline cells:        ['planner', 'memory', 'web_search_exa', 'web_search_tavily', 'solver_cot_haiku', 'verifier_haiku', 'evaluator']
+  judge model:           anthropic/claude-haiku-4.5
+  max_steps:             18
+  enable_skip:           False (forced)
+  output dir:            /Users/Nicole/Documents/01_research/02_Agents/policy_framework/agensflow/experiments/e09_cross_domain_security/baseline_fixed
+
+Running pre-flight checks...
+═══ Pre-flight check report ═══
+  ✓ ok      openrouter     (0.3s)  auth ok (356 models available)
+  ✓ ok      exa            (1.6s)  search ok (1 results)
+  ✓ ok      tavily         (3.1s)  search ok (1 results)
+Total elapsed: 5.0s
+
+
+========== BASELINE PASS (1 epoch, no learning) ==========
+=== run 1 (epoch 1, 1/60) ===
+  [C1.1] C1 ... ruler=0.50 reward=+0.20  tok=12904  retries=0  path: planner → memory → web_search_exa → web_search_tavily → solver_cot_hai  (23.8s)
+
+=== run 2 (epoch 1, 2/60) ===
+  [C1.2] C1 ... ruler=0.93 reward=+0.62  tok=11395  retries=0  path: planner → memory → web_search_exa → web_search_tavily → solver_cot_hai  (23.2s)
+
+=== run 3 (epoch 1, 3/60) ===
+  [C1.3] C1 ... ruler=0.25 reward=-0.05  tok=13147  retries=0  path: planner → memory → web_search_exa → web_search_tavily → solver_cot_hai  (27.4s)
+
+=== run 4 (epoch 1, 4/60) ===
+  [C1.4] C1 ... ruler=0.28 reward=-0.02  tok=13415  retries=0  path: planner → memory → web_search_exa → web_search_tavily → solver_cot_hai  (36.4s)
+
+=== run 5 (epoch 1, 5/60) ===
+  [C1.5] C1 ... ruler=0.94 reward=+0.64  tok=12277  retries=0  path: planner → memory → web_search_exa → web_search_tavily → solver_cot_hai  (29.2s)
+
+=== run 6 (epoch 1, 6/60) ===
+  [C1.6] C1 ... ruler=0.70 reward=+0.40  tok=10517  retries=0  path: planner → web_search_exa → memory → web_search_tavily → solver_cot_hai  (29.2s)
+
+=== run 7 (epoch 1, 7/60) ===
+  [C1.7] C1 ... ruler=0.94 reward=+0.64  tok=9303  retries=0  path: planner → web_search_tavily → memory → web_search_exa → solver_cot_hai  (28.3s)
+
+=== run 8 (epoch 1, 8/60) ===
+  [C1.8] C1 ... ruler=0.33 reward=+0.03  tok=9836  retries=0  path: planner → solver_cot_haiku → memory → web_search_exa → web_search_tavi  (27.6s)
+
+=== run 9 (epoch 1, 9/60) ===
+  [C2.1] C2 ... ruler=0.50 reward=+0.20  tok=16623  retries=0  path: planner → memory → web_search_exa → web_search_tavily → solver_cot_hai  (34.2s)
+
+=== run 10 (epoch 1, 10/60) ===
+  [C2.2] C2 ... ruler=0.97 reward=+0.67  tok=15175  retries=0  path: planner → memory → web_search_exa → web_search_tavily → solver_cot_hai  (26.9s)
+
+=== run 11 (epoch 1, 11/60) ===
+  [C2.3] C2 ... ruler=0.53 reward=+0.23  tok=20137  retries=0  path: planner → memory → web_search_exa → web_search_tavily → solver_cot_hai  (51.7s)
+
+=== run 12 (epoch 1, 12/60) ===
+  [C2.4] C2 ... ruler=0.68 reward=+0.38  tok=16512  retries=0  path: planner → memory → web_search_exa → web_search_tavily → solver_cot_hai  (39.9s)
+
+=== run 13 (epoch 1, 13/60) ===
+  [C2.5] C2 ... ruler=0.96 reward=+0.66  tok=12632  retries=0  path: planner → memory → web_search_exa → web_search_tavily → solver_cot_hai  (33.1s)
+
+=== run 14 (epoch 1, 14/60) ===
+  [C2.6] C2 ... ruler=0.98 reward=+0.68  tok=12445  retries=0  path: planner → web_search_exa → memory → web_search_tavily → solver_cot_hai  (33.3s)
+
+=== run 15 (epoch 1, 15/60) ===
+  [C2.7] C2 ... ruler=0.12 reward=-0.18  tok=11844  retries=0  path: planner → web_search_tavily → solver_cot_haiku → memory → web_search_e  (32.2s)
+
+=== run 16 (epoch 1, 16/60) ===
+  [C2.8] C2 ... ruler=0.65 reward=+0.35  tok=10773  retries=0  path: planner → solver_cot_haiku → memory → web_search_exa → web_search_tavi  (31.1s)
+
+=== run 17 (epoch 1, 17/60) ===
+  [C3.1] C3 ... agent_event agent=web_search_exa status=error:rate_limited
+ruler=0.50 reward=+0.05  tok=9865  retries=1  path: planner → solver_cot_haiku → memory → web_search_tavily → verifier_hai  (28.2s)
+
+=== run 18 (epoch 1, 18/60) ===
+  [C3.2] C3 ... agent_event agent=verifier_haiku status=error:schema
+ruler=0.60 reward=+0.15  tok=20804  retries=1  path: planner → web_search_exa → web_search_tavily → memory → solver_cot_hai  (37.1s)
+
+=== run 19 (epoch 1, 19/60) ===
+  [C3.3] C3 ... ruler=0.93 reward=+0.63  tok=11195  retries=0  path: planner → web_search_tavily → memory → web_search_exa → solver_cot_hai  (28.8s)
+
+=== run 20 (epoch 1, 20/60) ===
+  [C3.4] C3 ... ruler=0.15 reward=-0.14  tok=12273  retries=0  path: planner → web_search_exa → web_search_tavily → solver_cot_haiku → memo  (36.5s)
+
+=== run 21 (epoch 1, 21/60) ===
+  [C3.5] C3 ... ruler=0.44 reward=+0.14  tok=12283  retries=0  path: planner → web_search_tavily → memory → web_search_exa → solver_cot_hai  (39.1s)
+
+=== run 22 (epoch 1, 22/60) ===
+  [C3.6] C3 ... agent_event agent=verifier_haiku status=error:schema
+ruler=0.65 reward=+0.20  tok=19999  retries=1  path: planner → solver_cot_haiku → memory → web_search_exa → web_search_tavi  (32.4s)
+
+=== run 23 (epoch 1, 23/60) ===
+  [C3.7] C3 ... ruler=0.11 reward=-0.19  tok=11510  retries=0  path: planner → solver_cot_haiku → memory → web_search_exa → web_search_tavi  (32.2s)
+
+=== run 24 (epoch 1, 24/60) ===
+  [C4.1] C4 ... ruler=0.50 reward=+0.20  tok=13410  retries=0  path: planner → web_search_tavily → solver_cot_haiku → memory → web_search_e  (35.6s)
+
+=== run 25 (epoch 1, 25/60) ===
+  [C4.2] C4 ... ruler=0.76 reward=+0.46  tok=11706  retries=0  path: planner → memory → solver_cot_haiku → web_search_exa → web_search_tavi  (28.1s)
+
+=== run 26 (epoch 1, 26/60) ===
+  [C4.3] C4 ... agent_event agent=web_search_tavily status=error:unknown
+ruler=0.39 reward=-0.06  tok=18309  retries=1  path: planner → memory → web_search_exa → solver_cot_haiku → evaluator → ver  (40.0s)
+
+=== run 27 (epoch 1, 27/60) ===
+  [C4.4] C4 ... ruler=0.92 reward=+0.61  tok=8946  retries=0  path: planner → web_search_exa → memory → solver_cot_haiku → verifier_haiku   (31.2s)
+
+=== run 28 (epoch 1, 28/60) ===
+  [C4.5] C4 ... agent_event agent=verifier_haiku status=error:schema
+ruler=0.75 reward=+0.30  tok=19598  retries=1  path: planner → web_search_exa → memory → solver_cot_haiku → evaluator → ver  (42.0s)
+
+=== run 29 (epoch 1, 29/60) ===
+  [C4.6] C4 ... agent_event agent=verifier_haiku status=error:schema
+ruler=0.69 reward=+0.24  tok=25035  retries=1  path: planner → web_search_tavily → memory → web_search_exa → solver_cot_hai  (53.7s)
+
+=== run 30 (epoch 1, 30/60) ===
+  [C4.7] C4 ... ruler=0.77 reward=+0.47  tok=11512  retries=0  path: planner → web_search_exa → solver_cot_haiku → web_search_tavily → eval  (36.6s)
+
+=== run 31 (epoch 1, 31/60) ===
+  [C4.8] C4 ... ruler=0.97 reward=+0.67  tok=15428  retries=0  path: planner → memory → web_search_exa → web_search_tavily → solver_cot_hai  (35.1s)
+
+=== run 32 (epoch 1, 32/60) ===
+  [C5.1] C5 ... ruler=0.50 reward=+0.20  tok=11543  retries=0  path: planner → memory → web_search_exa → web_search_tavily → solver_cot_hai  (16.0s)
+
+=== run 33 (epoch 1, 33/60) ===
+  [C5.2] C5 ... agent_event agent=verifier_haiku status=error:schema
+ruler=0.94 reward=+0.49  tok=28923  retries=1  path: planner → memory → web_search_exa → web_search_tavily → solver_cot_hai  (53.3s)
+
+=== run 34 (epoch 1, 34/60) ===
+  [C5.3] C5 ... ruler=0.96 reward=+0.66  tok=11072  retries=0  path: planner → memory → web_search_exa → web_search_tavily → solver_cot_hai  (24.6s)
+
+=== run 35 (epoch 1, 35/60) ===
+  [C5.4] C5 ... ruler=0.70 reward=+0.40  tok=10860  retries=0  path: planner → web_search_tavily → memory → web_search_exa → solver_cot_hai  (27.8s)
+
+=== run 36 (epoch 1, 36/60) ===
+  [C5.5] C5 ... ruler=0.11 reward=-0.19  tok=9231  retries=0  path: planner → solver_cot_haiku → memory → web_search_exa → web_search_tavi  (29.6s)
+
+=== run 37 (epoch 1, 37/60) ===
+  [C5.6] C5 ... ruler=0.72 reward=+0.42  tok=12456  retries=0  path: planner → web_search_tavily → memory → web_search_exa → solver_cot_hai  (37.3s)
+
+=== run 38 (epoch 1, 38/60) ===
+  [C5.7] C5 ... ruler=0.55 reward=+0.25  tok=11367  retries=0  path: planner → web_search_tavily → memory → web_search_exa → solver_cot_hai  (35.1s)
+
+=== run 39 (epoch 1, 39/60) ===
+  [C6.1] C6 ... ruler=0.50 reward=+0.20  tok=10270  retries=0  path: planner → web_search_tavily → memory → web_search_exa → solver_cot_hai  (20.3s)
+
+=== run 40 (epoch 1, 40/60) ===
+  [C6.2] C6 ... ruler=0.94 reward=+0.64  tok=11425  retries=0  path: planner → web_search_exa → memory → web_search_tavily → solver_cot_hai  (29.3s)
+
+=== run 41 (epoch 1, 41/60) ===
+  [C6.3] C6 ... agent_event agent=verifier_haiku status=error:schema
+ruler=0.42 reward=-0.03  tok=20087  retries=1  path: planner → solver_cot_haiku → memory → web_search_exa → web_search_tavi  (34.9s)
+
+=== run 42 (epoch 1, 42/60) ===
+  [C6.4] C6 ... ruler=0.93 reward=+0.63  tok=11632  retries=0  path: planner → web_search_exa → memory → web_search_tavily → solver_cot_hai  (31.6s)
+
+=== run 43 (epoch 1, 43/60) ===
+  [C6.5] C6 ... ruler=0.95 reward=+0.65  tok=10353  retries=0  path: planner → web_search_tavily → web_search_exa → memory → solver_cot_hai  (30.7s)
+
+=== run 44 (epoch 1, 44/60) ===
+  [C6.6] C6 ... ruler=0.51 reward=+0.21  tok=8880  retries=0  path: planner → web_search_exa → web_search_tavily → memory → solver_cot_hai  (26.0s)
+
+=== run 45 (epoch 1, 45/60) ===
+  [C6.7] C6 ... ruler=0.22 reward=-0.08  tok=10094  retries=0  path: planner → web_search_tavily → solver_cot_haiku → memory → web_search_e  (33.0s)
+
+=== run 46 (epoch 1, 46/60) ===
+  [C7.1] C7 ... ruler=0.50 reward=+0.20  tok=14618  retries=0  path: planner → memory → web_search_exa → solver_cot_haiku → evaluator → ver  (32.2s)
+
+=== run 47 (epoch 1, 47/60) ===
+  [C7.2] C7 ... agent_event agent=web_search_tavily status=error:unknown
+ruler=0.62 reward=+0.17  tok=16934  retries=1  path: planner → web_search_exa → memory → solver_cot_haiku → verifier_haiku   (48.5s)
+
+=== run 48 (epoch 1, 48/60) ===
+  [C7.3] C7 ... agent_event agent=web_search_tavily status=error:unknown
+ruler=0.35 reward=-0.10  tok=13422  retries=1  path: planner → solver_cot_haiku → memory → verifier_haiku → web_search_exa   (40.3s)
+
+=== run 49 (epoch 1, 49/60) ===
+  [C7.4] C7 ... ruler=0.83 reward=+0.53  tok=8474  retries=0  path: planner → memory → solver_cot_haiku → evaluator  (39.3s)
+
+=== run 50 (epoch 1, 50/60) ===
+  [C7.5] C7 ... ruler=0.84 reward=+0.54  tok=11757  retries=0  path: planner → memory → web_search_exa → web_search_tavily → solver_cot_hai  (49.2s)
+
+=== run 51 (epoch 1, 51/60) ===
+  [C7.6] C7 ... ruler=0.50 reward=+0.20  tok=14247  retries=0  path: planner → memory → web_search_tavily → web_search_exa → solver_cot_hai  (56.8s)
+
+=== run 52 (epoch 1, 52/60) ===
+  [C7.7] C7 ... ruler=0.61 reward=+0.32  tok=11256  retries=0  path: planner → web_search_exa → memory → web_search_tavily → solver_cot_hai  (34.2s)
+
+=== run 53 (epoch 1, 53/60) ===
+  [C8.1] C8 ... ruler=0.50 reward=+0.28  tok=5893  retries=0  path: planner → web_search_exa → web_search_tavily → memory → solver_cot_hai  (14.9s)
+
+=== run 54 (epoch 1, 54/60) ===
+  [C8.2] C8 ... ruler=0.72 reward=+0.42  tok=9835  retries=0  path: planner → solver_cot_haiku → memory → web_search_exa → web_search_tavi  (27.6s)
+
+=== run 55 (epoch 1, 55/60) ===
+  [C8.3] C8 ... ruler=0.35 reward=+0.05  tok=11227  retries=0  path: planner → web_search_tavily → web_search_exa → solver_cot_haiku → memo  (40.0s)
+
+=== run 56 (epoch 1, 56/60) ===
+  [C8.4] C8 ... ruler=0.91 reward=+0.60  tok=12615  retries=0  path: planner → web_search_exa → memory → web_search_tavily → solver_cot_hai  (32.2s)
+
+=== run 57 (epoch 1, 57/60) ===
+  [C8.5] C8 ... ruler=0.36 reward=+0.06  tok=9814  retries=0  path: planner → web_search_exa → solver_cot_haiku → memory → web_search_tavi  (31.2s)
+
+=== run 58 (epoch 1, 58/60) ===
+  [C8.6] C8 ... ruler=0.62 reward=+0.32  tok=9047  retries=0  path: planner → solver_cot_haiku → memory → web_search_exa → web_search_tavi  (27.7s)
+
+=== run 59 (epoch 1, 59/60) ===
+  [C8.7] C8 ... ruler=0.57 reward=+0.27  tok=10317  retries=0  path: planner → web_search_tavily → web_search_exa → solver_cot_haiku → memo  (30.1s)
+
+=== run 60 (epoch 1, 60/60) ===
+  [C8.8] C8 ... ruler=0.76 reward=+0.46  tok=9195  retries=0  path: planner → memory → web_search_exa → web_search_tavily → solver_cot_hai  (27.7s)
+
+
+Baseline summary:
+  runs:          60/60 ok (0 errors)
+  tokens mean:   12,960
+  RULER mean:    0.622
+  reward mean:   +0.299
+  retries mean:  0.17
+
+  per-class mean tokens / RULER:
+    C1 (n=8): 11,599 tok, RULER=0.61
+    C2 (n=8): 14,517 tok, RULER=0.67
+    C3 (n=7): 13,989 tok, RULER=0.48
+    C4 (n=8): 15,493 tok, RULER=0.72
+    C5 (n=7): 13,636 tok, RULER=0.64
+    C6 (n=7): 11,820 tok, RULER=0.64
+    C7 (n=7): 12,958 tok, RULER=0.61
+    C8 (n=8): 9,742 tok, RULER=0.60
+
+Records: /Users/Nicole/Documents/01_research/02_Agents/policy_framework/agensflow/experiments/e09_cross_domain_security/baseline_fixed/results_baseline.jsonl
+Summary: /Users/Nicole/Documents/01_research/02_Agents/policy_framework/agensflow/experiments/e09_cross_domain_security/baseline_fixed/summary.json

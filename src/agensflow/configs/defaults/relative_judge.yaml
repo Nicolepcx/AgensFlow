@@ -1,0 +1,111 @@
+# Default RULER scoring configuration. RULER is the external rubric-
+# based ranker that anchors the hybrid reward — these knobs control
+# the judge model and the rubric.
+#
+# See `agensflow/learning/ruler/README.md` for per-knob guidance and
+# the rationale behind the default judge.
+
+# Judge model used to score trajectory groups. Defaults to haiku for
+# cheap+fast scoring with mixed-family agents under test. For
+# production-grade grading consider gpt-5.4-mini or claude-sonnet-4.5.
+judge_model: "anthropic/claude-haiku-4.5"
+
+# Max output tokens for the judge call.
+max_tokens: 1500
+
+# Sampling temperature. 0.0 = same trajectories → same scores across
+# re-runs (reproducible reward training).
+temperature: 0.0
+
+# Score returned for single-trajectory groups (relative scoring N/A).
+neutral_single_trajectory_score: 0.5
+
+# Rubric text. Empty = use the in-code DEFAULT_RUBRIC. Override here
+# to inject workload-specific quality criteria.
+rubric: ""
+
+# ----- evidence-decompression knobs (chunk 11.A1) ----- #
+# Active only when callers pass `TrajectoryEvidence` in
+# `TrajectoryToScore` (chunk-11+ harnesses). When evidence is None
+# (chunk-2..10 path_summary flow), these are no-ops.
+#
+# "budgeted": top-K memory + truncated solver drafts + per-agent caps.
+#             ~2-3x judge cost vs path_summary.
+# "full":     no truncation. ~5-10x judge cost. Reserved for
+#             calibration / debug / cross-eval runs.
+evidence_mode: "budgeted"
+
+# Top-K memory snippets shown in budgeted mode.
+evidence_topk: 3
+
+# Hard cap on solver-draft chars in budgeted mode.
+solver_draft_max_chars: 2000
+
+# Hard cap on per-agent contribution chars (catches pathologically
+# long planner/evaluator/verifier outputs).
+evidence_max_chars_per_agent: 4000
+
+# ----- Cross-judge averaging + disagreement (chunk 11.A2) ----- #
+# When non-empty, relative_judge_score_group runs each model as an independent
+# judge and aggregates scores (mean) with disagreement telemetry.
+# Empty (default) = single-judge mode (chunk-2..10 behavior).
+#
+# Recommended cross-family triple for chunk-11+:
+#   cross_judge_models:
+#     - "anthropic/claude-haiku-4.5"
+#     - "openai/gpt-5.4-mini"
+#     - "qwen/qwen3.6-flash"
+cross_judge_models: []
+
+# Per-judge Instructor mode (chunk 11.A2 probe). Required for routes
+# that 404 under TOOLS — qwen/* and grok-4.3 need "json". Anthropic
+# and OpenAI use TOOLS (the default).
+cross_judge_modes: {}
+# Example for the validated 3-family set:
+# cross_judge_modes:
+#   "qwen/qwen3.6-flash": "json"
+#   "x-ai/grok-4.3": "json"
+
+# Per-judge extra_body override (chunk 11.A2 probe). Empty dict {}
+# explicitly DISABLES extra_body for that judge — required for OpenAI
+# (`require_parameters: True` paradoxically breaks OpenAI's primary
+# OpenRouter route).
+cross_judge_extra_body: {}
+# Example for the validated 3-family set:
+# cross_judge_extra_body:
+#   "openai/gpt-5.4-mini": {}   # explicit "no extra_body" for OpenAI
+
+# Default extra_body. The `require_parameters: True` flag forces
+# OpenRouter to route only to providers that support all requested
+# parameters — needed for tool-calling consistency on most providers,
+# but BREAKS OpenAI (override per-judge above).
+extra_body_default:
+  provider:
+    require_parameters: true
+
+# Calibration threshold for deriving confidence from disagreement_std.
+# `confidence = 1 - clamp(std / threshold, 0, 1)`. 0.2 means judge std
+# of 0.2 collapses confidence to 0; 0.0 → confidence 1.0.
+disagreement_confidence_threshold: 0.2
+
+# ----- Per-axis rubric scoring (chunk 11.A3) ----- #
+# Axis weights for composing the scalar RULER score from per-axis
+# judge outputs. Default mirrors the four axes in DEFAULT_RUBRIC at
+# 30/30/20/20 weighting. When the judge returns axis_scores, the
+# framework uses the weighted sum (over the intersection of axes
+# named here and axes returned by the judge) as the effective scalar.
+# When axis_scores is empty (custom rubric, judge didn't comply),
+# falls back to the judge's holistic scalar.
+#
+# Empty `axis_weights: {}` reverts to the chunk-2..10 holistic-only
+# behavior: the framework never composes from axes, just uses the
+# scalar.
+#
+# Tune per workload: research-style domains may raise `grounding`;
+# safety-critical domains may raise `recovery`; high-volume
+# customer-support may raise `coordination`.
+axis_weights:
+  goal_achievement: 0.30
+  grounding:        0.30
+  coordination:     0.20
+  recovery:         0.20

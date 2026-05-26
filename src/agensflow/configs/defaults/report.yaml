@@ -1,0 +1,37 @@
+# Default report-rendering configuration. Controls what
+# `RunReport.format_human()` and `SessionReport.format_human()`
+# render — the underlying dataclasses always carry the full data; this
+# only affects the human-facing pretty-print.
+#
+# See `agensflow/runtime/report/README.md` for the per-knob tuning
+# guide and the design rationale behind the defaults.
+
+# ----- per-run table layout ----- #
+# Column widths in `RunReport.format_human` per-agent table.
+run_agent_col_width: 28
+run_model_col_width: 32
+
+# Cap on rows shown in `RunReport.format_human` per-agent table.
+# 0 means "no cap" (show every agent that fired). Set to a small number
+# like 10 for runs with huge variant pools where the headline matters
+# more than the long tail.
+run_max_agents_in_table: 0
+
+# Whether `format_human` includes the per-agent error-breakdown sub-line
+# (the "↳ errors: rate_limited=3, ..." row). Disable for ultra-compact
+# output (one-line dashboards); leave on when humans read the report.
+include_agent_error_detail: true
+
+# ----- governance violation rendering ----- #
+# Cap on characters of `violation.detail` shown in `format_human`. The
+# full detail is preserved in `to_dict()`; this only truncates the
+# human view for pathologically-long detail strings. 0 = no truncation.
+violation_detail_max_chars: 400
+
+# ----- session table layout ----- #
+session_agent_col_width: 32
+
+# Cap on rows in the session per-agent rollup. 0 = no cap. For
+# sustained-traffic sweeps with hundreds of variants, set to 20-30 to
+# focus the report on highest-volume agents.
+session_max_agents_in_table: 0

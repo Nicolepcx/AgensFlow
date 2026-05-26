@@ -1,0 +1,16 @@
+# Default router configuration. Routing-specific knobs only — the
+# UCB/confidence/reliability hyperparameters live on PolicyGraphConfig.
+#
+# See `agensflow/learning/router/README.md` for per-knob guidance.
+
+# Max agent invocations per run before forced termination.
+max_steps: 12
+
+# Whether `skip:X` is a candidate action when there are alternatives.
+# Off in chunks 6/7; on in chunks 8/9 — turn on to let the policy
+# learn coordination *choice between alternatives*.
+enable_skip: false
+
+# Per-iteration forensic logging to trace.router_log. Off by default;
+# flip on for debugging recursion-loop runs.
+enable_router_logging: false

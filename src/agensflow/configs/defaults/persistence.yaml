@@ -1,0 +1,20 @@
+# Default persistence configuration. Pickle-based save/load for the
+# policy graph; tune protocol + default path here.
+#
+# See `agensflow/learning/persistence/README.md` for per-knob guidance.
+
+# Pickle protocol version. -1 (HIGHEST_PROTOCOL) is the most compact
+# and fastest; lower it if you need to load on older Python versions.
+# The default `null` here resolves to `pickle.HIGHEST_PROTOCOL` at
+# dataclass-default time — explicit value here would freeze it to one
+# version. We leave it null so the dataclass default wins.
+# (OmegaConf merges null over the default, so to KEEP the default,
+# don't include this line — uncomment + set explicitly if you need
+# to pin the protocol.)
+# pickle_protocol: 5
+
+# Whether to auto-create parent directories on save.
+auto_create_parent_dir: true
+
+# Default snapshot path; empty string = caller must supply.
+default_snapshot_path: ""

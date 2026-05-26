@@ -1,0 +1,122 @@
+===== BASELINE RE-JUDGE (start: Sat May 16 08:46:51 CEST 2026) =====
+Source:  experiments/e09_cross_domain_security/baseline_fixed/results_baseline.jsonl
+Output:  experiments/e09_cross_domain_security/baseline_fixed/replay_rescore_results.jsonl
+Judges:  ['anthropic/claude-haiku-4.5', 'openai/gpt-5.4-mini', 'qwen/qwen3.6-flash']
+Per-judge modes: {'qwen/qwen3.6-flash': 'json'}
+Per-judge extra_body overrides: {'openai/gpt-5.4-mini': {}}
+Default extra_body: {'provider': {'require_parameters': True}}
+Axis weights: {'goal_achievement': 0.3, 'grounding': 0.3, 'coordination': 0.2, 'recovery': 0.2}
+
+Loaded 60 records.
+
+Re-scoring 60 trajectories sequentially...
+Estimated time: ~4-6 min at typical judge latency.
+
+  [20/60]  judge_calls~60  elapsed=482s  eta=40s
+  [40/60]  judge_calls~120  elapsed=1005s  eta=20s
+  [60/60]  judge_calls~180  elapsed=1593s  eta=0s
+
+Wrote 60 comparison records to experiments/e09_cross_domain_security/baseline_fixed/replay_rescore_results.jsonl
+
+════════════════════════════════════════════════════════════════════════════════
+e09 3-judge offline re-score — summary
+════════════════════════════════════════════════════════════════════════════════
+Trajectories re-scored: 60/60 (failed: 0)
+
+Judge axis-compliance (52 multi-trajectory groups):
+    anthropic/claude-haiku-4.5                 52/52  (100%) returned axes
+    openai/gpt-5.4-mini                        52/52  (100%) returned axes
+    qwen/qwen3.6-flash                         47/47  (100%) returned axes
+
+Overall mean RULER:
+  original (single-judge haiku):   0.622
+  new      (3-judge cross-family): 0.749
+  Δ (new − original):              +0.127
+
+Per scenario class:
+  C1     n=  8  orig=0.61  new=0.85  Δ=+0.24  axis_σ=0.06  conf=0.73
+  C2     n=  8  orig=0.67  new=0.76  Δ=+0.09  axis_σ=0.09  conf=0.64
+  C3     n=  7  orig=0.48  new=0.68  Δ=+0.19  axis_σ=0.14  conf=0.51
+  C4     n=  8  orig=0.72  new=0.78  Δ=+0.06  axis_σ=0.08  conf=0.74
+  C5     n=  7  orig=0.64  new=0.80  Δ=+0.16  axis_σ=0.08  conf=0.71
+  C6     n=  7  orig=0.64  new=0.79  Δ=+0.16  axis_σ=0.09  conf=0.75
+  C7     n=  7  orig=0.61  new=0.66  Δ=+0.05  axis_σ=0.11  conf=0.59
+  C8     n=  8  orig=0.60  new=0.67  Δ=+0.08  axis_σ=0.10  conf=0.69
+
+===== MAIN RE-JUDGE (start: Sat May 16 09:13:25 CEST 2026) =====
+Source:  experiments/e09_cross_domain_security/results_agensflow.jsonl
+Output:  experiments/e09_cross_domain_security/replay_rescore_results.jsonl
+Judges:  ['anthropic/claude-haiku-4.5', 'openai/gpt-5.4-mini', 'qwen/qwen3.6-flash']
+Per-judge modes: {'qwen/qwen3.6-flash': 'json'}
+Per-judge extra_body overrides: {'openai/gpt-5.4-mini': {}}
+Default extra_body: {'provider': {'require_parameters': True}}
+Axis weights: {'goal_achievement': 0.3, 'grounding': 0.3, 'coordination': 0.2, 'recovery': 0.2}
+
+Loaded 480 records.
+
+Re-scoring 480 trajectories sequentially...
+Estimated time: ~32-48 min at typical judge latency.
+
+  [20/480]  judge_calls~60  elapsed=326s  eta=460s
+  [40/480]  judge_calls~120  elapsed=1035s  eta=440s
+  [60/480]  judge_calls~180  elapsed=1781s  eta=420s
+  [80/480]  judge_calls~240  elapsed=2557s  eta=400s
+  [100/480]  judge_calls~300  elapsed=3304s  eta=380s
+  [120/480]  judge_calls~360  elapsed=4052s  eta=360s
+  [140/480]  judge_calls~420  elapsed=4880s  eta=340s
+  [160/480]  judge_calls~480  elapsed=5642s  eta=320s
+  [180/480]  judge_calls~540  elapsed=6403s  eta=300s
+  [200/480]  judge_calls~600  elapsed=7189s  eta=280s
+  [220/480]  judge_calls~660  elapsed=7956s  eta=260s
+  [240/480]  judge_calls~720  elapsed=8723s  eta=240s
+  [260/480]  judge_calls~780  elapsed=9471s  eta=220s
+  [280/480]  judge_calls~840  elapsed=10236s  eta=200s
+  [300/480]  judge_calls~900  elapsed=11009s  eta=180s
+  [320/480]  judge_calls~960  elapsed=11769s  eta=160s
+  [340/480]  judge_calls~1020  elapsed=12505s  eta=140s
+  [360/480]  judge_calls~1080  elapsed=13220s  eta=120s
+  [380/480]  judge_calls~1140  elapsed=13978s  eta=100s
+  [400/480]  judge_calls~1200  elapsed=14729s  eta=80s
+  [420/480]  judge_calls~1260  elapsed=15441s  eta=60s
+  [440/480]  judge_calls~1320  elapsed=16183s  eta=40s
+  [460/480]  judge_calls~1380  elapsed=16940s  eta=20s
+  [480/480]  judge_calls~1440  elapsed=17676s  eta=0s
+
+Wrote 480 comparison records to experiments/e09_cross_domain_security/replay_rescore_results.jsonl
+
+════════════════════════════════════════════════════════════════════════════════
+e09 3-judge offline re-score — summary
+════════════════════════════════════════════════════════════════════════════════
+Trajectories re-scored: 479/480 (failed: 1)
+
+Judge axis-compliance (471 multi-trajectory groups):
+    anthropic/claude-haiku-4.5                470/470  (100%) returned axes
+    openai/gpt-5.4-mini                       471/471  (100%) returned axes
+    qwen/qwen3.6-flash                        470/470  (100%) returned axes
+
+Overall mean RULER:
+  original (single-judge haiku):   0.679
+  new      (3-judge cross-family): 0.793
+  Δ (new − original):              +0.113
+
+Per scenario class:
+  C1     n= 64  orig=0.64  new=0.78  Δ=+0.14  axis_σ=0.11  conf=0.58
+  C2     n= 64  orig=0.69  new=0.81  Δ=+0.12  axis_σ=0.10  conf=0.59
+  C3     n= 56  orig=0.73  new=0.81  Δ=+0.07  axis_σ=0.08  conf=0.69
+  C4     n= 63  orig=0.70  new=0.83  Δ=+0.13  axis_σ=0.09  conf=0.66
+  C5     n= 56  orig=0.68  new=0.82  Δ=+0.13  axis_σ=0.09  conf=0.67
+  C6     n= 56  orig=0.68  new=0.77  Δ=+0.09  axis_σ=0.11  conf=0.59
+  C7     n= 56  orig=0.65  new=0.72  Δ=+0.06  axis_σ=0.11  conf=0.59
+  C8     n= 64  orig=0.66  new=0.81  Δ=+0.15  axis_σ=0.11  conf=0.56
+
+Per epoch:
+  epoch 1  n= 60  orig=0.70  new=0.77  Δ=+0.07  conf=0.75
+  epoch 2  n= 59  orig=0.66  new=0.80  Δ=+0.14  conf=0.63
+  epoch 3  n= 60  orig=0.63  new=0.74  Δ=+0.11  conf=0.54
+  epoch 4  n= 60  orig=0.65  new=0.77  Δ=+0.12  conf=0.53
+  epoch 5  n= 60  orig=0.66  new=0.81  Δ=+0.15  conf=0.62
+  epoch 6  n= 60  orig=0.75  new=0.84  Δ=+0.09  conf=0.65
+  epoch 7  n= 60  orig=0.72  new=0.84  Δ=+0.12  conf=0.64
+  epoch 8  n= 60  orig=0.66  new=0.77  Δ=+0.11  conf=0.57
+
+===== DONE: Sat May 16 14:08:03 CEST 2026 =====

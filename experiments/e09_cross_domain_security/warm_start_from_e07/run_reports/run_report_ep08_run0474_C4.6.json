@@ -1,0 +1,46 @@
+{
+  "task_id": "C4.6",
+  "status": "completed",
+  "runtime_seconds": 3.9207598748616874,
+  "total_tokens": 942,
+  "n_calls": 2,
+  "skip_count": 11,
+  "agents": [
+    {
+      "agent": "planner",
+      "n_invocations": 1,
+      "n_successes": 1,
+      "n_failures": 0,
+      "total_tokens": 442,
+      "mean_latency_seconds": 1.9376292498782277,
+      "error_reasons": {},
+      "models": [
+        "openai/gpt-5.4-nano-20260317"
+      ]
+    },
+    {
+      "agent": "web_search_tavily",
+      "n_invocations": 1,
+      "n_successes": 1,
+      "n_failures": 0,
+      "total_tokens": 500,
+      "mean_latency_seconds": 1.9831306249834597,
+      "error_reasons": {},
+      "models": [
+        "tavily"
+      ]
+    }
+  ],
+  "governance_violations": [],
+  "policy_graph_backed_up": true,
+  "ruler_score": 0.095,
+  "hybrid_reward": 0.059675000000000006,
+  "halt_reason": null,
+  "suggested_fix": null,
+  "metadata": {
+    "scenario_class": "C4",
+    "epoch": 8,
+    "run_index": 474,
+    "expected_optimal_variant": "solver_haiku"
+  }
+}

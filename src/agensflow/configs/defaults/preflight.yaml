@@ -1,0 +1,28 @@
+# Default pre-flight check configuration. Pre-flight probes external
+# dependencies with cheap requests before any LLM tokens are spent —
+# catching broken API keys, exhausted quotas, and connectivity issues
+# in 30s instead of mid-experiment after $5 of waste.
+#
+# See `agensflow/runtime/preflight/README.md` for the per-knob tuning
+# guide and the design rationale behind the defaults.
+
+# ----- per-provider HTTP timeouts (seconds) ----- #
+# OpenRouter `/models` GET — usually <2s, 10s is a safe ceiling.
+openrouter_timeout_s: 10.0
+
+# EXA neural-search probe — slightly longer for cold-start latency.
+exa_timeout_s: 15.0
+
+# Tavily search probe.
+tavily_timeout_s: 15.0
+
+# ----- check selection ----- #
+# Names of checks to run when `run_preflight_checks` is called without
+# an explicit list. Each name must be in DEFAULT_CHECKS (or your
+# user-supplied registry). Drop "exa" / "tavily" if your experiment
+# doesn't use web search — saves 30s and avoids false failure on un-set
+# API keys.
+default_checks:
+  - openrouter
+  - exa
+  - tavily

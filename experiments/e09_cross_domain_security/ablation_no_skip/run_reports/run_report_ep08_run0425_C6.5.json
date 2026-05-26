@@ -1,0 +1,21 @@
+{
+  "task_id": "C6.5",
+  "status": "errored",
+  "runtime_seconds": 0,
+  "total_tokens": 0,
+  "n_calls": 0,
+  "skip_count": 0,
+  "agents": [],
+  "governance_violations": [],
+  "policy_graph_backed_up": false,
+  "ruler_score": null,
+  "hybrid_reward": null,
+  "halt_reason": null,
+  "suggested_fix": null,
+  "metadata": {
+    "scenario_class": "C6",
+    "epoch": 8,
+    "run_index": 425,
+    "expected_optimal_variant": "solver_fast"
+  }
+}

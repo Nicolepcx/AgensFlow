@@ -1,0 +1,28 @@
+# Default hybrid-reward configuration. The hybrid reward is the
+# recommended signal for production training; v1 `compute_reward` is
+# kept for ablation studies but not configurable here.
+#
+# Stability rule of thumb: keep ruler_weight >= max(cost_weight,
+# retry_weight). If operational penalties exceed the primary anchor,
+# the policy may converge to cheap-but-wrong trajectories.
+#
+# See `agensflow/learning/reward/README.md` for per-knob guidance.
+
+# Weight on the RULER score (the primary quality anchor, [0, 1]).
+# Higher → quality matters more relative to cost/retries.
+ruler_weight: 1.0
+
+# Weight on the normalized token-cost penalty.
+cost_weight: 0.3
+
+# Weight on the validation-retry penalty (counts each retry).
+retry_weight: 0.15
+
+# Token count that maps to the maximum cost penalty (cost_term clips
+# at 1.0 above this). 8000 tokens is tuned for chunk-3-scale runs.
+cost_normalizer: 8000
+
+# Whether to log a warning when ruler_weight < max(cost_weight,
+# retry_weight). Off this only if you've intentionally chosen
+# operational-dominant weights for an experiment.
+enable_stability_warning: true

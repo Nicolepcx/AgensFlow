@@ -1,0 +1,29 @@
+# Default governance policy — per-run constraints that catch broken
+# infrastructure cheaply without false-positives on flaky-but-recoverable
+# agents.
+#
+# The loader merges this on top of the GovernancePolicy dataclass
+# defaults. Override any subset in your own YAML; unknown keys raise
+# UnknownKeyError in strict mode (catches typos).
+#
+# See `agensflow/runtime/governance/README.md` for the per-knob tuning
+# guide and the design rationale behind the defaults.
+
+# Halt the run if any single agent fails this many times consecutively
+# (with no successful invocations in between). Low enough to limit
+# wasted LLM tokens on broken tools; high enough that genuinely-flaky
+# agents get a few chances before being labeled broken.
+max_consecutive_failures_per_agent: 5
+
+# Halt if any single agent is invoked more than this many times in one
+# run. With chunk-8/9-style variant pools, individual agents typically
+# fire ≤2x per run; >12 means the router is cycling pathologically.
+# Cheap circuit-break independent of error pattern.
+max_calls_per_agent: 12
+
+# When True, AUTH and QUOTA errors halt the run on first occurrence
+# without waiting for the consecutive-failure threshold. Wrong API key
+# or exhausted credits won't recover within a session, so spending
+# more LLM tokens is wasted. Set False only for testing how the
+# substrate handles persistent provider failure.
+halt_on_terminal_errors: true

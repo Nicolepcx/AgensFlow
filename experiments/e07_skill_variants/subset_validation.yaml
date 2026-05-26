@@ -1,0 +1,83 @@
+# Subset-validation config for chunk-11 stack (option B from chunk-11 plan).
+#
+# Purpose: exercise A1 (decompressed evidence) at real LLM scale before
+# committing chunk-12's larger DeepPlanning budget. The replay
+# (replay_rescore.py) validated A2 + A3 + A4 against the EXISTING chunk-9
+# trajectories, but couldn't exercise A1 because the persisted JSONL
+# records don't carry trace events. This subset re-execution does.
+#
+# Scope: 24 tasks (3 per scenario class), 1 epoch, cold-start, full
+# chunk-11 reward stack on.
+#
+# Cost estimate: ~$8-12 LLM total, ~30-45 min wall-clock.
+
+router:
+  max_steps: 18
+  enable_skip: true
+  enable_router_logging: false
+
+policy_graph:
+  confidence_threshold: 5
+  reliability_weight: 0.5
+  # Keep gamma at 1.0 for this validation — we're testing chunk-11
+  # mechanics, not C1's discount effect. Discount is unit-test-validated
+  # and orthogonal.
+  gamma: 1.0
+
+relative_judge:
+  # Validated 3-family cross-judge triple (chunk-11 probe).
+  cross_judge_models:
+    - "anthropic/claude-haiku-4.5"
+    - "openai/gpt-5.4-mini"
+    - "qwen/qwen3.6-flash"
+
+  # Per-judge mode: qwen needs JSON; anthropic + openai use TOOLS default.
+  cross_judge_modes:
+    "qwen/qwen3.6-flash": "json"
+
+  # Per-judge extra_body: gpt-5.4-mini needs no extra_body (require_parameters
+  # paradoxically breaks OpenAI's primary OpenRouter route).
+  cross_judge_extra_body:
+    "openai/gpt-5.4-mini": {}
+
+  # Default extra_body for anthropic + qwen.
+  extra_body_default:
+    provider:
+      require_parameters: true
+
+  # Disagreement-to-confidence calibration.
+  disagreement_confidence_threshold: 0.2
+
+  # Per-axis rubric scoring (chunk 11.A3). Default 4 axes.
+  axis_weights:
+    goal_achievement: 0.30
+    grounding: 0.30
+    coordination: 0.20
+    recovery: 0.20
+
+  # Budgeted evidence rendering (chunk 11.A1). The whole POINT of this
+  # subset re-execution is to exercise this path at real-LLM scale —
+  # judges should now see structured per-agent contributions, not just
+  # path summaries.
+  evidence_mode: "budgeted"
+  evidence_topk: 3
+  solver_draft_max_chars: 2000
+  evidence_max_chars_per_agent: 4000
+
+reward:
+  ruler_weight: 1.0
+  cost_weight: 0.3
+  retry_weight: 0.15
+  cost_normalizer: 8000
+  enable_stability_warning: true
+
+governance:
+  max_consecutive_failures_per_agent: 5
+  max_calls_per_agent: 12
+  halt_on_terminal_errors: true
+
+preflight:
+  default_checks:
+    - openrouter
+    - exa
+    - tavily

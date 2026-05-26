@@ -1,0 +1,198 @@
+{
+  "per_judge": {
+    "gpt": {
+      "chunk8_wins": 29,
+      "chunk7_wins": 27,
+      "ties": 3,
+      "total_scored": 59
+    },
+    "grok": {
+      "chunk8_wins": 26,
+      "chunk7_wins": 29,
+      "ties": 4,
+      "total_scored": 59
+    },
+    "haiku": {
+      "chunk8_wins": 22,
+      "chunk7_wins": 28,
+      "ties": 9,
+      "total_scored": 59
+    },
+    "sonnet": {
+      "chunk8_wins": 28,
+      "chunk7_wins": 21,
+      "ties": 10,
+      "total_scored": 59
+    }
+  },
+  "per_class": {
+    "C1": {
+      "haiku": {
+        "chunk7": 6,
+        "chunk8": 1,
+        "tie": 1
+      },
+      "gpt": {
+        "chunk8": 3,
+        "chunk7": 4,
+        "tie": 1
+      },
+      "sonnet": {
+        "tie": 1,
+        "chunk7": 4,
+        "chunk8": 3
+      },
+      "grok": {
+        "chunk7": 6,
+        "chunk8": 2
+      }
+    },
+    "C2": {
+      "haiku": {
+        "chunk7": 4,
+        "chunk8": 3,
+        "tie": 1
+      },
+      "gpt": {
+        "chunk7": 5,
+        "chunk8": 3
+      },
+      "sonnet": {
+        "chunk7": 3,
+        "tie": 2,
+        "chunk8": 3
+      },
+      "grok": {
+        "chunk7": 6,
+        "chunk8": 2
+      }
+    },
+    "C3": {
+      "haiku": {
+        "chunk8": 1,
+        "tie": 3,
+        "chunk7": 2
+      },
+      "gpt": {
+        "chunk7": 2,
+        "chunk8": 4
+      },
+      "sonnet": {
+        "chunk8": 4,
+        "tie": 1,
+        "chunk7": 1
+      },
+      "grok": {
+        "chunk8": 3,
+        "tie": 2,
+        "chunk7": 1
+      }
+    },
+    "C4": {
+      "haiku": {
+        "chunk8": 4,
+        "chunk7": 2
+      },
+      "gpt": {
+        "chunk8": 4,
+        "chunk7": 2
+      },
+      "sonnet": {
+        "chunk8": 4,
+        "chunk7": 2
+      },
+      "grok": {
+        "chunk8": 4,
+        "chunk7": 2
+      }
+    },
+    "C5": {
+      "haiku": {
+        "chunk7": 1,
+        "chunk8": 5
+      },
+      "gpt": {
+        "chunk8": 4,
+        "chunk7": 2
+      },
+      "sonnet": {
+        "chunk7": 1,
+        "chunk8": 5
+      },
+      "grok": {
+        "chunk8": 5,
+        "chunk7": 1
+      }
+    },
+    "C6": {
+      "haiku": {
+        "chunk8": 3,
+        "chunk7": 4,
+        "tie": 1
+      },
+      "gpt": {
+        "chunk8": 6,
+        "chunk7": 2
+      },
+      "sonnet": {
+        "chunk8": 5,
+        "tie": 2,
+        "chunk7": 1
+      },
+      "grok": {
+        "chunk8": 5,
+        "tie": 1,
+        "chunk7": 2
+      }
+    },
+    "C7": {
+      "haiku": {
+        "chunk7": 5,
+        "tie": 2,
+        "chunk8": 2
+      },
+      "gpt": {
+        "chunk7": 7,
+        "chunk8": 2
+      },
+      "sonnet": {
+        "chunk7": 6,
+        "chunk8": 2,
+        "tie": 1
+      },
+      "grok": {
+        "chunk7": 7,
+        "tie": 1,
+        "chunk8": 1
+      }
+    },
+    "C8": {
+      "haiku": {
+        "chunk7": 4,
+        "chunk8": 3,
+        "tie": 1
+      },
+      "gpt": {
+        "chunk8": 3,
+        "chunk7": 3,
+        "tie": 2
+      },
+      "sonnet": {
+        "tie": 3,
+        "chunk8": 2,
+        "chunk7": 3
+      },
+      "grok": {
+        "chunk7": 4,
+        "chunk8": 4
+      }
+    }
+  },
+  "agreement": {
+    "2": 12,
+    "4": 32,
+    "3": 15
+  },
+  "n_tasks_scored": 59,
+  "n_skipped": 0
+}

@@ -1,0 +1,77 @@
+===== WARM-START RE-JUDGE (start: Sun May 17 11:19:56 CEST 2026) =====
+Source:  experiments/e09_cross_domain_security/warm_start_from_e07/results_agensflow.jsonl
+Output:  experiments/e09_cross_domain_security/warm_start_from_e07/replay_rescore_results.jsonl
+Judges:  ['anthropic/claude-haiku-4.5', 'openai/gpt-5.4-mini', 'qwen/qwen3.6-flash']
+Per-judge modes: {'qwen/qwen3.6-flash': 'json'}
+Per-judge extra_body overrides: {'openai/gpt-5.4-mini': {}}
+Default extra_body: {'provider': {'require_parameters': True}}
+Axis weights: {'goal_achievement': 0.3, 'grounding': 0.3, 'coordination': 0.2, 'recovery': 0.2}
+
+Loaded 480 records.
+
+Re-scoring 480 trajectories sequentially...
+Estimated time: ~32-48 min at typical judge latency.
+
+  [20/480]  judge_calls~60  elapsed=337s  eta=460s
+  [40/480]  judge_calls~120  elapsed=1021s  eta=440s
+  [60/480]  judge_calls~180  elapsed=1768s  eta=420s
+  [80/480]  judge_calls~240  elapsed=2564s  eta=400s
+  [100/480]  judge_calls~300  elapsed=3356s  eta=380s
+  [120/480]  judge_calls~360  elapsed=4103s  eta=360s
+  [140/480]  judge_calls~420  elapsed=4909s  eta=340s
+  [160/480]  judge_calls~480  elapsed=5666s  eta=320s
+  [180/480]  judge_calls~540  elapsed=6424s  eta=300s
+  [200/480]  judge_calls~600  elapsed=7184s  eta=280s
+  [220/480]  judge_calls~660  elapsed=7950s  eta=260s
+  [240/480]  judge_calls~720  elapsed=8699s  eta=240s
+  [260/480]  judge_calls~780  elapsed=9480s  eta=220s
+  [280/480]  judge_calls~840  elapsed=10247s  eta=200s
+  [300/480]  judge_calls~900  elapsed=11009s  eta=180s
+  [320/480]  judge_calls~960  elapsed=11724s  eta=160s
+  [340/480]  judge_calls~1020  elapsed=12446s  eta=140s
+  [360/480]  judge_calls~1080  elapsed=13166s  eta=120s
+  [380/480]  judge_calls~1140  elapsed=13939s  eta=100s
+  [400/480]  judge_calls~1200  elapsed=14762s  eta=80s
+  [420/480]  judge_calls~1260  elapsed=15490s  eta=60s
+  [440/480]  judge_calls~1320  elapsed=16244s  eta=40s
+  [460/480]  judge_calls~1380  elapsed=17028s  eta=20s
+  [480/480]  judge_calls~1440  elapsed=17812s  eta=0s
+
+Wrote 480 comparison records to experiments/e09_cross_domain_security/warm_start_from_e07/replay_rescore_results.jsonl
+
+════════════════════════════════════════════════════════════════════════════════
+e09 3-judge offline re-score — summary
+════════════════════════════════════════════════════════════════════════════════
+Trajectories re-scored: 480/480 (failed: 0)
+
+Judge axis-compliance (472 multi-trajectory groups):
+    anthropic/claude-haiku-4.5                470/470  (100%) returned axes
+    openai/gpt-5.4-mini                       472/472  (100%) returned axes
+    qwen/qwen3.6-flash                        465/465  (100%) returned axes
+
+Overall mean RULER:
+  original (single-judge haiku):   0.735
+  new      (3-judge cross-family): 0.794
+  Δ (new − original):              +0.060
+
+Per scenario class:
+  C1     n= 64  orig=0.72  new=0.76  Δ=+0.04  axis_σ=0.12  conf=0.53
+  C2     n= 64  orig=0.76  new=0.81  Δ=+0.05  axis_σ=0.10  conf=0.61
+  C3     n= 56  orig=0.73  new=0.82  Δ=+0.09  axis_σ=0.11  conf=0.60
+  C4     n= 64  orig=0.75  new=0.82  Δ=+0.07  axis_σ=0.09  conf=0.65
+  C5     n= 56  orig=0.74  new=0.84  Δ=+0.10  axis_σ=0.07  conf=0.76
+  C6     n= 56  orig=0.70  new=0.74  Δ=+0.04  axis_σ=0.11  conf=0.62
+  C7     n= 56  orig=0.78  new=0.79  Δ=+0.01  axis_σ=0.09  conf=0.68
+  C8     n= 64  orig=0.70  new=0.78  Δ=+0.08  axis_σ=0.10  conf=0.66
+
+Per epoch:
+  epoch 1  n= 60  orig=0.69  new=0.73  Δ=+0.03  conf=0.62
+  epoch 2  n= 60  orig=0.70  new=0.75  Δ=+0.04  conf=0.59
+  epoch 3  n= 60  orig=0.74  new=0.78  Δ=+0.03  conf=0.66
+  epoch 4  n= 60  orig=0.73  new=0.80  Δ=+0.08  conf=0.60
+  epoch 5  n= 60  orig=0.73  new=0.82  Δ=+0.09  conf=0.67
+  epoch 6  n= 60  orig=0.79  new=0.84  Δ=+0.05  conf=0.68
+  epoch 7  n= 60  orig=0.78  new=0.82  Δ=+0.04  conf=0.63
+  epoch 8  n= 60  orig=0.71  new=0.82  Δ=+0.11  conf=0.63
+
+===== DONE: Sun May 17 16:16:49 CEST 2026 =====

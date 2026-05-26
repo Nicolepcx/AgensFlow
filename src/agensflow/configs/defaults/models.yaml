@@ -1,0 +1,64 @@
+# Default skill→model bindings. The variant tables ARE the config —
+# tune these to swap providers, add custom variants, or change which
+# skill-card backs which variant.
+#
+# YAML override semantics: dict-merge ADDS keys, REPLACES on collision.
+# To REMOVE a default variant, build the dict explicitly in your YAML —
+# OmegaConf has no "delete key" operator.
+#
+# See `agensflow/runtime/models/README.md` for the variant-pattern
+# rationale and tuning guidance.
+
+# Base skill → model id. Used when the activation plan invokes a base
+# skill name directly (no variant in play).
+default_assignment:
+  planner: "openai/gpt-5.4-nano"
+  memory: "openai/gpt-5.4-nano"
+  solver: "anthropic/claude-haiku-4.5"
+  critic: "anthropic/claude-haiku-4.5"
+  verifier: "anthropic/claude-haiku-4.5"
+  evaluator: "openai/gpt-5.4-nano"
+  synthesizer: "anthropic/claude-haiku-4.5"
+
+# Variant bindings: variant_name → [base_skill, model_id].
+# Variants share the base skill's agent factory but route to a specific
+# model (and optionally a specific skill card — see variant_cards).
+# The policy graph learns per-signature which variant wins.
+variant_bindings:
+  # Solver variants — same role, different (family, tier) cells.
+  solver_fast:       ["solver",   "openai/gpt-5.4-nano"]
+  solver_mini:       ["solver",   "openai/gpt-5.4-mini"]
+  solver_haiku:      ["solver",   "anthropic/claude-haiku-4.5"]
+  solver_qwen_flash: ["solver",   "qwen/qwen3.6-flash"]
+  solver_qwen_max:   ["solver",   "qwen/qwen3.6-max-preview"]
+  # Verifier variants.
+  verifier_fast:     ["verifier", "openai/gpt-5.4-nano"]
+  verifier_haiku:    ["verifier", "anthropic/claude-haiku-4.5"]
+  # Chunk-9: solver-card × model variants — same skill, three model
+  # bindings each, paired with three skill cards (concise / cot /
+  # evidence). The (card, model) action space lets the policy learn
+  # per-signature which behavioral spec × which model wins.
+  solver_concise_haiku:  ["solver", "anthropic/claude-haiku-4.5"]
+  solver_concise_fast:   ["solver", "openai/gpt-5.4-nano"]
+  solver_concise_mini:   ["solver", "openai/gpt-5.4-mini"]
+  solver_cot_haiku:      ["solver", "anthropic/claude-haiku-4.5"]
+  solver_cot_fast:       ["solver", "openai/gpt-5.4-nano"]
+  solver_cot_mini:       ["solver", "openai/gpt-5.4-mini"]
+  solver_evidence_haiku: ["solver", "anthropic/claude-haiku-4.5"]
+  solver_evidence_fast:  ["solver", "openai/gpt-5.4-nano"]
+  solver_evidence_mini:  ["solver", "openai/gpt-5.4-mini"]
+
+# Variant → skill_card binding. When the variant is invoked, the
+# referenced skill card's `instructions` are used as the system prompt
+# instead of the hardcoded default. Variants without a card binding
+# fall back to the hardcoded prompt in `runtime/agents.py`.
+variant_cards:
+  solver_concise_haiku:   "solver_concise"
+  solver_concise_fast:    "solver_concise"
+  solver_concise_mini:    "solver_concise"
+  solver_cot_haiku:       "solver_chain_of_thought"
+  solver_cot_fast:        "solver_chain_of_thought"
+  solver_cot_mini:        "solver_chain_of_thought"
+  solver_evidence_haiku:  "solver_evidence_first"
+  solver_evidence_fast:   "solver_evidence_first"
+  solver_evidence_mini:   "solver_evidence_first"
