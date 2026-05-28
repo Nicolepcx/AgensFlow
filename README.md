@@ -195,7 +195,20 @@ Apache 2.0. See [LICENSE](LICENSE).
 
 ## Citation
 
-The accompanying paper has been submitted to arXiv. Citation information will be added here once the arXiv record is public. For now, please cite the repository.
+The accompanying paper is available on arXiv:
+
+Koenigstein, N. (2026). *AgensFlow: A Coordination-Policy Substrate for Multi-Agent Systems*. arXiv:2605.27466.
+
+```bibtex
+@misc{koenigstein2026agensflow,
+  title={AgensFlow: A Coordination-Policy Substrate for Multi-Agent Systems},
+  author={Koenigstein, Nicole},
+  year={2026},
+  eprint={2605.27466},
+  archivePrefix={arXiv},
+  primaryClass={cs.MA},
+  url={https://arxiv.org/abs/2605.27466}
+}
 
 ## Status of this work
 
