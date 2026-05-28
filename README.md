@@ -17,6 +17,16 @@ Variance is preserved where it is epistemically productive, removed where it is 
 
 Alpha. Layers 0–5 are shipping (policy primitives, runtime, learning substrate, reward + RelativeJudge, governance + pre-flight + reports). End-to-end experiments under [`experiments/`](experiments/) show how the substrate accumulates per-`(signature, action)` value across runs. Trace metrics, training pipelines, and the accompanying paper are part of the broader research program and will be released as the work matures.
 
+## Contributing
+
+Since AgensFlow is currently in alpha, contributions are welcome.
+
+Useful contribution areas include documentation, examples, reproducibility improvements, additional experiments, policy-graph extensions, governance and audit tooling, and integrations with multi-agent frameworks or model providers.
+
+Before submitting large architectural changes, please open an issue first so the design can be discussed in relation to the framework’s layer structure, traceability requirements, and reproducibility goals.
+
+For setup instructions, development workflow, and pull request expectations, see [`CONTRIBUTING.md`](CONTRIBUTING.md).
+
 ## Quickstart
 
 ### Prerequisites — API keys
