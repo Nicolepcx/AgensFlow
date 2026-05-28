@@ -36,7 +36,7 @@ Pre-flight checks (`preflight.default_checks` in your YAML) validate these at th
 ```bash
 git clone https://github.com/Nicolepcx/AgensFlow.git
 cd AgensFlow
-pip install -e ".[viz]"
+python -m pip install -e .
 ```
 
 ### Plan a run (no LLM cost)
@@ -209,6 +209,8 @@ Koenigstein, N. (2026). *AgensFlow: A Coordination-Policy Substrate for Multi-Ag
   primaryClass={cs.MA},
   url={https://arxiv.org/abs/2605.27466}
 }
+
+```
 
 ## Status of this work
 
