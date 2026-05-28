@@ -3,6 +3,8 @@
 
 **AgensFlow is a framework for coordinating multi-agent systems where coordination itself is the learnable object.**
 
+AgensFlow is in alpha. Stars, issues, reproducibility checks, and contributions are welcome as the framework evolves.
+
 The name combines Latin *agēns*, meaning acting, driving, or conducting, with *flow*: the framework is concerned not with a single static agent, but with agency in motion, structured through reusable coordination decisions. AgensFlow makes use-case-conditioned skill selection, model-role assignment, topology choice, and reward audit observable and learnable from repeated trajectories, rather than fixing them as one-off pipeline decisions.
 
 AgensFlow treats orchestration as a first-class learnable object:
